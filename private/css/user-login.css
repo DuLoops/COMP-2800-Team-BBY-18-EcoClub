@@ -1,0 +1,12 @@
+#app-logo {
+    padding-top: 15px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#app-name {
+    text-align: center;
+    font-size: 20px;
+}
