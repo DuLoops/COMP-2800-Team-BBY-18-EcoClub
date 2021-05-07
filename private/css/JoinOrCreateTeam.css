@@ -1,6 +1,20 @@
+body {
+    font-family: 'Noto Serif', serif;
+}
+
 #back-icon{
     float: left;
-    font-size:24px
+    font-size:24px;
+    color: white;
+}
+
+#back {
+    color: white;
+}
+
+.nav-link {
+    color: #003366;
+    font-weight: bold;
 }
 
 .box {
@@ -20,6 +34,7 @@
 
 .box h5 {
    text-align: center;
+   color: #003366;
 }
 
 #icon {
@@ -31,7 +46,7 @@
 
 #button {
     display: block;
-    margin: auto;
+    margin: auto;   
 }
 
 .createTeam {
@@ -48,4 +63,5 @@
     text-align: center;
     font-size: 18px;
     padding-bottom: 20px;
+    color: #003366;
 }
