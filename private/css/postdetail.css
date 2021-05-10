@@ -1,0 +1,54 @@
+body {
+    font-family: 'Noto Serif', serif;
+    font-size: 23px;
+}
+
+#back-icon{
+    float: left;
+    font-size:24px;
+    
+}
+
+#back-button {
+    background-color: #659DBD;
+}
+
+.nav-link {
+    color: #003366;
+    font-weight: bold;
+}
+
+.name-user {
+    padding: 5px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #659DBD;
+    text-align: center;
+    padding: 3px 0;
+  }
+  
+  .btnFoot {
+    width: 32%;
+    height: 5vh;
+    /* background-color: rgb(75, 63, 63); */
+  }
+  
+  #button {
+    display: block;
+    margin: auto;   
+    font-size: 20px;
+    background-color: #659DBD;
+}
+
+  footer i{
+    font-size: 1.5rem;
+  }
+
+  .btn_club {
+    background-color: rgba(0, 0 ,0 , 0.2) !important;
+  }
