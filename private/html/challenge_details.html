@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/challenge_details.css" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Back</a></li>
+      </ul>
+      <p class="name">Challenge Details</p>
+    </div>
+  </nav>
+  <div class="container">
+    <form>
+
+      <div class="form-group">
+        <p class="chalange_name">Challenge Name</p>
+        <img src="../img/star.png" class="img">
+        <p class="eco_points">Eco points</p>
+
+      </div>
+
+      <input type="text" class="form-control" id="chalange_name_feild">
+
+
+      <div>
+        <label class="chalange_details">Challange Details</label>
+        <textarea class="form-control" rows="9" id="comment"></textarea>
+      </div>
+      <div class="col-md-12 text-center">
+        <button type="button" id="btn" class="btn btn-primary btn-lg">Take the challenge</button>
+      </div>
+    </form>
+  </div>
+  <div class="footer">
+    <button type="button" class="btn btnFoot">Group</button>
+    <button type="button" class="btn btnFoot">Post</button>
+    <button type="button" class="btn btnFoot">Icon</button>
+  </div>
+
+</body>
+
+</html>
