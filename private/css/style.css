@@ -1,8 +1,10 @@
 /* color palette*/
 :root {
   -blue: #659DBD;
+  /* rgba(101, 157, 189, 1)*/
   -yellow: #FBEEC1;
   -green: #92C43D;
+  /* rgba(146, 196, 61, 1) */
 }
 /* using color root example. */
 .something {
