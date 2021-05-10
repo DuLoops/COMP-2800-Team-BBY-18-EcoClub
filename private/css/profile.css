@@ -1,0 +1,44 @@
+body {
+    font-family: 'Noto Serif', serif;
+}
+
+#userInfo {
+    margin-top: 22px;
+    border: 1px solid black;
+    
+}
+
+#ecoPoints, #email-address{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 26px;
+}
+.name-user {
+    text-align: center;
+    font-size: 32px;
+}
+
+#buttons {
+    margin-top: 40px;
+}
+
+.btn-text{
+    font-size: 25px;
+}
+.btn {
+    width: 200px;
+}
+#back-icon{
+    float: left;
+    font-size:24px;
+    
+}
+
+#back-button {
+    background-color: #659DBD;
+}
+
+.nav-link {
+    color: #003366;
+    font-weight: bold;
+}

@@ -1,0 +1,45 @@
+:root {
+  -blue: #659DBD;
+  /* rgba(101, 157, 189, 1)*/
+  -yellow: #FBEEC1;
+  -green: #92C43D;
+  /* rgba(146, 196, 61, 1) */
+}
+
+nav {
+
+}
+
+#feed_contents{
+  height: 100px;
+  width: 95%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #659DBD;
+  text-align: center;
+  padding: 3px 0;
+}
+
+.btnFoot {
+  width: 32%;
+  height: 5vh;
+  background-color: rgb(75, 63, 63);
+}
+
+.btn_club {
+  background-color: rgba(0, 0 ,0 , 0.2) !important;
+}
+
+footer i{
+  font-size: 1.5rem;
+}
+
