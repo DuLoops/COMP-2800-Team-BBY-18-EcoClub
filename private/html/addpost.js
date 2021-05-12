@@ -114,8 +114,7 @@
 //                 })
 //             }
 
-
-
+document.getElementById("button").addEventListener("click", uploadUserProfilePic);
 function uploadUserProfilePic() {
     console.log("Working");
     // Let's assume my storage is only enabled for authenticated users 
@@ -124,14 +123,13 @@ function uploadUserProfilePic() {
     firebase.auth().onAuthStateChanged(function (user) {
             // pointer #1
             const image = document.getElementById("mypic"); // pointer #2
+            console.log("Working");
            
             // listen for file selection
-            document.getElementById('formFileLg').addEventListener('change', handleFileSelect, false);
 
-            function handleFileSelect(event) {
-                var file = event.target.files[0];
-                var blob = URL.createObjectURL(file);
-                image.src = blob; // display this image
+            function handleFileSelect() {
+                var file = document.getElementById('formFileLg').value;
+                
 
                 //store using this name
                 var storageRef = storage.ref("images/" + user.uid);
@@ -147,18 +145,29 @@ function uploadUserProfilePic() {
                 storageRef.getDownloadURL()
                     .then(function (url) { // Get URL of the uploaded file
                         console.log(url); // Save the URL into users collection
-                        db.collection("users").doc(user.uid).collection("User-Post").doc("1").set({
-                                "postPic": url
+                        async function myFunction() {
+                           
+                            // var id;
+                            // await db.collection("groups").doc("example").collection("posts").get().then(function (querySnapshot) {
+                            //     id = querySnapshot.size;
+                            // });
+                            // console.log("id: ", id);
+                            var post_desc = document.getElementById("post-desc").value;
+                            db.collection("groups").doc("example").collection("posts").add({
+                                "postPic": url,
+                                "desc": post_desc
                             })
                             .then(function () {
                                 console.log('Added Profile Pic URL to Firestore.');
                             })
+                        }
+                        myFunction();
                     })
             }
+            handleFileSelect();
+
     })
 }
-
-uploadUserProfilePic()
 
 
 // function displayUserProfilePic() {

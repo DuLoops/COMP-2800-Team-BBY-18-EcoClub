@@ -52,6 +52,11 @@ footer {
     background-color: #659DBD;
 }
 
+  #post-desc {
+  margin-top: 1rem;
+  
+  
+}
   footer i{
     font-size: 1.5rem;
   }
