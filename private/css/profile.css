@@ -25,7 +25,8 @@ body {
 .btn-text{
     font-size: 25px;
 }
-.btn {
+
+.clickable {
     width: 200px;
 }
 #back-icon{

@@ -36,23 +36,41 @@ creatediv();
 
 function display() {
     firebase.auth().onAuthStateChanged(function (somebody) {
+
         if (somebody) {
             db.collection("users")
-                .doc(somebody.uid)
+                .doc(somebody.uid).collection("user-challenges").doc("1").collection("eco-challenges").doc("example")
                 // Read
                 .get()
                 .then(function (doc) {
-                    // Extract the first name of the user
-                    var name = doc.data().name;
-
+                    
+                    var challengeName = doc.data().desc;
                     if (name) {
-                        $(".name").html(name);
+                        $(".name").html(challengeName);
                     } else {
-                        $(".name").html("name");
+                        $(".name").html("EcoClub User");
                     }
                 });
         }
     });
+    // firebase.auth().onAuthStateChanged(function (somebody) {
+    //     if (somebody) {
+    //         db.collection("users")
+    //             .doc(somebody.uid)
+    //             // Read
+    //             .get()
+    //             .then(function (doc) {
+    //                 // Extract the first name of the user
+    //                 var name = doc.data().name;
+
+    //                 if (name) {
+    //                     $(".name").html(name);
+    //                 } else {
+    //                     $(".name").html("name");
+    //                 }
+    //             });
+    //     }
+    // });
 }
 
 function display2() {
