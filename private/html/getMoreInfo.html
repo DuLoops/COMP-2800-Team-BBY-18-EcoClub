@@ -25,21 +25,22 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">About you</a>
+      <a class="nav-link" id="about" href="#">About you</a>
     </li>
   </ul><br>
-  <h2>Welcome <span class="user-name"></span></h2>
+  <h2 id="welcome">Welcome <span class="user-name"></span></h2>
   <div id="add-post">
-    <label for="formFileLg" class="form-label">Select a picture</label>
+    <label for="formFileLg" class="form-label heading1">Select a profile picture</label><br>
     <input class="form-control form-control-lg" id="formFileLg" type="file">
     <div id="mypic"></div>
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">Add a description</label>
-    <!-- <textarea class="form-control" id="exampleFormControlTextarea1 post-desc" rows="7"></textarea> -->
+    <label for="exampleFormControlTextarea1" class="form-label heading1">Add a bio</label><br>
     <input type="text" placeholder="Say something... " id="bio" class="inputClass">
   </div>
-  <button type="button" class="btn" id="button">Add</button>
+  <div id="btn-div">
+    <button type="button" class="btn" id="add-button">Add</button>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>

@@ -1,25 +1,3 @@
-function sayName() {
-    firebase.auth().onAuthStateChanged(function (somebody) {
-        if (somebody) {
-            db.collection("users")
-                .doc(somebody.uid)
-                // Read
-                .get()
-                .then(function (doc) {
-                    // Extract the first name of the user
-                    var name = doc.data().name;
-
-                    if (name) {
-                        $(".user-name").html(name);
-                    } else {
-                        $(".user-name").html("EcoClub User");
-                    }
-                });
-        }
-    });
-}
-sayName();
-
 document.getElementById("button").addEventListener("click", uploadUserProfilePic);
 function uploadUserProfilePic() {
     console.log("Working");
@@ -55,9 +33,10 @@ function uploadUserProfilePic() {
                         console.log(url); // Save the URL into users collection
                         async function myFunction() {
                            
-                            var post_desc = document.getElementById("bio").value;
-                            db.collection("users").doc(user.uid).add({
-                                "profilePic": url
+                            var bio = document.getElementById("bio").value;
+                            db.collection("users").doc(user.uid).update({
+                                "profilePic": url,
+                                "bio": bio
                             })
                             .then(function () {
                                 console.log('Added Profile Pic URL to Firestore.');
