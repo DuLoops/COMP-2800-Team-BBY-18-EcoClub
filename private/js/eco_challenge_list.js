@@ -7,7 +7,7 @@ function createGrid() {
             var div = $("<div class='jumbotron'>" + doc.data().desc + "</div>");
             var b1 = $("<a id='slot' type='button'></a><br>");
 
-            var head = $("<div class='form-group'><p class='chalange_name'>" + doc.id + "</p><img src=" + '../img/star.png' + " class='img'><p class='eco_points'>Eco points</p></div>");
+            var head = $("<div class='form-group'><p class='chalange_name'>" + doc.id + "</p></div>");
             b1.append(head);
             b1.append(div);
             b1.attr("href", "challenge_details.html").click(function () {
