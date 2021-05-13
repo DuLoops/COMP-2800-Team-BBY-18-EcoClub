@@ -1,4 +1,4 @@
-document.getElementById("button").addEventListener("click", uploadUserProfilePic);
+document.getElementById("add-button").addEventListener("click", uploadUserProfilePic);
 function uploadUserProfilePic() {
     console.log("Working");
     // Let's assume my storage is only enabled for authenticated users 

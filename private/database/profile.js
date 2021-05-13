@@ -10,6 +10,9 @@ function sayName() {
                     var name = doc.data().name;
                     var points = doc.data().ecopoint;
                     var email = doc.data().email;
+                    var picUrl = doc.data().profilePic; 
+                    console.log(picUrl);
+                    $("#image").append("<img src='" + picUrl + "'>")
 
                     if (name) {
                         $(".name-user").html(name);

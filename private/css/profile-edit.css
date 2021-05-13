@@ -1,0 +1,44 @@
+#buttons {
+    margin-top: 40px;
+}
+
+.btn-text{
+    font-size: 25px;
+}
+#back-icon{
+    float: left;
+    font-size:24px;
+    color: white;
+    
+}
+
+#back-button {
+    background-color: #28a745;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+#back {
+    color: white;
+}
+
+#head{
+    color: black;
+}
+
+#btn-div {
+    padding: 1rem;
+    margin-left: 9rem;
+}
+
+#done-button {
+    background-color: #28a745;
+    color: white;
+    width: 5rem
+}
+
+.mb-3{
+    text-align: center;
+}
