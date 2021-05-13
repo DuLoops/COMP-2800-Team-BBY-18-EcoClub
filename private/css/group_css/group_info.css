@@ -5,6 +5,7 @@
   --green: #28a745;
   /* bootstrap: -success */
   --grey: #f7f7f7;
+  --ligth_green: #28a745;
 }
 
 
@@ -86,3 +87,23 @@ footer {
 footer i{
   font-size: 1.5rem;
 } 
+
+#back-icon{
+  float: left;
+  font-size:24px;
+  color: white;
+
+}
+
+#back {
+color: white;
+}
+
+#back-button {
+  background-color: #28a745;
+}
+
+.nav-link {
+color: black;
+font-weight: bold;
+}

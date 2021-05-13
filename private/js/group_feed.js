@@ -11,7 +11,7 @@ function getPosts() {
         var desc = doc.data().desc;
         var poster = doc.data().poster;
         var picURL = doc.data().postPic;
-        console.log(getPosterInfo(poster));
+        console.log("int the main func ------ "  + getPosterInfo(poster));
         document.getElementById("feed_content").innerHTML += "<div class='post'>" + getPosterInfo(poster) + "<p class='post_desc'>" + desc + "</p></div>";
       });
     });
