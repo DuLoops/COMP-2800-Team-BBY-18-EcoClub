@@ -12,7 +12,7 @@ function sayName() {
                     var email = doc.data().email;
                     var picUrl = doc.data().profilePic; 
                     console.log(picUrl);
-                    $("#image").append("<img src='" + picUrl + "'>")
+                    // $("#image").append("<img src='" + picUrl + "'>")
 
                     if (name) {
                         $(".name-user").html(name);
