@@ -49,9 +49,15 @@ body {
     margin: auto;   
 }
 
+#Joinbutton {
+    display: block;
+    margin: auto; 
+}
+
 .createTeam {
     padding-bottom: 20px;
 }
+
 
 #code {
     width: 80%;

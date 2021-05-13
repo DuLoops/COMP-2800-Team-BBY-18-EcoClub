@@ -1,7 +1,15 @@
+body{
+    background-color: #f7f7f7;
+    font-family: sans-serif;
+}
 #app-name {
+    background-color: #4daf54;
     text-align: center;
-    /* color:#044112; */
-    color: #31708e;
+    border-radius: 5px;
+    padding: 5px;
+    /* color: #003366; */
+    /* color: #cc9900 */
+    color: #FFE056;
 }
 
 #background {
@@ -25,7 +33,6 @@
     left: 2%;
     text-align: center;
     font-size: 1.2rem;
-    color: #0a5e2aff;
 }
 
 .column {
@@ -54,5 +61,4 @@
   #teamculture {
     text-align: center;
     font-size: 1.2rem;
-    color: #0a5e2aff;
   }
