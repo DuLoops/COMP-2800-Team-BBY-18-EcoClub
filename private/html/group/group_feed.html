@@ -6,7 +6,7 @@
   <title>Group Feed</title>
 
   <!-- CSS-->
-  <link rel="stylesheet" href="/private/css/group.css">
+  <link rel="stylesheet" href="/private/css/group_css/group.css">
   <!-- Font awesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
   <!-- Bootstrap-->
@@ -23,7 +23,7 @@
   </a>
 </nav>
 
-  <div id="feed_contents">
+  <div id="feed_content">
     <p>Welcome to the club!</p>
     <p>Post something to share it with your club!</p>
   </div>
@@ -32,5 +32,20 @@
     <button type="button" class="btn btnFoot btn_post"><i class="far fa-plus-square"></i></button>
     <button type="button" class="btn btnFoot btn_profile"><i class="fas fa-user-circle"></i></button>
   </footer>
+
+<!-- firebase -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+
+
+  <!-- Link to the api keys for your firebase project -->
+  <script src="/private/database/firestore.js"></script>
+
+  <script src="/private/js/group_feed.js"></script>
+
+
 </body>
 </html>

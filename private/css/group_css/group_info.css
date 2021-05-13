@@ -7,6 +7,7 @@
   --grey: #f7f7f7;
 }
 
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -16,16 +17,50 @@
 .html,
 body {
 	height: 100%;
+
 }
 
-.post{
-  height: 100px;
-  width: 95%;
+#group_info_content{
+  padding:20px;
+}
+
+#info_contents {
+  width:100%;
+}
+
+#groupImg {
+  width:90%;
+  display:block;
   margin-left:auto;
   margin-right: auto;
   margin-top: 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
 }
+
+#group_people{
+  background-color: var(--grey);
+}
+
+#group_leader_div{
+  background-color: var(--green);
+}
+
+#group_members{
+  display:flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  
+}
+
+.member{
+  border-radius: 1rem;
+  background-color: rgba(40, 167, 69, 0.5);
+  margin:10px
+}
+
+.member p{
+  margin:5px;
+}
+
 
 footer {
   position: fixed;
@@ -35,6 +70,7 @@ footer {
   background-color: var(--green);
   text-align: center;
   padding: 3px 0;
+  
 }
 
 .btnFoot {
@@ -49,5 +85,4 @@ footer {
 
 footer i{
   font-size: 1.5rem;
-}
-
+} 

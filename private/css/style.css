@@ -1,12 +1,14 @@
 /* color palette*/
 :root {
-  -blue: #659DBD;
+  --blue: #659DBD;
   /*  bootstrap: -info*/
-  -yellow: #FBEEC1;
-  -green: #28a745;
+  --yellow: #FBEEC1;
+  --green: #28a745;
   /* bootstrap: -success */
+  --grey: #f7f7f7;
 }
+
 /* using color root example. */
 .something {
-  background-color: var(-blue);
+  background-color: var(--blue);
 }
