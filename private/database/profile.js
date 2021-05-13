@@ -27,72 +27,20 @@ function sayName() {
 }
 sayName();
 
-function creatediv() {
-    let para = document.createElement("div"); // Create a <p> element
-    document.body.appendChild(para); // Append <p> to <div> with id="myDIV"
-    let text = document.createElement("P");
-    text.setAttribute("class", "name");
-    para.append(text);
-}
-
-creatediv();
-
-function display() {
-    firebase.auth().onAuthStateChanged(function (somebody) {
-
-        if (somebody) {
-            db.collection("users")
-                .doc(somebody.uid).collection("user-challenges").doc("1").collection("eco-challenges").doc("example")
-                // Read
-                .get()
-                .then(function (doc) {
-                    
-                    var challengeName = doc.data().desc;
-                    if (name) {
-                        $(".name").html(challengeName);
-                    } else {
-                        $(".name").html("EcoClub User");
-                    }
-                });
-        }
-    });
-    // firebase.auth().onAuthStateChanged(function (somebody) {
-    //     if (somebody) {
-    //         db.collection("users")
-    //             .doc(somebody.uid)
-    //             // Read
-    //             .get()
-    //             .then(function (doc) {
-    //                 // Extract the first name of the user
-    //                 var name = doc.data().name;
-
-    //                 if (name) {
-    //                     $(".name").html(name);
-    //                 } else {
-    //                     $(".name").html("name");
-    //                 }
-    //             });
-    //     }
-    // });
-}
-
-function display2() {
-    firebase.auth().onAuthStateChanged(function (somebody) {
-        if (somebody) {
-            db.collection("users")
-                .doc(somebody.uid)
-                // Read
-                .get()
-                .then(function (doc) {
-                    // Extract the first name of the user
-                    var email = doc.data().email;
-
-                    if (email) {
-                        $(".name").html(email);
-                    } else {
-                        $(".name").html("name");
-                    }
-                });
-        }
-    });
-}
+function getChallenges() {
+    document.getElementById("challenges-div").innerHTML = "";
+  
+    db.collection("eco-challenges")
+      .get()
+      .then(function (snap) {
+        snap.forEach(function (doc) {
+          var desc = doc.data().desc;
+          var ecopoint = doc.data().ecopoint;
+          var title = doc.data().title;
+          document.getElementById("challenges-div").innerHTML += "<div class='card border-dark mb-3'><div class='card-header bg-transparent border-dark'>" + title + "</div><div class='card-body text-success'><p class='card-text'>" + desc + "</p></div><div class='card-footer bg-transparent border-dark'>EcoPoints: " + ecopoint + "</div></div>" ;
+        });
+      });
+  }
+  getChallenges();
+  
+  
