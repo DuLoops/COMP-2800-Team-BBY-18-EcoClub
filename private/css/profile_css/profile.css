@@ -1,0 +1,100 @@
+:root {
+    --blue: #659DBD;
+    /*  bootstrap: -info*/
+    --yellow: #FBEEC1;
+    --green: #28a745;
+    /* bootstrap: -success */
+    --grey: #f7f7f7;
+  }
+
+body {
+    font-family: 'Noto Serif', serif;
+}
+
+#userInfo {
+    margin-top: 22px;
+}
+
+#ecoPoints, #email-address{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 26px;
+    color: #003366;
+}
+.name-user {
+    text-align: center;
+    font-size: 32px;
+}
+
+#buttons {
+    margin-top: 40px;
+}
+
+.btn-text{
+    font-size: 25px;
+}
+.clickable {
+    width: 200px;
+    color: white;
+}
+#back-icon{
+    float: left;
+    font-size:24px;
+    color: white;
+    
+}
+
+#back-button {
+    background-color: #28a745;
+}
+
+.nav-link {
+    color: white;
+    font-weight: bold;
+}
+
+.profile-btn{
+    color: black;
+    font-weight: bold;
+}
+
+#challenges-div{
+   padding: 1.2rem;
+    
+}
+.challenge-desc {
+    background-color: lightblue;
+}
+
+#challenge-title{
+    float: left;
+}
+
+#ecopoints{
+    float: right;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--green);
+    text-align: center;
+    padding: 3px 0;
+  }
+  
+  .btnFoot {
+    width: 32%;
+    height: 5vh;
+    
+  }
+  
+  .btn_profile {
+    background-color: rgba(0, 0 ,0 , 0.2) !important;
+  }
+  
+  footer i{
+    font-size: 1.5rem;
+  }

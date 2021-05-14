@@ -1,0 +1,72 @@
+:root {
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
+  --yellow: #FBEEC1;
+  --green: #28a745;
+  /* bootstrap: -success */
+  --grey: #f7f7f7;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.html,
+body {
+	height: 100%;
+}
+
+.post{
+  height: 100px;
+  width: 95%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--green);
+  text-align: center;
+  padding: 3px 0;
+}
+
+.btnFoot {
+  width: 32%;
+  height: 5vh;
+  background-color: rgb(75, 63, 63);
+}
+
+.btn_club {
+  background-color: rgba(0, 0 ,0 , 0.2) !important;
+}
+
+footer i{
+  font-size: 1.5rem;
+}
+
+#back-icon{
+  float: left;
+  font-size:24px;
+  color: white;
+
+}
+
+#back {
+color: white;
+}
+
+#back-button {
+  background-color: #28a745;
+}
+
+.nav-link {
+color: black;
+font-weight: bold;
+}

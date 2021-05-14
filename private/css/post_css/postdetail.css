@@ -1,0 +1,39 @@
+body {
+    font-family: 'Noto Serif', serif;
+    font-size: 23px;
+}
+
+#back-icon{
+    float: left;
+    font-size:24px;
+    color: white;
+    
+}
+
+#back {
+  color: white;
+}
+
+#back-button {
+    background-color: #28a745;
+}
+
+.nav-link {
+  color: black;
+  font-weight: bold;
+}
+
+
+
+.name-user {
+    padding: 5px;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 3px 0;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <!-- Font awesome-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/private/css/post_css/postdetail.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="nav nav-pills nav-fill">
+        <li class="nav-item btn" id="back-button">
+            <a class="nav-link" aria-current="page" href="#">
+                <i class="fa fa-arrow-circle-left" id="back-icon"></i>
+                <span id="back">Back</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Comments</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Group Info</a>
+        </li>
+    </ul><br>
+    <!-- <h2 class="name-user"></h2>
+    <div id="image"></div> -->
+    <div class="container">
+        <div class="heading-container"></div>
+        <div id="main-content-card">
+            <div class="current-rating-container">
+                <p id="current-rating"></p>
+            </div>
+            <div class="comment-container"></div>
+        </div>
+        </div>
+        <footer>
+            <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+            <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
+            <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i class="fas fa-user-circle"></i></button>
+          </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <script src="/private/database/firestore.js"></script>
+
+    <script src="/private/js/postdetail.js"></script>
+
+    <script src="/private/js/footer.js"></script>
+</body>
+
+</html>
