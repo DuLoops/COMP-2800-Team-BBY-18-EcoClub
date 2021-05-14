@@ -16,7 +16,7 @@ async function myFunction() {
     });
     var groupCode = str1.concat(length.toString());
 
-    docRef.set({
+    await docRef.set({
         groupName: group_name,
         groupCode: groupCode,
         desc: group_description,

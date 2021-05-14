@@ -4,6 +4,7 @@ function getPosts() {
 
   db.collection("groups")
     .doc("example")
+    // .doc(getGroupID())
     .collection("posts")
     .get()
     .then(function (snap) {
@@ -18,10 +19,10 @@ function getPosts() {
 }
 getPosts();
 
-function getGroupID(userID) {
+function getGroupID() {
   var groupID;
   db.collection("users")
-    .doc(userID)
+    .doc(getUserID())
     .get().then((doc) => {
       groupID = doc.data().group;
     })
@@ -43,7 +44,7 @@ function getPosterInfo(userID) {
       var userPofile = doc.data().profilePic;
       var returnString = "<div class='post_poster'>" + userName + "</div>"
       console.log(returnString);
-      return returnString
+      return returnString;
     } else {
       // doc.data() will be undefined in this case
       console.log("Cannot find the user");

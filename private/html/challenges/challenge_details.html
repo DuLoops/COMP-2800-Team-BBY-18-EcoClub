@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="/private/css/challenges_css/challenge_details.css" />
 
   <!-- Font awesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- css -->
+<link rel="stylesheet" type="text/css" href="/private/css/challenges_css/challenge_details.css" />
+
 </head>
 
 <body>
@@ -25,30 +27,29 @@
           <span id="back">Back</span>
         </a>
       </li class="ff">
-      <p class="name">Eco Challenges</p>
+      <p class="name">Challenge details</p>
     </ul>
   </nav>
 
   <div class="container">
-    <form>
-
       <div class="form-group">
-        <p class="chalange_name">Challenge Name</p>
-        <img src="../img/star.png" class="img">
+        <p class="chalange_name">Challenge Name</p> 
+        <img src="/private/img/logos/eco_point.jpg" class="img" id="eco_point">
         <p class="eco_points">Eco points</p>
       </div>
 
-      <textarea class="form-control cc" id="chalange_name_feild"></textarea>
+      <div class="form-control cc" id="chalange_name_feild"></div>
 
 
       <div>
         <label class="chalange_details">Challange Details</label>
-        <textarea class="form-control" rows="9" id="comment"></textarea>
+        <div class="form-control" rows="9" id="comment"></div>
       </div>
       <div class="col-md-12 text-center">
         <button type="button" id="btn" class="btn btn-primary btn-lg">Take the challenge</button>
       </div>
-    </form>
+
+    
   </div>
   <footer>
     <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
