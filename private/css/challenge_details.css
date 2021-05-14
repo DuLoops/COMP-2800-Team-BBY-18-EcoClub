@@ -6,11 +6,26 @@ body {
     margin: 0%;
 }
 
+
+
+#back-icon {
+    color: white;
+    font-size: 5vw;
+}
+
+#back {
+    color: white;
+    font-size: 5vw;
+    padding-left: 10%;
+}
+
 .name {
     text-align: center;
-    margin: 0%;
-    font-size: 3em;
+    font-size: 7vw;
+    margin-top: 1.5vh;
 }
+
+
 
 .form-group {
     display: flex;

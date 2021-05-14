@@ -20,5 +20,6 @@
 
 /* using color root example. */
 .something {
+
   background-color: var(--blue);
 }
