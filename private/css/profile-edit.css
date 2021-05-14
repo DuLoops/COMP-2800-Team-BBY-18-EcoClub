@@ -1,3 +1,13 @@
+:root {
+    --blue: #659DBD;
+    /*  bootstrap: -info*/
+    --yellow: #FBEEC1;
+    --green: #28a745;
+    /* bootstrap: -success */
+    --grey: #f7f7f7;
+  }
+  
+
 body {
     font-size: 25px;
 }
@@ -46,3 +56,27 @@ body {
 .mb-3{
     text-align: center;
 }
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--green);
+    text-align: center;
+    padding: 3px 0;
+  }
+  
+  .btnFoot {
+    width: 32%;
+    height: 5vh;
+    
+  }
+  
+  .btn_profile {
+    background-color: rgba(0, 0 ,0 , 0.2) !important;
+  }
+  
+  footer i{
+    font-size: 1.5rem;
+  }

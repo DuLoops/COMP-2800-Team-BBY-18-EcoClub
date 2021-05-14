@@ -13,17 +13,7 @@
 </head>
 
 <body>
-    <ul class="nav nav-pills nav-fill">
-        <li class="nav-item btn" id="back-button">
-          <a class="nav-link" aria-current="page" href="#">
-            <i class="fa fa-arrow-circle-left" id="back-icon"></i>
-              <span id="back">Back</span>
-        </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Add a post</a>
-        </li>
-      </ul><br>
+    
       <div id="add-post">
         <label for="formFileLg" class="form-label">Select a picture</label>
         <input class="form-control form-control-lg" id="formFileLg" type="file">
@@ -35,10 +25,12 @@
       <button type="button" class="btn" id="button">Post</button>
       <img id="ecoicon" src="/private/images/ecoicon.png" alt="eco icon">
       <footer>
-        <button type="button" class="btn btnFoot btn_club"><i class="fas fa-users"></i></button>
-        <button type="button" class="btn btnFoot btn_post"><i class="far fa-plus-square"></i></button>
-        <button type="button" class="btn btnFoot btn_profile"><i class="fas fa-user-circle"></i></button>
+        <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+        <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
+        <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i class="fas fa-user-circle"></i></button>
       </footer>
+
+      <script src="/private/js/footer.js"></script>
 </body>
 
 </html>

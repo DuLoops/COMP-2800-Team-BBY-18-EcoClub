@@ -26,11 +26,7 @@ var uiConfig = {
                     .then(function () {
                         console.log("New user added to firestore");
                         window.location.assign(
-<<<<<<< HEAD
-                            "../profile/profile-main.html"); //re-direct to main.html after signup
-=======
-                            "../html/profile-main.html"); //re-direct to main.html after signup
->>>>>>> Sarah_Makkar_feature1
+                            "/private/html/team/JoinOrCreateTeam.html"); //re-direct to main.html after signup
                     })
                     .catch(function (error) {
                         console.log("Error adding new user: " + error);
@@ -45,7 +41,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: '../profile/profile-main.html',
+    signInSuccessUrl: '../team/JoinOrCreateTeam.html',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
