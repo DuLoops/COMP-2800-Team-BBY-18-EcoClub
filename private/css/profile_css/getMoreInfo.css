@@ -51,7 +51,7 @@
     margin-left: 8rem;
 }
 
-#add-button {
+#add-button, #next-button {
     background-color: #28a745;
     color: white;
     width: 5rem

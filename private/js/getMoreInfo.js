@@ -39,6 +39,7 @@ function uploadUserProfilePic() {
                                 "bio": bio
                             })
                             .then(function () {
+                                alert("Profile created successfully");
                                 console.log('Added Profile Pic URL to Firestore.');
                             })
                         }
