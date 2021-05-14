@@ -1,12 +1,25 @@
 /* color palette*/
 :root {
-  -blue: #659DBD;
-  /* rgba(101, 157, 189, 1)*/
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
   -yellow: #FBEEC1;
-  -green: #92C43D;
-  /* rgba(146, 196, 61, 1) */
+
+  -green: #28a745;
+ /* bootstrap: -success */
+
+ -light-gray: #f8f9fa
+ /* Bootstrap -light*/
+
+ /* Default font */
+ /* font-family: 'Lato', sans-serif; */
+
+ /* Logo font */
+ /* font-family: 'Noto Serif', serif; */
+
 }
+
 /* using color root example. */
 .something {
-  background-color: var(-blue);
+
+  background-color: var(--blue);
 }

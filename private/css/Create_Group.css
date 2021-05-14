@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Hind);
+
+:root {
+  -blue: #659DBD;
+  -yellow: #FBEEC1;
+  -green: #4daf54;
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  height: 100%;
+  margin: 0%;
+}
+
+
+
+
+#back-icon {
+  color: white;
+  font-size: 5vw;
+}
+
+#back {
+  color: white;
+  font-size: 5vw;
+  padding-left: 10%;
+}
+
+.name {
+  text-align: center;
+  font-size: 7vw;
+  margin-top: 1.5vh;
+}
+
+
+
+.feild_name {
+  text-align: center;
+  font-size: 5vw;
+  width: 100%;
+  margin-top: 10%;
+}
+
+.form-control {
+  width: 75%;
+  margin: auto;
+}
+
+
+#btn {
+  margin: 0%;
+  margin-top: 10%;
+}
+
+.img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4.5vh;
+  width: 45%;
+}
+
+#button {
+  display: block;
+  margin: auto;
+}
+
+#text {
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 20px;
+  color: #003366;
+}

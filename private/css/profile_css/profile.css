@@ -12,6 +12,7 @@ body {
     margin-top: 10px;
     text-align: center;
     font-size: 26px;
+    color: #003366;
 }
 .name-user {
     text-align: center;
@@ -25,7 +26,7 @@ body {
 .btn-text{
     font-size: 25px;
 }
-.btn {
+.clickable {
     width: 200px;
 }
 #back-icon{
@@ -35,10 +36,15 @@ body {
 }
 
 #back-button {
-    background-color: #659DBD;
+    background-color: #28a745;
 }
 
 .nav-link {
-    color: #003366;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-btn{
+    color: black;
     font-weight: bold;
 }

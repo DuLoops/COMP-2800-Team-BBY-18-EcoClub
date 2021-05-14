@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Hind);
+
+body {
+  font-family: 'Hind', sans-serif;
+  height: 100%;
+  margin: 0%;
+}
+
+#back-icon {
+  color: white;
+  font-size: 5vw;
+}
+
+#back {
+  color: white;
+  font-size: 5vw;
+  padding-left: 10%;
+}
+
+.name {
+  text-align: center;
+  font-size: 7vw;
+  margin-top: 1.5vh;
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #659DBD;
+  color: white;
+  text-align: center;
+}
+
+.btnFoot {
+  width: 32%;
+  height: 5vh;
+  background-color: rgb(75, 63, 63);
+}
+
+.jumbotron {
+  color: black;
+}
+
+.form-group {
+  display: flex;
+  margin-left: 2%;
+  margin-bottom: 0%;
+}
+
+.chalange_name {
+  font-size: 3.7vw;
+  width: 72%;
+}
+
+
+.eco_points {
+  font-size: 3.7vw;
+}
+
+.img {
+  float: left;
+  width: 5vw;
+  height: 5vw;
+  margin-right: 2%;
+}
+
+#list {
+  width: 80%;
+  margin: auto;
+}
