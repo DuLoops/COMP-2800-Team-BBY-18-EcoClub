@@ -4,8 +4,6 @@ body {
 
 #userInfo {
     margin-top: 22px;
-    border: 1px solid black;
-    
 }
 
 #ecoPoints, #email-address{
@@ -28,10 +26,12 @@ body {
 }
 .clickable {
     width: 200px;
+    color: white;
 }
 #back-icon{
     float: left;
     font-size:24px;
+    color: white;
     
 }
 
@@ -47,4 +47,20 @@ body {
 .profile-btn{
     color: black;
     font-weight: bold;
+}
+
+#challenges-div{
+   padding: 1.2rem;
+    
+}
+.challenge-desc {
+    background-color: lightblue;
+}
+
+#challenge-title{
+    float: left;
+}
+
+#ecopoints{
+    float: right;
 }
