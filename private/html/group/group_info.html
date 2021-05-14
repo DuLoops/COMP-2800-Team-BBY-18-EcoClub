@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,33 +7,70 @@
   <title>Group Info</title>
 
   <!-- CSS-->
-  <link rel="stylesheet" href="/private/css/group.css">
+  <link rel="stylesheet" href="/private/css/group_css/group_info.css">
   <!-- Font awesome-->
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <!-- Bootstrap-->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
 </head>
+
 <body>
-  <header>
-    <div id="backButton"><p>Back</p><i class="fas fa-arrow-left"></i></div>
-    <p>Group Info</p>
-  </header>
-  <h3>#Group Code</h3>
+  <ul class="nav nav-pills nav-fill">
+    <li class="nav-item btn" id="back-button">
+        <a class="nav-link" aria-current="page" href="#">
+            <i class="fa fa-arrow-circle-left" id="back-icon"></i>
+            <span id="back">Back</span>
+        </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Group Info</a>
+  </li>
+</ul>
+
+
+  <h3 id="group_code">#Group Code</h3>
   <button id="eidt">Edit</button>
+
   <div id="group_info_content">
     <img src="/private/img/group_profile.png" alt="Group images" id="groupImg">
-    <p id="group_name">Group Name<span></span></p>
-    <div id="group_desc"></div>
+    <p id="group_name">Group Name</p>
+    <p id="group_desc"></p>
+  </div>
+
+  <div id="group_people">
+    <div id="group_leader_div">
+      <p id="group_leader_caption">Leader <p id="group_leader"></p> </p>
+      
+    </div>
     <div id="group_members">
-      <p>Members</p>
+      <div><p>Members</p></div>
     </div>
   </div>
+
+
   <footer>
     <button type="button" class="btn btnFoot btn_club"><i class="fas fa-users"></i></button>
     <button type="button" class="btn btnFoot btn_post"><i class="far fa-plus-square"></i></button>
     <button type="button" class="btn btnFoot btn_profile"><i class="fas fa-user-circle"></i></button>
   </footer>
+
+  <!-- firebase -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+
+
+  <!-- Link to the api keys for your firebase project -->
+  <script src="/private/database/firestore.js"></script>
+
+  <script src="/private/js/group_info.js"></script>
+
+
 </body>
+
 </html>
