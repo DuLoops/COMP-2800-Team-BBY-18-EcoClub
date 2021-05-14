@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
-    <!-- Font awesome-->
+    <link rel="stylesheet" href="/private/css/profile_css/profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/private/css/postdetail.css">
     <title>Document</title>
 </head>
 
@@ -23,36 +22,40 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Comments</a>
+            <a class="nav-link" href="#">Profile</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Group Info</a>
+            <a class="nav-link" href="#">Edit Profile</a>
         </li>
-    </ul><br>
-    <!-- <h2 class="name-user"></h2>
-    <div id="image"></div> -->
-    <div class="container">
-        <div class="heading-container"></div>
-        <div id="main-content-card">
-            <div class="current-rating-container">
-                <p id="current-rating"></p>
-            </div>
-            <div class="comment-container"></div>
-        </div>
-        </div>
-    <footer>
-        <input type="text" placeholder="Add a comment.." id="comment" class="inputClass">
-        <button type="button" class="btn btn-success" id="post-btn">Post</button>
-    </footer>
+    </ul>
+
+    <div id="userInfo">
+        <h1 class="name-user"></h1>
+        <h2 id="email-address">Email: <span class="email-user"></span></h2>
+        <h2 id="ecoPoints">Eco Points: <span class="points-user"></span></h2>
+    </div>
+
+    <div id="buttons">
+        <button type="button" class="btn btn-primary btn-lg" onclick="display()"><i class="fa fa-trophy" aria-hidden="true"></i> <span class="btn-text">Challenges</span></button>
+        <button type="button" class="btn btn-secondary btn-lg" onclick="display2()"><i class="fas fa-users"></i> <span class="btn-text">Groups</span></button>
+       
+     </div>
+
+
+    
+
+
+
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
-    <script src="../database/firestore.js"></script>
-    <script src="../html/postdetail.js"></script>
-    
+    <script src="/private/database/firestore.js"></script>
+    <script src="/private/database/profile.js"></script>
+
 </body>
 
 </html>
