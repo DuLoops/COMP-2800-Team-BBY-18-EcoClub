@@ -12,6 +12,10 @@ body {
     color: white;
 }
 
+#backButton {
+    background-color: #28a745; 
+}
+
 .nav-link {
     color: #003366;
     font-weight: bold;
@@ -46,12 +50,14 @@ body {
 
 #button {
     display: block;
-    margin: auto;   
+    margin: auto;  
+    background-color: #28a745; 
 }
 
 #Joinbutton {
     display: block;
     margin: auto; 
+    background-color: #28a745;
 }
 
 .createTeam {
