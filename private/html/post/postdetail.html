@@ -10,7 +10,11 @@
     <!-- Font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+<<<<<<< HEAD:private/html/postdetail.html
+    <link rel="stylesheet" href="/private/css/postdetail.css">
+=======
     <link rel="stylesheet" href="/private/css/post_css/postdetail.css">
+>>>>>>> dev:private/html/post/postdetail.html
     <title>Document</title>
 </head>
 
@@ -29,11 +33,20 @@
             <a class="nav-link" href="#">Group Info</a>
         </li>
     </ul><br>
-    <h2 class="name-user">Sazia Makkar</h2>
+    <!-- <h2 class="name-user"></h2>
+    <div id="image"></div> -->
+    <div class="container">
+        <div class="heading-container"></div>
+        <div id="main-content-card">
+            <div class="current-rating-container">
+                <p id="current-rating"></p>
+            </div>
+            <div class="comment-container"></div>
+        </div>
+        </div>
     <footer>
-        <button type="button" class="btn btnFoot btn_club"><i class="fas fa-users"></i></button>
-        <button type="button" class="btn btnFoot btn_post"><i class="far fa-plus-square"></i></button>
-        <button type="button" class="btn btnFoot btn_profile"><i class="fas fa-user-circle"></i></button>
+        <input type="text" placeholder="Add a comment.." id="comment" class="inputClass">
+        <button type="button" class="btn btn-success" id="post-btn">Post</button>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,7 +54,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+<<<<<<< HEAD:private/html/postdetail.html
+    <script src="../database/firestore.js"></script>
+    <script src="../html/postdetail.js"></script>
+    
+=======
     <script src="/private/database/firestore.js"></script>
+>>>>>>> dev:private/html/post/postdetail.html
 </body>
 
 </html>

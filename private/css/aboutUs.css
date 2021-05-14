@@ -1,0 +1,82 @@
+:root {
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
+  --yellow: #FBEEC1;
+  --green: #28a745;
+  /* bootstrap: -success */
+  --grey: #f7f7f7;
+}
+
+body{
+    background-color: #f7f7f7;
+    font-family: 'Lato', sans-serif;
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 1.3rem;
+}
+#app-name {
+    background-color: #4daf54 ;
+    width:50%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+
+    color: #FFE056;
+}
+
+#header {
+}
+
+#background {
+    /* background-color: rgba(40, 167, 69, 0.5); */
+    width: 100%;
+    height: 15rem;
+    position: relative;
+}
+
+#about {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#app-desc {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .member {
+    width: 95%;
+    border-radius: 50%;
+    margin-left: 15%;
+  }
+
+  .name {
+    margin-left: 7%;
+  }
+
+  #teamculture {
+    text-align: center;
+    font-size: 1.2rem;
+  }
