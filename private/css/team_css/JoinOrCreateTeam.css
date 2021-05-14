@@ -1,0 +1,67 @@
+body {
+    font-family: 'Noto Serif', serif;
+}
+
+#back-icon{
+    float: left;
+    font-size:24px;
+    color: white;
+}
+
+#back {
+    color: white;
+}
+
+.nav-link {
+    color: #003366;
+    font-weight: bold;
+}
+
+.box {
+    background-color: #E9E7E6;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.team {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 10px;
+}
+
+.box h5 {
+   text-align: center;
+   color: #003366;
+}
+
+#icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+#button {
+    display: block;
+    margin: auto;   
+}
+
+.createTeam {
+    padding-bottom: 20px;
+}
+
+#code {
+    width: 80%;
+    margin: auto;
+    margin-top: 25px;
+}
+
+#text {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 20px;
+    color: #003366;
+}
