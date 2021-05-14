@@ -17,9 +17,5 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 
-<<<<<<< HEAD
-  var storage = firebase.storage();
-=======
   //Reference to the storage service.
-  // var storage = firebase.storage();
->>>>>>> 2e9f16d1911b13cd4d6c63fa288dcea2b34a6a92
+  var storage = firebase.storage();
