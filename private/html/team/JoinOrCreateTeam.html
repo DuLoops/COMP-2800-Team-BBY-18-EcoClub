@@ -20,7 +20,7 @@
 <body>
   <ul class="nav nav-pills nav-fill">
     <li class="nav-item btn btn-success">
-      <a class="nav-link" aria-current="page" href="#">
+      <a class="nav-link" aria-current="page" href="/private/html/profile/getMoreInfo.html">
         <i class="fa fa-arrow-circle-left" id="back-icon"></i>
         <span id="back">Back</span>
       </a>
@@ -31,11 +31,12 @@
   </ul><br>
   <div class="box">
     <img src="/private/images/team.jpg" alt="image" class="team">
-    <h5>CREATE A TEAM</h5>
+    <h5>CREATE A Club</h5>
     <img src="/private/images/icon.png" alt="icon" id="icon">
     <hr>
     <div class="createTeam">
-      <button type="button" class="btn btn-success" id="button" onclick="location.href = '../Create_Group.html';">Create Team</button>
+      <a href="/private/html/team/Create_Group.html"><button type="button" class="btn btn-success" id="button">Create
+          Club</button></a>
     </div>
 
   </div>
@@ -46,13 +47,20 @@
     <input type="text" class="form-control" placeholder="Enter code" aria-describedby="basic-addon1" id="code">
     <hr>
     <div class="createTeam">
-      <button type="button" class="btn btn-success" id="button">Join Team</button>
+      <button type="button" class="btn btn-success" id="Joinbutton">Join Team</button>
     </div>
     <p id="text">Got a code to join a team? Enter it above</p>
 
   </div>
 
-  <!-- <script src="/private/js/JoinOrCreateTeam.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+
+  <script src="/private/database/firestore.js"></script>
+  <script src="/private/js/JoinOrCreateTeam.js"></script>
 </body>
 
 </html>

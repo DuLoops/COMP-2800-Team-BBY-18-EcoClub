@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Hind);
-
+:root {
+    --blue: #659DBD;
+    /*  bootstrap: -info*/
+    --yellow: #FBEEC1;
+    --green: #28a745;
+    /* bootstrap: -success */
+    --grey: #f7f7f7;
+  }
 body {
     font-family: 'Hind', sans-serif;
     height: 100%;
@@ -63,8 +70,8 @@ body {
 
 .img {
     float: left;
-    width: 5vw;
-    height: 5vw;
+    width: 10vw;
+    height: 10vw;
     margin-right: 2%;
 }
 
@@ -73,18 +80,27 @@ body {
     margin-top: 5vh;
 }
 
-.footer {
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #659DBD;
-    color: white;
+    background-color: var(--green);
     text-align: center;
-}
-
-.btnFoot {
+    padding: 3px 0;
+  }
+  
+  .btnFoot {
     width: 32%;
     height: 5vh;
-    background-color: rgb(75, 63, 63);
+    background-color: var(--green);
+    
+  }
+  
+  footer i{
+    font-size: 2.5rem;
+  }
+  
+  #comment{
+    height: 30vh;
 }

@@ -13,13 +13,9 @@
 	padding: 0;
 }
 
-.html,
-body {
-	height: 100%;
-}
 
 .post{
-  height: 100px;
+  min-height: 100px;
   width: 95%;
   margin-left:auto;
   margin-right: auto;
@@ -27,6 +23,7 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+/* footer */
 footer {
   position: fixed;
   left: 0;
@@ -40,7 +37,6 @@ footer {
 .btnFoot {
   width: 32%;
   height: 5vh;
-  background-color: rgb(75, 63, 63);
 }
 
 .btn_club {
@@ -51,22 +47,33 @@ footer i{
   font-size: 1.5rem;
 }
 
-#back-icon{
-  float: left;
-  font-size:24px;
-  color: white;
-
+/* nav */
+.nav{
+  width:100%;
 }
 
-#back {
-color: white;
+.feed_nav{
+  width:26%;
 }
 
-#back-button {
-  background-color: #28a745;
+.nav-btn{
+  height:50px;
+  border-radius: 5px;
 }
 
 .nav-link {
-color: black;
-font-weight: bold;
+  color: white;
+  font-weight: bold;
+}
+
+.feed-btn{
+  color: black;
+  font-weight: bold;
+}
+
+#feed_li_challenge{
+  margin-right: 0.3rem;
+}
+#back-button , #feed_li_challenge{
+  background-color: #28a745;
 }

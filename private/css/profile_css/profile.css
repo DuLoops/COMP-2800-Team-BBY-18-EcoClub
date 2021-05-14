@@ -34,7 +34,7 @@ body {
     font-size: 25px;
 }
 .clickable {
-    width: 200px;
+    width: 45%;
     color: white;
 }
 #back-icon{
@@ -43,8 +43,10 @@ body {
     color: white;
     
 }
-
-#back-button {
+#aboutUs{
+    margin-right: 0.8rem;
+}
+#back-button , #aboutUs{
     background-color: #28a745;
 }
 
@@ -98,3 +100,11 @@ footer {
   footer i{
     font-size: 1.5rem;
   }
+
+  #logout{
+     width: 20%;
+     display: block;
+     margin: auto;
+     color: white;
+  }
+  

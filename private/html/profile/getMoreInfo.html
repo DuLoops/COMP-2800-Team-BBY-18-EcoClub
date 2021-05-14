@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
-  <link rel="stylesheet" href="../css/getMoreInfo.css">
+  <link rel="stylesheet" href="/private/css/profile_css/getMoreInfo.css">
   <title>Document</title>
 </head>
 
@@ -25,7 +25,7 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="about" href="#">About you</a>
+      <a class="nav-link" id="about" href="#">Create your profile</a>
     </li>
   </ul><br>
   <h2 id="welcome">Welcome <span class="user-name"></span></h2>
@@ -40,6 +40,7 @@
   </div>
   <div id="btn-div">
     <button type="button" class="btn" id="add-button">Add</button>
+    <a href="/private/html/team/JoinOrCreateTeam.html"><button type="button" class="btn" id="next-button">Next</button></a>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -50,8 +51,8 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
 
 
-    <script src="../database/firestore.js"></script>
-  <script src="/private/database/getMoreInfo.js"></script>
+    <script src="/private/database/firestore.js"></script>
+  <script src="/private/js/getMoreInfo.js"></script>
 </body>
 
 </html>

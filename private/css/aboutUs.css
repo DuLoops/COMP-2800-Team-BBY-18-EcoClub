@@ -80,3 +80,12 @@ body{
     text-align: center;
     font-size: 1.2rem;
   }
+
+  .btn{
+    background-color: black;
+    color: white;
+    width: 30%;
+    height: 40px;
+    display: block;
+    margin: auto;
+  }
