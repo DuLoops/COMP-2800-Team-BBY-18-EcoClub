@@ -15,33 +15,44 @@
 
 <body>
     <ul class="nav nav-pills nav-fill">
-        <li class="nav-item btn" id="back-button">
-            <a class="nav-link" aria-current="page" href="#">
-                <i class="fa fa-arrow-circle-left" id="back-icon"></i>
-                <span id="back">Back</span>
-            </a>
-        </li>
         <li class="nav-item">
             <a class="nav-link profile-btn" href="#">Profile</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link profile-btn" href="#">Edit Profile</a>
+        <li class="nav-item btn" id="aboutUs">
+            <a class="nav-link" aria-current="page" href="/private/html/aboutUs.html">
+                
+                <span id="about">About Us</span>
+            </a>
         </li>
+        <li class="nav-item btn" id="back-button">
+            <a class="nav-link" aria-current="page" href="profile-edit.html">
+                
+                <span id="back">Edit Profile</span>
+            </a>
+        </li>
+        
     </ul>
 
     <div id="userInfo">
+        <div id="image"></div>
         <h1 class="name-user"></h1>
         <h2 id="email-address">Email: <span class="email-user"></span></h2>
         <h2 id="ecoPoints">Eco Points: <span class="points-user"></span></h2>
     </div>
 
     <div id="buttons">
-        <button type="button" class="btn btn-primary btn-lg clickable" onclick="display()"><i class="fa fa-trophy" aria-hidden="true"></i> <span class="btn-text">Challenges</span></button>
+        <button type="button" class="btn btn-dark btn-lg clickable" onclick="display()"><i class="fa fa-trophy" aria-hidden="true"></i> <span class="btn-text">Challenges</span></button>
         <button type="button" class="btn btn-secondary btn-lg clickable" onclick="display2()"><i class="fas fa-users"></i> <span class="btn-text">Groups</span></button>
      </div>
+     <div id="challenges-div"></div>
 
 
-    
+     <a href="/private/html/login/user-login.html"><button type="button" class="btn btn-dark btn_club" id="logout">Logout</button></a>
+     <footer>
+        <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+        <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
+        <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i class="fas fa-user-circle"></i></button>
+      </footer>
 
 
 
@@ -53,7 +64,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
     <script src="/private/database/firestore.js"></script>
-    <script src="/private/database/profile.js"></script>
+    <script src="/private/js/profile.js"></script>
+
+    <script src="/private/js/footer.js"></script>
 
 </body>
 

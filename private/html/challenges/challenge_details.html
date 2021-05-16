@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/challenge_details.css" />
+  <link rel="stylesheet" type="text/css" href="/private/css/challenges_css/challenge_details.css" />
 
   <!-- Font awesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -20,7 +20,7 @@
   <nav class="navbar navbar-default">
     <ul class="nav nav-pills nav-fill">
       <li class="nav-item btn btn-success">
-        <a class="nav-link" aria-current="page" href="#">
+        <a class="nav-link" aria-current="page" href="/private/html/challenges/eco_challenge_list.html">
           <i class="fa fa-arrow-circle-left" id="back-icon"></i>
           <span id="back">Back</span>
         </a>
@@ -50,12 +50,13 @@
       </div>
     </form>
   </div>
-  <div class="footer">
-    <button type="button" class="btn btnFoot">Group</button>
-    <button type="button" class="btn btnFoot">Post</button>
-    <button type="button" class="btn btnFoot">Icon</button>
-  </div>
-  <script src="../js/challenge_details.js"> </script>
+  <footer>
+    <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+    <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
+    <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i class="fas fa-user-circle"></i></button>
+  </footer>
+  <script src="/private/js/challenge_details.js"> </script>
+  <script src="/private/js/footer.js"></script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@
 <body>
   <ul class="nav nav-pills nav-fill">
     <li class="nav-item btn" id="back-button">
-        <a class="nav-link" aria-current="page" href="#">
+        <a class="nav-link" aria-current="page" href="group_feed.html">
             <i class="fa fa-arrow-circle-left" id="back-icon"></i>
             <span id="back">Back</span>
         </a>
@@ -35,7 +35,7 @@
   <button id="eidt">Edit</button>
 
   <div id="group_info_content">
-    <img src="/private/img/group_profile.png" alt="Group images" id="groupImg">
+    <img src="/private/images/join.jpg" alt="Group images" id="groupImg">
     <p id="group_name">Group Name</p>
     <p id="group_desc"></p>
   </div>
@@ -52,9 +52,9 @@
 
 
   <footer>
-    <button type="button" class="btn btnFoot btn_club"><i class="fas fa-users"></i></button>
-    <button type="button" class="btn btnFoot btn_post"><i class="far fa-plus-square"></i></button>
-    <button type="button" class="btn btnFoot btn_profile"><i class="fas fa-user-circle"></i></button>
+    <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+    <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
+    <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i class="fas fa-user-circle"></i></button>
   </footer>
 
   <!-- firebase -->
@@ -70,6 +70,7 @@
 
   <script src="/private/js/group_info.js"></script>
 
+  <script src="/private/js/footer.js"></script>
 
 </body>
 
