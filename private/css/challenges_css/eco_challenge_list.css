@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Hind);
+
 :root {
   --blue: #659DBD;
   /*  bootstrap: -info*/
@@ -8,21 +8,27 @@
   --grey: #f7f7f7;
 }
 body {
-  font-family: 'Hind', sans-serif;
   height: 100%;
   margin: 0%;
+  padding: 1rem;
 }
 
-#back-icon {
-  color: white;
-  font-size: 5vw;
+#back-icon{
+  float: left;
+  font-size:3rem;
+  color: black;
 }
 
 #back {
-  color: white;
-  font-size: 5vw;
-  padding-left: 10%;
+  color: black;
+  padding-left: 0.8rem;
+  font-size: 1.8rem;
 }
+
+#heading {
+  text-align: center;
+}
+
 
 .name {
   text-align: center;

@@ -77,3 +77,12 @@ footer i{
 #back-button , #feed_li_challenge{
   background-color: #28a745;
 }
+
+#appName {
+  color: #28a745;
+}
+
+#links {
+  color: black;
+  font-weight: normal;
+}
