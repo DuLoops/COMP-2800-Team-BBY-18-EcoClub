@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>Document</title>
+    <link rel="stylesheet" href="/private/css/main.css">
+</head>
+
+<body>
+    <h1 id="welcome">Welcome, <span id="userName"></span></h1><br>
+    <div id="cards">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Build your profile</h5>
+                <p class="card-text">Add a profile picture and a short bio about yourself</p>
+                <a href="#" class="btn btn-success">Create profile</a>
+            </div>
+        </div><br>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Join or Create a Team</h5>
+                <p class="card-text">Be a part of a team to take eco challenges and earn ecoPoints. Share your views and inspire your team mates</p>
+                <a href="#" class="btn btn-success">Click here</a>
+            </div>
+        </div><br>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">About Us</h5>
+                <p class="card-text">Know about EcoClub and the app developers</p>
+                <a href="#" class="btn btn-success">Meet our Team</a>
+            </div>
+        </div>
+    </div>
+
+    <img src="/private/images/eco.webp" id="eco">
+   
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    <script src="/private/database/firestore.js"></script>
+    <script src="/private/js/main.js"></script>
+</body>
+
+</html>
