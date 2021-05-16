@@ -88,3 +88,7 @@ body {
     height: 5vh;
     background-color: rgb(75, 63, 63);
 }
+
+#comment{
+    height: 25vh;
+}
