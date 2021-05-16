@@ -10,10 +10,8 @@
 body{
     background-color: #f7f7f7;
     font-family: 'Lato', sans-serif;
-    background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     font-size: 1.3rem;
+    padding: 1rem;
 }
 #app-name {
     background-color: #4daf54 ;
@@ -23,11 +21,6 @@ body{
     text-align: center;
     border-radius: 5px;
     padding: 5px;
-
-    color: #FFE056;
-}
-
-#header {
 }
 
 #background {
@@ -42,6 +35,7 @@ body{
     top: 6%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-weight: bold;
 }
 
 #app-desc {
@@ -53,14 +47,14 @@ body{
     font-weight: bold;
   }
 
-.column {
+.column-image{
     float: left;
-    width: 33.33%;
+    width: 50%;
     padding: 15px;
   }
   
   /* Clearfix (clear floats) */
-  .row::after {
+  .row-image::after {
     content: "";
     clear: both;
     display: table;
@@ -82,10 +76,13 @@ body{
   }
 
   .btn{
-    background-color: black;
-    color: white;
-    width: 30%;
+    background-color: #4daf54;
+    width: 43%;
     height: 40px;
     display: block;
     margin: auto;
+  }
+
+  a{
+    text-decoration: none;
   }

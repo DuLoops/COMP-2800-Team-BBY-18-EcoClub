@@ -10,13 +10,16 @@
   <link rel="stylesheet" href="/private/css/group_css/group.css">
   <!-- Font awesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- Bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
 
-<ul class="nav nav-pills nav-fill">
+<!-- <ul class="nav nav-pills nav-fill">
   <li class="nav-item feed_nav">
       <a class="nav-link feed-btn" href="#">Feed</a>
   </li>
@@ -30,8 +33,22 @@
         <span id="feed_edit">Club Info</span>
     </a>
 </li>
-</ul>
+</ul> -->
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" id="appName" href="#">EcoStars</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Group Feed<span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link " id="links" href="/private/html/challenges/eco_challenge_list.html">Eco Challenges</a>
+      <a class="nav-item nav-link" id="links"  href="/private/html/group/group_info.html">Group Info</a>
+      <a class="nav-item nav-link" id="links" href="/private/html/login/user-login.html">Log out</a>
+    </div>
+  </div>
+</nav>
 
   <div id="feed_content">
     <p>Welcome to the club!</p>

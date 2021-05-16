@@ -1,0 +1,20 @@
+body{
+    padding: 1rem;
+}
+
+#welcome{
+    padding-top: 0.5rem;
+    text-align:center ;
+    line-height: 0%;
+}
+
+.card{
+    margin: auto;
+}
+
+#eco{
+    width: 50%;
+    height: 6rem;
+    display: block;
+    margin: auto;
+}

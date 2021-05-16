@@ -1,3 +1,7 @@
+body {
+    font-family: 'Noto Serif', serif;
+}
+
 #buttons {
     margin-top: 40px;
 }
@@ -7,21 +11,25 @@
 }
 #back-icon{
     float: left;
-    font-size:24px;
-    color: white;
-    
+    font-size:2rem;
+    color: black;
 }
 
+#back {
+    color: black;
+    padding-left: 0.4rem;
+    font-size: 1.2rem;
+}
 #back-button {
     background-color: #28a745;
 }
 
-.nav-link {
-    font-weight: bold;
+#heading {
+    text-align: center;
 }
 
-#back {
-    color: white;
+.nav-link {
+    font-weight: bold;
 }
 
 #about {
@@ -35,6 +43,7 @@
 
 .heading1 {
     font-size: 1.5rem;
+    color: #003366;
 }
 
 #add-post, .mb-3 {

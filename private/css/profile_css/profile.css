@@ -100,11 +100,12 @@ footer {
   footer i{
     font-size: 1.5rem;
   }
-
-  #logout{
-     width: 20%;
-     display: block;
-     margin: auto;
-     color: white;
+  
+  #appName {
+    color: #28a745;
   }
   
+  #links {
+    color: black;
+    font-weight: normal;
+  }
