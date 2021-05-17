@@ -153,6 +153,7 @@ function uploadUserProfilePic() {
                             // });
                             // console.log("id: ", id);
                             var post_desc = document.getElementById("post-desc").value;
+                            console.log("WORKING");
                             db.collection("groups").doc("example").collection("posts").add({
                                 "postPic": url,
                                 "desc": post_desc
