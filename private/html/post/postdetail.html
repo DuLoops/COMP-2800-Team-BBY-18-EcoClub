@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="/private/css/post_css/postdetail.css">
-    <title>Document</title>
-</head>
+    <title>EcoClub</title>
+    <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png"/>
+  </head>
 
 <body>
     <ul class="nav nav-pills nav-fill">
@@ -29,19 +30,32 @@
             <a class="nav-link" href="#">Group Info</a>
         </li>
     </ul><br>
-    <h2 class="name-user">Sazia Makkar</h2>
-    <footer>
-        <button type="button" class="btn btnFoot btn_club"><i class="fas fa-users"></i></button>
-        <button type="button" class="btn btnFoot btn_post"><i class="far fa-plus-square"></i></button>
-        <button type="button" class="btn btnFoot btn_profile"><i class="fas fa-user-circle"></i></button>
-    </footer>
-
+    <!-- <h2 class="name-user"></h2>
+    <div id="image"></div> -->
+    <div class="container">
+        <div class="heading-container"></div>
+        <div id="main-content-card">
+            <div class="current-rating-container">
+                <p id="current-rating"></p>
+            </div>
+            <div class="comment-container"></div>
+        </div>
+        </div>
+        <footer>
+            <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+            <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
+            <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i class="fas fa-user-circle"></i></button>
+          </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
     <script src="/private/database/firestore.js"></script>
+
+    <script src="/private/js/postdetail.js"></script>
+
+    <script src="/private/js/footer.js"></script>
 </body>
 
 </html>

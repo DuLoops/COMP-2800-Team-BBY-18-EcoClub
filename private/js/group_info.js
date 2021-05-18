@@ -22,7 +22,7 @@ docRef.get().then((doc) => {
     console.log("Error getting document:", error);
 });
 
-function getGroupID(userID) {
+function getGroupID() {
   var groupID;
   db.collection("users")
   .doc(getUserId())

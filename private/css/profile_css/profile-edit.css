@@ -1,0 +1,84 @@
+:root {
+    --blue: #659DBD;
+    /*  bootstrap: -info*/
+    --yellow: #FBEEC1;
+    --green: #28a745;
+    /* bootstrap: -success */
+    --grey: #f7f7f7;
+  }
+  
+
+body {
+    font-size: 25px;
+}
+
+#buttons {
+    margin-top: 40px;
+}
+
+.btn-text{
+    font-size: 25px;
+}
+#back-icon{
+    float: left;
+    font-size:2rem;
+    color: black;
+  }
+  
+  #back {
+    color: black;
+    padding-left: 0.8rem;
+    font-size: 1.4rem;
+  }
+  
+  #heading {
+    text-align: center;
+  }
+
+
+#back-button {
+    background-color: #28a745;
+}
+
+#head{
+    color: black;
+}
+
+#btn-div {
+    padding: 1rem;
+    margin-left: 9rem;
+}
+
+#done-button {
+    background-color: #28a745;
+    color: white;
+    width: 5rem
+}
+
+.mb-3{
+    text-align: center;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--green);
+    text-align: center;
+    padding: 3px 0;
+  }
+  
+  .btnFoot {
+    width: 32%;
+    height: 5vh;
+    
+  }
+  
+  .btn_profile {
+    background-color: rgba(0, 0 ,0 , 0.2) !important;
+  }
+  
+  footer i{
+    font-size: 1.5rem;
+  }

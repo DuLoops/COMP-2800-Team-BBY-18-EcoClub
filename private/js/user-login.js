@@ -19,16 +19,20 @@ var uiConfig = {
                 db.collection("users").doc(user.uid).set({ //write to firestore
                         name: user.displayName, //"users" collection
                         email: user.email, //with authenticated user's ID (user.uid)
-                        ecopoint: "0"
+                        ecopoint: "0",
+                        profilePic: "link",
+                        bio: "bio"
                     })
                     .then(function () {
                         console.log("New user added to firestore");
                         window.location.assign(
-                            "../profile/profile-main.html"); //re-direct to main.html after signup
+                            "/private/html/main.html"); //re-direct to main.html after signup
                     })
                     .catch(function (error) {
                         console.log("Error adding new user: " + error);
                     });
+
+                    
             } else {
                 return true;
             }
@@ -37,7 +41,7 @@ var uiConfig = {
     },
     // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
     signInFlow: 'popup',
-    signInSuccessUrl: '../profile/profile-main.html',
+    signInSuccessUrl: '/private/html/main.html',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
         // firebase.auth.GoogleAuthProvider.PROVIDER_ID,

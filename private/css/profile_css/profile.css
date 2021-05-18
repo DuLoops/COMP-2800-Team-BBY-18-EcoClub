@@ -1,11 +1,18 @@
+:root {
+    --blue: #659DBD;
+    /*  bootstrap: -info*/
+    --yellow: #FBEEC1;
+    --green: #28a745;
+    /* bootstrap: -success */
+    --grey: #f7f7f7;
+  }
+
 body {
     font-family: 'Noto Serif', serif;
 }
 
 #userInfo {
     margin-top: 22px;
-    border: 1px solid black;
-    
 }
 
 #ecoPoints, #email-address{
@@ -27,15 +34,19 @@ body {
     font-size: 25px;
 }
 .clickable {
-    width: 200px;
+    width: 45%;
+    color: white;
 }
 #back-icon{
     float: left;
     font-size:24px;
+    color: white;
     
 }
-
-#back-button {
+#aboutUs{
+    margin-right: 0.8rem;
+}
+#back-button , #aboutUs{
     background-color: #28a745;
 }
 
@@ -48,3 +59,53 @@ body {
     color: black;
     font-weight: bold;
 }
+
+#challenges-div{
+   padding: 1.2rem;
+    
+}
+.challenge-desc {
+    background-color: lightblue;
+}
+
+#challenge-title{
+    float: left;
+}
+
+#ecopoints{
+    float: right;
+}
+
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--green);
+    text-align: center;
+    padding: 3px 0;
+  }
+  
+  .btnFoot {
+    width: 32%;
+    height: 5vh;
+    
+  }
+  
+  .btn_profile {
+    background-color: rgba(0, 0 ,0 , 0.2) !important;
+  }
+  
+  footer i{
+    font-size: 1.5rem;
+  }
+  
+  #appName {
+    color: #28a745;
+  }
+  
+  #links {
+    color: black;
+    font-weight: normal;
+  }

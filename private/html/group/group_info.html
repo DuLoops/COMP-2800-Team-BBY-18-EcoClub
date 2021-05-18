@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Group Info</title>
+  <title>EcoClub</title>
+  <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png"/>
 
   <!-- CSS-->
   <link rel="stylesheet" href="/private/css/group_css/group_info.css">
@@ -20,23 +21,23 @@
 <body>
   <ul class="nav nav-pills nav-fill">
     <li class="nav-item btn" id="back-button">
-        <a class="nav-link" aria-current="page" href="#">
+        <a class="nav-link" aria-current="page" href="group_feed.html">
             <i class="fa fa-arrow-circle-left" id="back-icon"></i>
             <span id="back">Back</span>
         </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Group Info</a>
+      <a class="nav-link" href="#">Club Info</a>
   </li>
 </ul>
 
 
-  <h3 id="group_code">#Group Code</h3>
+  <h3 id="group_code">#Club Code</h3>
   <button id="eidt">Edit</button>
 
   <div id="group_info_content">
-    <img src="/private/img/group_profile.png" alt="Group images" id="groupImg">
-    <p id="group_name">Group Name</p>
+    <img src="/private/images/join.jpg" alt="Group images" id="groupImg">
+    <p id="group_name">Club Name</p>
     <p id="group_desc"></p>
   </div>
 
@@ -52,9 +53,9 @@
 
 
   <footer>
-    <button type="button" class="btn btnFoot btn_club"><i class="fas fa-users"></i></button>
-    <button type="button" class="btn btnFoot btn_post"><i class="far fa-plus-square"></i></button>
-    <button type="button" class="btn btnFoot btn_profile"><i class="fas fa-user-circle"></i></button>
+    <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+    <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
+    <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i class="fas fa-user-circle"></i></button>
   </footer>
 
   <!-- firebase -->
@@ -70,6 +71,7 @@
 
   <script src="/private/js/group_info.js"></script>
 
+  <script src="/private/js/footer.js"></script>
 
 </body>
 

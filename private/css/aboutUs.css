@@ -1,0 +1,88 @@
+:root {
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
+  --yellow: #FBEEC1;
+  --green: #28a745;
+  /* bootstrap: -success */
+  --grey: #f7f7f7;
+}
+
+body{
+    background-color: #f7f7f7;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+#app-name {
+    background-color: #4daf54 ;
+    width:50%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#background {
+    /* background-color: rgba(40, 167, 69, 0.5); */
+    width: 100%;
+    height: 15rem;
+    position: relative;
+}
+
+#about {
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+
+#app-desc {
+    position: absolute;
+    top: 25%;
+    left: 2%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+.column-image{
+    float: left;
+    width: 50%;
+    padding: 15px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row-image::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .member {
+    width: 95%;
+    border-radius: 50%;
+    margin-left: 15%;
+  }
+
+  .name {
+    margin-left: 7%;
+  }
+
+  #teamculture {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .btn{
+    background-color: #4daf54;
+    width: 43%;
+    height: 40px;
+    display: block;
+    margin: auto;
+  }
+
+  a{
+    text-decoration: none;
+  }

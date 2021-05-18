@@ -16,7 +16,7 @@ async function myFunction() {
     });
     var groupCode = str1.concat(length.toString());
 
-    docRef.set({
+    await docRef.set({
         groupName: group_name,
         groupCode: groupCode,
         desc: group_description,
@@ -25,7 +25,7 @@ async function myFunction() {
     });
 
 
-
+    window.location.href= "/private/html/group/group_feed.html";
 
     // firebase.auth().onAuthStateChanged(function (user) {
     //     db.collection("groups").doc(docRef.id).add();

@@ -1,23 +1,32 @@
-@import url(https://fonts.googleapis.com/css?family=Hind);
-
+:root {
+    --blue: #659DBD;
+    /*  bootstrap: -info*/
+    --yellow: #FBEEC1;
+    --green: #28a745;
+    /* bootstrap: -success */
+    --grey: #f7f7f7;
+  }
 body {
-    font-family: 'Hind', sans-serif;
-    height: 100%;
-    margin: 0%;
+    padding: 1rem;
 }
 
 
 
-#back-icon {
-    color: white;
-    font-size: 5vw;
-}
-
-#back {
-    color: white;
-    font-size: 5vw;
-    padding-left: 10%;
-}
+#back-icon{
+    float: left;
+    font-size:3rem;
+    color: black;
+  }
+  
+  #back {
+    color: black;
+    padding-left: 0.8rem;
+    font-size: 1.8rem;
+  }
+  
+  #heading {
+    text-align: center;
+  }
 
 .name {
     text-align: center;
@@ -63,32 +72,38 @@ body {
 
 .img {
     float: left;
-    width: 5vw;
-    height: 5vw;
+    width: 10vw;
+    height: 10vw;
     margin-right: 2%;
 }
 
 #btn {
     margin: 0%;
     margin-top: 5vh;
+    background-color: var(--green);
 }
 
-.footer {
+footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #659DBD;
-    color: white;
+    background-color: var(--green);
     text-align: center;
-}
-
-.btnFoot {
+    padding: 3px 0;
+  }
+  
+  .btnFoot {
     width: 32%;
     height: 5vh;
-    background-color: rgb(75, 63, 63);
-}
-
-#comment{
-    height: 25vh;
+    background-color: var(--green);
+    
+  }
+  
+  footer i{
+    font-size: 2.5rem;
+  }
+  
+  #comment{
+    height: 30vh;
 }
