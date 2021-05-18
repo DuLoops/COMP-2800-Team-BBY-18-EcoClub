@@ -98,3 +98,8 @@ footer {
   .card {
     font-size: 1.5rem;
   }
+  #mypic-goes-here{
+    width: 50%;
+    display: block;
+    margin: auto;
+}

@@ -19,7 +19,7 @@ function uploadUserProfilePic(e) {
         updating.innerHTML = "Updating..";
         document.body.appendChild(updating); 
         //store using this name
-          var storageRef = storage.ref("images/" + user.uid + ".jpg"); 
+          var storageRef = storage.ref("profile/" + user.uid + ".jpg"); 
                 
           //upload the picked file
               storageRef.put(file) 
