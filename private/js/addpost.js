@@ -1,48 +1,40 @@
-document.getElementById("button").addEventListener("click", uploadUserProfilePic);
-function uploadUserProfilePic() {
-    // Let's assume my storage is only enabled for authenticated users 
-    // This is set in your firebase console storage "rules" tab
+document.getElementById("button").addEventListener('click', uploadUserProfilePic);
+document.getElementById("mypic-input").addEventListener('change', uploadOnClick);
+let file;
+function uploadOnClick(e) {
 
+     file = e.target.files[0];
+     const image = document.getElementById("mypic-goes-here"); // pointer #2
+     var blob = URL.createObjectURL(file);
+     image.src = blob;            // display this image
+}
+
+function uploadUserProfilePic(e) {
     firebase.auth().onAuthStateChanged(function (user) {
-        var fileInput = document.getElementById("mypic-input");   // pointer #1
-        const image = document.getElementById("mypic-goes-here"); // pointer #2
-
-        // listen for file selection
-        fileInput.addEventListener('change', function (e) {
-            var file = e.target.files[0];
-            var blob = URL.createObjectURL(file);
-            image.src = blob;            // display this image
-
-            //store using this name
-            var storageRef = storage.ref("images/" + user.uid + ".jpg"); 
-            
-            //upload the picked file
-            storageRef.put(file) 
-                .then(function(){
-                    console.log('Uploaded to Cloud Storage.');
-                })
-
-						//get the URL of stored file
-            storageRef.getDownloadURL()
-                .then(function (url) {   // Get URL of the uploaded file
-                    console.log(url);    // Save the URL into users collection
-                    db.collection("groups").doc("example").collection("posts").add({
-                      "postPic": url
-                   })
+        //store using this name
+          var storageRef = storage.ref("images/" + user.uid + ".jpg"); 
+                
+          //upload the picked file
+              storageRef.put(file) 
                     .then(function(){
-                        console.log('Added Profile Pic URL to Firestore.');
-                    })
-                })
-        })
+                         console.log('Uploaded to Cloud Storage.');
+                 })
+    
+                             //get the URL of stored file
+                 storageRef.getDownloadURL()
+                     .then(function (url) {   // Get URL of the uploaded file
+                         console.log(url);    // Save the URL into users collection
+                         db.collection("users").doc(user.uid).get().then(function(doc){
+                             var groupId = doc.data().group;
+                             var groupDesc = document.getElementById("post-desc").value;
+                             db.collection("groups").doc(groupId).collection("posts").add({
+                                 "postPic": url,
+                                 "groupDesc": groupDesc
+                             })
+                         })
+                         .then(function(){
+                             console.log('Added Profile Pic URL to Firestore.');
+                         })
+                     })
     })
 }
-// uploadUserProfilePic();
-
-// function addDescription() {
-//     firebase.auth().onAuthStateChanged(function (user) {
-//         var desc = document.getElementById("post-desc").value;
-//         db.collection("groups").doc("example").collection("posts").add({
-//             "desc": desc
-//          })
-//     })
-// }
