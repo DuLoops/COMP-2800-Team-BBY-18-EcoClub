@@ -11,6 +11,7 @@ function sayName() {
                     var points = doc.data().ecopoint;
                     var email = doc.data().email;
                     var picUrl = doc.data().profilePic; 
+                    var groupID = doc.data().group;
                     // var groupId = doc.data().group;
                     console.log(picUrl);
                     // $("#image").append("<img src='" + picUrl + "'>")
@@ -21,7 +22,7 @@ function sayName() {
                     } else {
                         $(".name-user").html("EcoClub User");
                     }
-                    db.collection("groups").doc("example").get()
+                    db.collection("groups").doc(groupID).get()
                 .then(function(doc){
                     var teamName = doc.data().groupName;
                     var teamDesc = doc.data().desc
@@ -60,9 +61,21 @@ document.getElementById("leaveTeam").addEventListener("click", leaveTeam);
 function leaveTeam(){
     firebase.auth().onAuthStateChanged(function (somebody) {
         if (somebody) {
-            db.collection("users").doc("somebody.uid").update({
+            db.collection("users").doc(somebody.uid).update({
                 group : ""
             })
+            // db.collection("users")
+            // .doc(somebody.uid)
+            // // Read
+            // .get()
+            // .then(function (doc) {
+            //     var groupID = doc.data().group;
+            //     db.collection("groups").doc(groupID).update(
+            //         'members', Firestore.FieldValue.arrayRemove(somebody.uid)
+            //     ).then(() => {
+            //         return documentRef.get();
+            //       })
+            // })
         } else {
             console.log("Invlaid");
         }
