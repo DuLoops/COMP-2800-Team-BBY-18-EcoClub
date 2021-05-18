@@ -16,14 +16,15 @@
 
 <body>
 
-  <div id="add-post">
-    <label for="formFileLg" class="form-label">Select a picture</label>
-    <input class="form-control form-control-lg" id="formFileLg" type="file">
+  <div class="container text-center py-3">
+    <img id="mypic-goes-here" src="" width=50 height=50 />
+    <input type="file" id="mypic-input" accept="images/*" />
   </div>
   <div class="mb-3">
     <label for="exampleFormControlTextarea1" class="form-label">Add a description</label>
     <input type="text" placeholder="Say something... " id="post-desc" class="inputClass">
   </div>
+
   <button type="button" class="btn" id="button">Post</button>
   <img id="ecoicon" src="/private/images/ecoicon.png" alt="eco icon">
   <footer>
