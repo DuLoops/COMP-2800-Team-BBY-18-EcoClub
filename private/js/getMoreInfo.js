@@ -47,6 +47,7 @@ function uploadUserProfilePic() {
                     })
             }
             handleFileSelect();
+            setTimeout(function() { location.replace("/private/html/main.html") }, 2000);
 
     })
 }
