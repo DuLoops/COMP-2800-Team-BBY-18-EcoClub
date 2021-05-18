@@ -1,21 +1,31 @@
 // post group feed
 function getPosts() {
   document.getElementById("feed_content").innerHTML = "";
-
-  db.collection("groups")
-    .doc(getGroupID())
-    // .doc(getGroupID())
-    .collection("posts")
-    .get()
-    .then(function (snap) {
-      snap.forEach(function (doc) {
-        var desc = doc.data().desc;
-        var poster = doc.data().poster;
-        var picURL = doc.data().postPic;
-        console.log("int the main func ------ " + getPosterInfo(poster));
-        document.getElementById("feed_content").innerHTML += "<div class='post'>" + getPosterInfo(poster) + "<p class='post_desc'>" + desc + "</p></div>";
-      });
-    });
+  firebase.auth().onAuthStateChanged(function (user) {
+    db.collection("users")
+      .doc(user.uid)
+      .get().then(function (doc) {
+        var groupID = doc.data().group;
+        console.log(groupID);
+        db.collection("groups")
+          .doc(groupID)
+          // .doc(getGroupID())
+          .collection("posts")
+          .get()
+          .then(function (snap) {
+            snap.forEach(function (doc) {
+              console.log("work");
+              var description = doc.data().groupDesc;
+              console.log(description);
+              // var poster = doc.data().poster;
+              // // var picURL = doc.data().postPic;
+              // console.log("int the main func ------ " + getPosterInfo(poster));
+              document.getElementById("feed_content").innerHTML += "<div class='post'>" + "<p class='post_desc'>" + description + "</p></div>";
+            });
+          });
+        // return groupID;
+      })
+  })
 }
 getPosts();
 
