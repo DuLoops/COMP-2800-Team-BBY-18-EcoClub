@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Hind);
+
 
 :root {
   -blue: #659DBD;
@@ -7,49 +7,28 @@
 }
 
 body {
-  font-family: 'Hind', sans-serif;
+  font-family: 'Noto Serif', serif;
   height: 100%;
   margin: 0%;
 }
 
-#body {
-  font-size: 25px;
-}
 
-#buttons {
-  margin-top: 40px;
-}
-
-.btn-text{
-  font-size: 25px;
-}
 #back-icon{
   float: left;
-  font-size:24px;
-  color: white;
-  
-}
-
-#back-button {
-  background-color: #28a745;
-}
-
-.nav-link {
-  font-weight: bold;
-}
-
-#back {
-  color: white;
-}
-
-#head{
+  font-size:2rem;
   color: black;
 }
 
-#btn-div {
-  padding: 1rem;
-  margin-left: 9rem;
+#back {
+  color: black;
+  padding-left: 0.4rem;
+  font-size: 1.2rem;
 }
+
+#heading {
+  text-align: center;
+}
+
 
 .name {
   text-align: center;
@@ -75,6 +54,8 @@ body {
 #btn {
   margin: 0%;
   margin-top: 10%;
+  background-color: #28a745;
+
 }
 
 .img {

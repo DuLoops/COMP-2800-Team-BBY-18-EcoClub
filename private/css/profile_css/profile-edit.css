@@ -21,21 +21,23 @@ body {
 }
 #back-icon{
     float: left;
-    font-size:24px;
-    color: white;
-    
-}
+    font-size:2rem;
+    color: black;
+  }
+  
+  #back {
+    color: black;
+    padding-left: 0.8rem;
+    font-size: 1.4rem;
+  }
+  
+  #heading {
+    text-align: center;
+  }
+
 
 #back-button {
     background-color: #28a745;
-}
-
-.nav-link {
-    font-weight: bold;
-}
-
-#back {
-    color: white;
 }
 
 #head{
