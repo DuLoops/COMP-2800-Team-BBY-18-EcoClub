@@ -45,7 +45,21 @@ body {
     font-size: 1.5rem;
     color: #003366;
 }
-
+.py-3{
+    font-size: 1.5rem;
+    width: 80%;
+    margin: auto;
+}
+#mypic-goes-here{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+.mb-3 {
+    font-size: 1.5rem;
+    width: 80%;
+    margin: auto;
+}
 #add-post, .mb-3 {
     padding: 1rem;
 }
@@ -65,3 +79,31 @@ body {
     color: white;
     width: 5rem
 }
+
+.text{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid black;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

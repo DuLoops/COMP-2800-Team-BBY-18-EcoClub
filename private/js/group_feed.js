@@ -3,7 +3,7 @@ function getPosts() {
   document.getElementById("feed_content").innerHTML = "";
 
   db.collection("groups")
-    .doc("example")
+    .doc(getGroupID())
     // .doc(getGroupID())
     .collection("posts")
     .get()
@@ -12,7 +12,7 @@ function getPosts() {
         var desc = doc.data().desc;
         var poster = doc.data().poster;
         var picURL = doc.data().postPic;
-        console.log("int the main func ------ "  + getPosterInfo(poster));
+        console.log("int the main func ------ " + getPosterInfo(poster));
         document.getElementById("feed_content").innerHTML += "<div class='post'>" + getPosterInfo(poster) + "<p class='post_desc'>" + desc + "</p></div>";
       });
     });
@@ -20,26 +20,31 @@ function getPosts() {
 getPosts();
 
 function getGroupID() {
-  var groupID;
-  db.collection("users")
-    .doc(getUserID())
-    .get().then((doc) => {
-      groupID = doc.data().group;
-    })
-  return groupID;
+  firebase.auth().onAuthStateChanged(function (user) {
+    db.collection("users")
+      .doc(user.uid)
+      .get().then(function (doc) {
+        var groupID = doc.data().group;
+        console.log(groupID);
+        return groupID;
+      })
+  })
+
 }
 
-function getUserID() {
-  var user = firebase.auth().currentUser;
-  return user.uid;
-}
+// function getUserID() {
+//   firebase.auth().onAuthStateChanged(function (user){
+//     console.log(user.uid);
+//     return user.uid;
+//   })
+// }
 
 function getPosterInfo(userID) {
   var user_member = db.collection("users").doc(userID);
   // console.log(member);
   user_member.get().then((doc) => {
     if (doc.exists) {
-      
+
       var userName = doc.data().name;
       var userPofile = doc.data().profilePic;
       var returnString = "<div class='post_poster'>" + userName + "</div>"
@@ -48,8 +53,7 @@ function getPosterInfo(userID) {
     } else {
       // doc.data() will be undefined in this case
       console.log("Cannot find the user");
-    }
-    ;
+    };
   }).catch((error) => {
     console.log("Error getting document:", error);
   });
