@@ -21,6 +21,9 @@ function createGrid() {
 
                 complete.click(function () {
                     console.log(doc.id);
+                    db.collection("users").doc("example").collection("user-challenges").doc(doc.id).update({
+                        isCompleted: true
+                    });
                 });
                 Delete.click(async function () {
                     await db.collection("users").doc("example")
@@ -31,10 +34,6 @@ function createGrid() {
                         });
                     window.location.reload();
                 });
-
-
-
-
                 div.append(title);
                 div.append(complete);
                 div.append(Delete);
