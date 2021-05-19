@@ -114,57 +114,62 @@
 //                 })
 //             }
 
+var imageURL;
+
 document.getElementById("button").addEventListener("click", uploadUserProfilePic);
+
 function uploadUserProfilePic() {
     console.log("Working");
     // Let's assume my storage is only enabled for authenticated users 
     // This is set in your firebase console storage "rules" tab
 
     firebase.auth().onAuthStateChanged(function (user) {
-            // pointer #1
-            const image = document.getElementById("mypic"); // pointer #2
-            console.log("Working");
-           
-            // listen for file selection
+        // pointer #1
+        const image = document.getElementById("mypic"); // pointer #2
+        console.log("Working");
 
-            function handleFileSelect() {
-                var file = document.getElementById('formFileLg').value;
-                
+        // listen for file selection
 
-                //store using this name
-                var storageRef = storage.ref("images/" + user.uid);
+        function handleFileSelect() {
+            var file = document.getElementById('formFileLg').value;
 
-                //upload the picked file
-                storageRef.put(file)
-                    .then(function () {
-                        console.log('Uploaded to Cloud Storage.');
-                    })
+            //store using this name
+            var storageRef = storage.ref("images/" + user.uid);
 
-                    console.log( storageRef.getDownloadURL());
-                //get the URL of stored file
-                storageRef.getDownloadURL()
-                    .then(function (url) { // Get URL of the uploaded file
-                        console.log(url); // Save the URL into users collection
-                        async function myFunction() {
-                           
-                            // var id;
-                            // await db.collection("groups").doc("example").collection("posts").get().then(function (querySnapshot) {
-                            //     id = querySnapshot.size;
-                            // });
-                            // console.log("id: ", id);
-                            var post_desc = document.getElementById("post-desc").value;
-                            db.collection("groups").doc("example").collection("posts").add({
-                                "postPic": url,
-                                "desc": post_desc
-                            })
-                            .then(function () {
-                                console.log('Added Profile Pic URL to Firestore.');
-                            })
-                        }
-                        myFunction();
-                    })
-            }
-            handleFileSelect();
+            //upload the picked file
+            storageRef.put(file)
+                .then(function () {
+                    console.log('Uploaded to Cloud Storage.');
+                })
+
+            console.log(storageRef.getDownloadURL());
+            //get the URL of stored file
+            storageRef.getDownloadURL()
+                .then(function (url) { // Get URL of the uploaded file
+                    // Save the URL into users collection
+                    imageURL = url;
+                    console.log(url);
+                    // async function myFunction() {
+
+                    //     // var id;
+                    //     // await db.collection("groups").doc("example").collection("posts").get().then(function (querySnapshot) {
+                    //     //     id = querySnapshot.size;
+                    //     // });
+                    //     // console.log("id: ", id);
+                    //     var post_desc = document.getElementById("post-desc").value;
+                    //     db.collection("groups").doc("example").collection("posts").add({
+                    //         "postPic": url,
+                    //         "desc": post_desc
+                    //     })
+                    //     .then(function () {
+                    //         console.log('Added Profile Pic URL to Firestore.');
+                    //     })
+                    // }
+
+                    // myFunction();
+                })
+        }
+        handleFileSelect();
 
     })
 }
