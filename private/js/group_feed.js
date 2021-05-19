@@ -9,7 +9,6 @@ function getPosts() {
         console.log(groupID);
         db.collection("groups")
           .doc(groupID)
-          // .doc(getGroupID())
           .collection("posts")
           .get()
           .then(function (snap) {
@@ -29,25 +28,19 @@ function getPosts() {
 }
 getPosts();
 
-function getGroupID() {
-  firebase.auth().onAuthStateChanged(function (user) {
-    db.collection("users")
-      .doc(user.uid)
-      .get().then(function (doc) {
-        var groupID = doc.data().group;
-        console.log(groupID);
-        return groupID;
-      })
-  })
-
-}
-
-// function getUserID() {
-//   firebase.auth().onAuthStateChanged(function (user){
-//     console.log(user.uid);
-//     return user.uid;
+// function getGroupID() {
+//   firebase.auth().onAuthStateChanged(function (user) {
+//     db.collection("users")
+//       .doc(user.uid)
+//       .get().then(function (doc) {
+//         var groupID = doc.data().group;
+//         console.log(groupID);
+//         return groupID;
+//       })
 //   })
+
 // }
+
 
 function getPosterInfo(userID) {
   var user_member = db.collection("users").doc(userID);
