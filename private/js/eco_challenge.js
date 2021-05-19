@@ -10,18 +10,17 @@ function createGrid() {
             querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
                 console.log(doc.id);
-                console.log(doc.data().desc);
+                console.log(doc.data().isCompleted);
                 // var div = $("<div class='jumbotron'>" + doc.data().desc + "</div>");
                 // var b1 = $("<a id='slot' type='button'></a><br>");
 
-                var div = $("<div class='form-group jumbotron'></div><br>");
+                var div = $("<div class='form-group'></div><br>");
                 var title = $("<p class='chalange_name'>" + doc.id + "></p>");
                 var complete = $("<button class='button button5'>Complete</button>");
                 var Delete = $("<button class='button button5'>Delete</button>");
+
                 complete.click(function () {
-                    window.location.href = "/private/html/group/group_feed.html";
-                    localStorage.setItem("id", doc.id);
-                    localStorage.setItem("desc", doc.data().desc);
+                    console.log(doc.id);
                 });
                 Delete.click(async function () {
                     await db.collection("users").doc("example")
