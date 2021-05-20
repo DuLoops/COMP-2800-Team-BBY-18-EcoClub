@@ -7,26 +7,8 @@
     --grey: #f7f7f7;
   }
 body {
-    padding: 1rem;
+    padding-left: 1rem;
 }
-
-
-
-#back-icon{
-    float: left;
-    font-size:3rem;
-    color: black;
-  }
-  
-  #back {
-    color: black;
-    padding-left: 0.8rem;
-    font-size: 1.8rem;
-  }
-  
-  #heading {
-    text-align: center;
-  }
 
 .name {
     text-align: center;
@@ -62,7 +44,7 @@ body {
     text-align: center;
     font-size: 5vw;
     width: 100%;
-    margin-top: 5vh;
+    
 
 }
 
@@ -82,27 +64,6 @@ body {
     margin-top: 5vh;
     background-color: var(--green);
 }
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--green);
-    text-align: center;
-    padding: 3px 0;
-  }
-  
-  .btnFoot {
-    width: 32%;
-    height: 5vh;
-    background-color: var(--green);
-    
-  }
-  
-  footer i{
-    font-size: 2.5rem;
-  }
   
   #comment{
     height: 30vh;

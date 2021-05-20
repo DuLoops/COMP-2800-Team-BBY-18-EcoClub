@@ -1,0 +1,33 @@
+#back-icon{
+    float: left;
+    font-size:2rem;
+    color: black;
+}
+
+#back {
+    color: black;
+    padding-left: 0.4rem;
+    font-size: 1.2rem;
+}
+#heading {
+    text-align: center;
+    color: black;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+#links {
+    color: black;
+    font-weight: normal;
+    font-size: 1.2rem;
+}
+
+.nav-item{
+    font-size: 1.2rem;
+}
+#appName {
+    color: #28a745;
+    font-size: 1.6rem;
+  }

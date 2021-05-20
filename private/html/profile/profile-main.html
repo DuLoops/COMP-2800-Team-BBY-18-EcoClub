@@ -21,7 +21,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <!-- CSS -->
     <link rel="stylesheet" href="/private/css/profile_css/profile.css">
-
+    <link rel="stylesheet" href="/private/css/footer.css">
+    <link rel="stylesheet" href="/private/css/navbar.css">
     <title>EcoClub</title>
     <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png" />
 </head>
@@ -55,9 +56,6 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="#">Profile<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link " id="links" href="/private/html/challenges/eco_challenge_list.html">Eco
-                    Challenges</a>
-                <a class="nav-item nav-link" id="links" href="/private/html/group/group_info.html">Group Feed</a>
                 <a class="nav-item nav-link" id="links" href="/private/html/profile/profile-edit.html">Edit Profile</a>
                 <a class="nav-item nav-link" id="links" href="/private/html/login/user-login.html">Log out</a>
             </div>
@@ -65,7 +63,7 @@
     </nav>
 
     <div id="userInfo">
-        <div id="image"></div>
+        <img src="" id="mypic-goes-here">
         <h1 class="name-user"></h1>
         <h2 id="email-address">Email: <span class="email-user"></span></h2>
         <h2 id="ecoPoints">Eco Points: <span class="points-user"></span></h2>
@@ -81,10 +79,12 @@
             <a href="#" class="btn btn-success" id="leaveTeam">Leave Team</a>
         </div>
     </div>
-    <div class="footer_space" style="height:46.6px;"></div>
-    <footer>
+  
+  <div class="footer_space" style="height:46.6px;"></div>
+  <footer>
+        <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
+                aria-hidden="true"></i></button>
         <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
-        <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
         <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
                 class="fas fa-user-circle"></i></button>
     </footer>

@@ -2,40 +2,49 @@
 <html lang="en">
 
 <head>
-  <title>EcoClub</title>
-  <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png"/>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/private/css/challenges_css/eco_challenge_list.css" />
+    <link rel="stylesheet" type="text/css" href="/private/css/challenges_css/eco_challenge.css" />
     <link rel="stylesheet" href="/private/css/footer.css">
     <link rel="stylesheet" href="/private/css/navbar.css">
-
     <!-- Font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+        
 </head>
 
 <body>
 
-  <a class="nav-link" aria-current="page" href="/private/html/group/group_feed.html">
-    <i class="fa fa-arrow-circle-left" id="back-icon"></i>
-    <h2 id="heading">Eco Challenges</h2>
-  </a><hr>
+    <a class="nav-link" aria-current="page" href="/private/html/profile/profile-main.html">
+        <i class="fa fa-arrow-circle-left" id="back-icon"></i>
+        <h2 id="heading">Eco Challenges</h2> 
+      </a><hr>
+
+
     <div id="list">
     </div>
 
-    <div class="footer_space" style="height:46.6px;"></div>
+    <div class="col-md-12 text-center">
+        <a href="/private/html/challenges/eco_challenge_add_post.html" id="btn" class="btn btn-lg" role="button"
+            aria-disabled="true">Share you idea (Add post)</a>
+    </div>
+
+    <div class="col-md-12 text-center">
+        <a href="/private/html/challenges/eco_challenge_list.html" id="btn" class="btn btn-lg" role="button"
+            aria-disabled="true">Take a new Challenge</a>
+    </div>
 
     <footer>
-      <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
-              aria-hidden="true"></i></button>
-      <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
-      <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
-              class="fas fa-user-circle"></i></button>
-  </footer>
+        <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
+                aria-hidden="true"></i></button>
+        <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+        <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
+                class="fas fa-user-circle"></i></button>
+    </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -55,10 +64,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
 
     <!-- Your own Firebase API key information -->
-    <script src="../../database/firebase-api-EcoClub.js"> </script>
+    <script src="/private/database/firebase-api-EcoClub.js"> </script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-    <script src="/private/js/eco_challenge_list.js"> </script>
+    <script src="/private/js/eco_challenge.js"> </script>
     <script src="/private/js/footer.js"></script>
 </body>
 

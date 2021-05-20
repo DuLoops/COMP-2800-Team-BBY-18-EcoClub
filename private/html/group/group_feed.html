@@ -10,6 +10,9 @@
 
   <!-- CSS-->
   <link rel="stylesheet" href="/private/css/group_css/group.css">
+  <link rel="stylesheet" href="/private/css/footer.css">
+  <link rel="stylesheet" href="/private/css/navbar.css">
+
   <!-- Font awesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -30,7 +33,7 @@
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" id="appName" href="#"> Club Feed</a>
+    <a class="navbar-brand" id="appName" href="#">EcoClub</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -51,11 +54,12 @@
 
   <div class="footer_space" style="height:46.6px;"></div>
   <footer>
+    <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
+            aria-hidden="true"></i></button>
     <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
-    <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
     <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
-        class="fas fa-user-circle"></i></button>
-  </footer>
+            class="fas fa-user-circle"></i></button>
+</footer>
 
   <!-- firebase -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

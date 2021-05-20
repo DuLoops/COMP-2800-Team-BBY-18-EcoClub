@@ -6,3 +6,12 @@ function createGrid() {
     document.getElementById("chalange_name_feild").innerHTML = timeslocal;
 }
 createGrid();
+
+function take_challenge() {
+    var challengeID = localStorage.getItem("id");
+    firebase.auth().onAuthStateChanged(function (user) {
+        db.collection("users").doc(user.uid).collection("user_challenges").doc().set({
+            "challengeID": challengeID,
+        });
+    });
+}

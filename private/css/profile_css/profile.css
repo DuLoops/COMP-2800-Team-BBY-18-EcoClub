@@ -60,41 +60,16 @@ body {
     color: black;
     font-weight: bold;
 }
-
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--green);
-    text-align: center;
-    padding: 3px 0;
-  }
-  
-  .btnFoot {
-    width: 32%;
-    height: 5vh;
-    
-  }
   
   .btn_profile {
     background-color: rgba(0, 0 ,0 , 0.2) !important;
-  }
-  
-  footer i{
-    font-size: 1.5rem;
-  }
-  
-  #appName {
-    color: #28a745;
-  }
-  
-  #links {
-    color: black;
-    font-weight: normal;
   }
 
   .card {
     font-size: 1.5rem;
   }
+  #mypic-goes-here{
+    width: 50%;
+    display: block;
+    margin: auto;
+}

@@ -9,23 +9,14 @@ body {
 .btn-text{
     font-size: 25px;
 }
-#back-icon{
-    float: left;
-    font-size:2rem;
-    color: black;
-}
 
-#back {
-    color: black;
-    padding-left: 0.4rem;
-    font-size: 1.2rem;
-}
 #back-button {
     background-color: #28a745;
 }
 
 #heading {
     text-align: center;
+    color: black;
 }
 
 .nav-link {
