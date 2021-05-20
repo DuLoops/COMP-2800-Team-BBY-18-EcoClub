@@ -64,15 +64,6 @@ body {
   .btn_profile {
     background-color: rgba(0, 0 ,0 , 0.2) !important;
   }
-  
-  #appName {
-    color: #28a745;
-  }
-  
-  #links {
-    color: black;
-    font-weight: normal;
-  }
 
   .card {
     font-size: 1.5rem;

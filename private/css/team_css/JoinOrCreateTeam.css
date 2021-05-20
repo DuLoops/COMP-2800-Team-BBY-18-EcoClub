@@ -2,29 +2,9 @@ body {
     font-family: 'Noto Serif', serif;
 }
 
-#back-icon{
-    float: left;
-    font-size:2rem;
-    color: black;
-}
-
-#back {
-    color: black;
-    padding-left: 0.4rem;
-    font-size: 1.2rem;
-}
 
 #backButton {
     background-color: #28a745; 
-}
-
-.nav-link {
-    color: #003366;
-    font-weight: bold;
-}
-
-#heading {
-    text-align: center;
 }
 
 .box {

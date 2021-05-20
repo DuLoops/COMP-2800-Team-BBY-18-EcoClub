@@ -66,22 +66,7 @@ body {
   background-color: rgba(0, 0 ,0 , 0.2) !important;
 }
 
-#back-icon{
-  float: left;
-  font-size:24px;
-  color: white;
-
-}
-
-#back {
-color: white;
-}
 
 #back-button {
   background-color: #28a745;
-}
-
-.nav-link {
-color: black;
-font-weight: bold;
 }
