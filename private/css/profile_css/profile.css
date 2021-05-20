@@ -9,6 +9,7 @@
 
 body {
     font-family: 'Noto Serif', serif;
+    padding: 1rem;
 }
 
 #userInfo {
@@ -60,22 +61,6 @@ body {
     font-weight: bold;
 }
 
-#challenges-div{
-   padding: 1.2rem;
-    
-}
-.challenge-desc {
-    background-color: lightblue;
-}
-
-#challenge-title{
-    float: left;
-}
-
-#ecopoints{
-    float: right;
-}
-
 
 footer {
     position: fixed;
@@ -108,4 +93,8 @@ footer {
   #links {
     color: black;
     font-weight: normal;
+  }
+
+  .card {
+    font-size: 1.5rem;
   }

@@ -21,7 +21,8 @@ var uiConfig = {
                         email: user.email, //with authenticated user's ID (user.uid)
                         ecopoint: "0",
                         profilePic: "link",
-                        bio: "bio"
+                        bio: "bio",
+                        group:""
                     })
                     .then(function () {
                         console.log("New user added to firestore");
