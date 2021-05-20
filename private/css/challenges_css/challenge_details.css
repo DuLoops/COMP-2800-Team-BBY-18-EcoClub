@@ -7,7 +7,7 @@
     --grey: #f7f7f7;
   }
 body {
-    padding: 1rem;
+    padding-left: 1rem;
 }
 
 
@@ -26,6 +26,7 @@ body {
   
   #heading {
     text-align: center;
+    color: black;
   }
 
 .name {
@@ -62,7 +63,7 @@ body {
     text-align: center;
     font-size: 5vw;
     width: 100%;
-    margin-top: 5vh;
+    
 
 }
 

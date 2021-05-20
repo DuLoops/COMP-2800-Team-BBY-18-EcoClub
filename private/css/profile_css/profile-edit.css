@@ -1,46 +1,62 @@
 :root {
-    --blue: #659DBD;
-    /*  bootstrap: -info*/
-    --yellow: #FBEEC1;
-    --green: #28a745;
-    /* bootstrap: -success */
-    --grey: #f7f7f7;
-  }
-  
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
+  --yellow: #FBEEC1;
+  --green: #28a745;
+  /* bootstrap: -success */
+  --grey: #f7f7f7;
+}
+
 
 body {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 #buttons {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
-.btn-text{
-    font-size: 25px;
+.btn-text {
+  font-size: 25px;
+}
+
+#back-icon {
+  float: left;
+  font-size: 2rem;
+  color: black;
+}
+
+#back {
+  color: black;
+  padding-left: 0.8rem;
+  font-size: 1.4rem;
+}
+
+#heading {
+  text-align: center;
 }
 
 #back-button {
-    background-color: #28a745;
+  background-color: #28a745;
 }
 
-#head{
-    color: black;
+#head {
+  color: black;
 }
 
 #btn-div {
-    padding: 1rem;
-    margin-left: 9rem;
+  padding: 1rem;
+  margin-left: 9rem;
 }
 
 #done-button {
-    background-color: #28a745;
-    color: white;
-    width: 5rem
+  background-color: #28a745;
+  color: white;
+  width: 5rem
 }
 
-.mb-3{
-    text-align: center;
+.mb-3 {
+  text-align: center;
 }
 
   

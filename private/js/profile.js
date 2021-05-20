@@ -10,7 +10,8 @@ function sayName() {
                     var name = doc.data().name;
                     var points = doc.data().ecopoint;
                     var email = doc.data().email;
-                    var picUrl = doc.data().profilePic; 
+                    var picUrl = doc.data().profilePic;
+                    var groupID = doc.data().group;
                     // var groupId = doc.data().group;
                     console.log(picUrl);
                     // $("#image").append("<img src='" + picUrl + "'>")
@@ -21,18 +22,18 @@ function sayName() {
                     } else {
                         $(".name-user").html("EcoClub User");
                     }
-                    db.collection("groups").doc("example").get()
-                .then(function(doc){
-                    var teamName = doc.data().groupName;
-                    var teamDesc = doc.data().desc
-                    if (name) {
-                        $("#teamName").html(teamName);
-                        $("#teamDesc").html(teamDesc);
-                    } else {
-                        $("#teamName").html("Group Description");
-                        $("#teamDesc").html("Team Description");
-                    }
-                })
+                    db.collection("groups").doc(groupID).get()
+                        .then(function (doc) {
+                            var teamName = doc.data().groupName;
+                            var teamDesc = doc.data().desc
+                            if (name) {
+                                $("#teamName").html(teamName);
+                                $("#teamDesc").html(teamDesc);
+                            } else {
+                                $("#teamName").html("Group Description");
+                                $("#teamDesc").html("Team Description");
+                            }
+                        })
                 });
         }
     });
@@ -41,7 +42,7 @@ sayName();
 
 // function getChallenges() {
 //     document.getElementById("challenges-div").innerHTML = "";
-  
+
 //     db.collection("eco-challenges")
 //       .get()
 //       .then(function (snap) {
@@ -57,17 +58,52 @@ sayName();
 
 document.getElementById("leaveTeam").addEventListener("click", leaveTeam);
 
-function leaveTeam(){
+function leaveTeam() {
     firebase.auth().onAuthStateChanged(function (somebody) {
         if (somebody) {
-            db.collection("users").doc("somebody.uid").update({
-                group : ""
-            })
+            // db.collection("users").doc(somebody.uid).update({
+            //     group: ""
+            // })
+            db.collection("users")
+                .doc(somebody.uid)
+                // Read
+                .get()
+                .then(function (doc) {
+                    var groupID = doc.data().group;
+                    console.log(groupID);
+                    var GroupRef = db.collection("groups").doc(groupID);
+
+                    // Atomically remove a region from the "regions" array field.
+                    GroupRef.update({
+                        members: firebase.firestore.FieldValue.arrayRemove(somebody.uid)
+                    });
+                    db.collection("users").doc(somebody.uid).update({
+                            group: ""
+                    })
+                    setTimeout(function(){
+                        alert("Updated Succesfully");
+                        location.replace("/private/html/main.html")
+                   },2000)
+                })
         } else {
             console.log("Invlaid");
         }
     })
 }
 
-  
-  
+function displayUserProfilePic() {
+    firebase.auth().onAuthStateChanged(function (user) { //get user object
+        db.collection("users").doc(user.uid) //use user's uid
+            .get() //READ the doc
+            .then(function (doc) {
+                var picUrl = doc.data().profilePic; //extract pic url
+
+                // use this line if "mypicdiv" is a "div"
+                //$("#mypicdiv").append("<img src='" + picUrl + "'>")
+
+                // use this line if "mypic-goes-here" is an "img" 
+                $("#mypic-goes-here").attr("src", picUrl);
+            })
+    })
+}
+displayUserProfilePic();
