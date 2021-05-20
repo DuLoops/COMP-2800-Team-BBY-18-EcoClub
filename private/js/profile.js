@@ -61,20 +61,29 @@ document.getElementById("leaveTeam").addEventListener("click", leaveTeam);
 function leaveTeam() {
     firebase.auth().onAuthStateChanged(function (somebody) {
         if (somebody) {
-            db.collection("users").doc(somebody.uid).update({
-                group: ""
-            })
+            // db.collection("users").doc(somebody.uid).update({
+            //     group: ""
+            // })
             db.collection("users")
                 .doc(somebody.uid)
                 // Read
                 .get()
                 .then(function (doc) {
                     var groupID = doc.data().group;
-                    db.collection("groups").doc(groupID).update(
-                        'members', Firestore.FieldValue.arrayRemove(somebody.uid)
-                    ).then(() => {
-                        return documentRef.get();
+                    console.log(groupID);
+                    var GroupRef = db.collection("groups").doc(groupID);
+
+                    // Atomically remove a region from the "regions" array field.
+                    GroupRef.update({
+                        members: firebase.firestore.FieldValue.arrayRemove(somebody.uid)
+                    });
+                    db.collection("users").doc(somebody.uid).update({
+                            group: ""
                     })
+                    setTimeout(function(){
+                        alert("Updated Succesfully");
+                        location.replace("/private/html/main.html")
+                   },2000)
                 })
         } else {
             console.log("Invlaid");
@@ -83,7 +92,6 @@ function leaveTeam() {
 }
 
 function displayUserProfilePic() {
-    console.log("hi");
     firebase.auth().onAuthStateChanged(function (user) { //get user object
         db.collection("users").doc(user.uid) //use user's uid
             .get() //READ the doc

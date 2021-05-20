@@ -66,7 +66,7 @@ function uploadUserProfile(e) {
 
                 setTimeout(function () {
                     alert("Updated Succesfully");
-                    location.replace("/private/html/main.html")
+                    location.replace("/private/html/profile/profile-main.html")
                 }, 2000)
             })
     })
