@@ -9,3 +9,4 @@ document.getElementById("footer_post").onclick = function () {
 document.getElementById("footer_profile").onclick = function () {
   location.href = "/private/html/profile/profile-main.html";
 };
+

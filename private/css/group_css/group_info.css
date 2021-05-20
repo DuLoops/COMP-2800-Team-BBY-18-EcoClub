@@ -18,7 +18,18 @@
 .html,
 body {
 	height: 100%;
+}
 
+#group_code{
+  margin:20px;
+  float:left;
+}
+
+#forAdmin{
+  margin:20px;
+  float:right;
+  border:solid var(--green) 2px;
+  padding:3px;
 }
 
 #group_info_content{
@@ -35,21 +46,37 @@ body {
   margin-left:auto;
   margin-right: auto;
   margin-top: 1rem;
+  border:solid var(--green) 1px;
+
+}
+#group_name{
+  margin:10px;
 }
 
+#group_desc{
+  border:solid var(--green) 1px;
+  border-radius: 4px;
+  padding:2px;
+}
 #group_people{
   background-color: var(--grey);
 }
 
 #group_leader_div{
   background-color: var(--green);
+  width:90%;
+  border-radius: 10px;
+  padding:3px;
+  margin-right:auto;
+  margin-left:auto;
 }
+
 
 #group_members{
   display:flex;
   flex-direction: column;
   background-color: var(--grey);
-  
+  padding:10px;
 }
 
 .member{

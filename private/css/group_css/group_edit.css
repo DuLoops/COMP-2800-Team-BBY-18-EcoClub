@@ -18,15 +18,33 @@
 .html,
 body {
 	height: 100%;
-
 }
 
-#group_info_content{
-  padding:20px;
+
+#heading{
+  text-align: center;
+  margin-top:20px;
 }
 
-#info_contents {
+form{
+  display:block;
+  margin: 20px auto 20px auto;
+  width:80%;
+}
+
+input{
   width:100%;
+  display:block;
+  margin: 5px;
+}
+
+.member p{
+  
+}
+.remove_member{
+  float:right;
+  margin:20px;
+  display:block;
 }
 
 #groupImg {
@@ -35,21 +53,15 @@ body {
   margin-left:auto;
   margin-right: auto;
   margin-top: 1rem;
-}
+  border:solid var(--green) 1px;
 
-#group_people{
-  background-color: var(--grey);
-}
-
-#group_leader_div{
-  background-color: var(--green);
 }
 
 #group_members{
   display:flex;
   flex-direction: column;
   background-color: var(--grey);
-  
+  padding:10px;
 }
 
 .member{
