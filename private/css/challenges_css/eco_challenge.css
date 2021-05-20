@@ -13,22 +13,6 @@ body {
   padding: 1rem;
 }
 
-#back-icon {
-  float: left;
-  font-size: 3rem;
-  color: black;
-}
-
-#back {
-  color: black;
-  padding-left: 0.8rem;
-  font-size: 1.8rem;
-}
-
-#heading {
-  text-align: center;
-}
-
 
 .name {
   text-align: center;
@@ -36,32 +20,11 @@ body {
   margin-top: 1.5vh;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--green);
-  text-align: center;
-  padding: 3px 0;
-}
-
-.btnFoot {
-  width: 32%;
-  height: 5vh;
-  background-color: var(--green);
-
-}
-
 #btn {
   margin: 0%;
   margin-top: 5vh;
   background-color: var(--green);
   color: black;
-}
-
-footer i {
-  font-size: 2.5rem;
 }
 
 .form-group {
@@ -99,4 +62,8 @@ footer i {
   margin-left: 2%;
   text-decoration: none;
   font-size: 16px;
+}
+
+#footer_tasks {
+  background-color: rgba(0, 0 ,0 , 0.2) !important;
 }
