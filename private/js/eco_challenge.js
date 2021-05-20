@@ -19,11 +19,15 @@ function createGrid() {
                 var complete = $("<button class='button button5'>Complete</button>");
                 var Delete = $("<button class='button button5'>Delete</button>");
 
-                complete.click(function () {
+                complete.click(async function () {
                     console.log(doc.id);
-                    db.collection("users").doc("example").collection("user-challenges").doc(doc.id).update({
+                    await db.collection("users").doc("example").collection("user-challenges").doc(doc.id).update({
                         isCompleted: true
                     });
+
+                    localStorage.setItem("challenge_title", doc.id);
+                    window.location.href= "/private/html/challenges/eco_challenge_add_post.html";
+
                 });
                 Delete.click(async function () {
                     await db.collection("users").doc("example")
