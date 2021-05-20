@@ -58,3 +58,11 @@ footer i{
   text-align: center;
   padding: 3px 0;
 }
+
+.profile-pic{
+  width: 3.5rem;
+}
+
+.name{
+  font-weight: bold;
+}

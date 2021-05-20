@@ -54,4 +54,3 @@ function uploadUserProfilePic(e) {
 //     })
 // }
 // displayUserProfilePic();
-}

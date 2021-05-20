@@ -14,35 +14,39 @@
 // });
 
 document.getElementById("post-btn").addEventListener("click", uploadComment);
+
 function uploadComment() {
     console.log("Working");
     // Let's assume my storage is only enabled for authenticated users 
     // This is set in your firebase console storage "rules" tab
 
     firebase.auth().onAuthStateChanged(function (user) {
-            console.log(user.uid);
-            var userId = user.uid;
-            function handleFileSelect() {
-                
-                        async function myFunction() {
-                           
-                            var comment = document.getElementById("comment").value;
-                            db.collection("users").doc(user.uid).get().then(function(doc){
-                                //var groupId = doc.data().group;
-                                db.collection("groups").doc("example").collection("posts").doc("example").collection("comment").add({
-                                    "comment": comment,
-                                    "commenter": userId
-                                })
-                                .then(function () {
-                                    console.log('Added comment to Firestore.');
-                                })
-                            })
-                        }
-                        myFunction();
-                   
+        console.log(user.uid);
+        var userId = user.uid;
+
+        function handleFileSelect() {
+
+            async function myFunction() {
+
+                var comment = document.getElementById("comment").value;
+                db.collection("users").doc(user.uid).get().then(function (doc) {
+                    var groupId = doc.data().group;
+                    var post = (localStorage.getItem('postID'));
+                    console.log(post);
+                    db.collection("groups").doc(groupId).collection("posts").doc(post).collection("comment").add({
+                            "comment": comment,
+                            "commenter": userId
+                        })
+                        .then(function () {
+                            console.log('Added comment to Firestore.');
+                        })
+                })
             }
-            handleFileSelect();
-        })
+            myFunction();
+
+        }
+        handleFileSelect();
+    })
 }
 
 function displayUserProfilePic() {
@@ -61,7 +65,29 @@ function displayUserProfilePic() {
     })
 }
 
+function getChallenges() {
+    document.getElementById("comment-box").innerHTML = "";
 
+    firebase.auth().onAuthStateChanged(function (user) {
+        db.collection("users").doc(user.uid).get().then(function (doc) {
+            var groupId = doc.data().group;
+            var post = (localStorage.getItem('postID'));
+            db.collection("groups").doc(groupId).collection("posts").doc(post).collection("comment")
+                .get()
+                .then(function (snap) {
+                    snap.forEach(function (doc) {
+                        var comment = doc.data().comment;
+                        db.collection("users").doc(user.uid).get().then(function (doc) {
+                            var userName = doc.data().name;
+                            var picUrl = doc.data().profilePic;
+                            $(".profile-pic").attr("src", picUrl);
+                            document.getElementById("comment-box").innerHTML += "<div> <img class='profile-pic' src='" + picUrl
+                            + "' alt='profilePic'><span class='name'>" + userName + "</span><br><p>" + comment + "</p></div><hr>";
+                        })
 
-
-
+                    });
+                });
+        })
+    })
+}
+getChallenges();
