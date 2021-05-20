@@ -82,27 +82,6 @@ body {
     margin-top: 5vh;
     background-color: var(--green);
 }
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--green);
-    text-align: center;
-    padding: 3px 0;
-  }
-  
-  .btnFoot {
-    width: 32%;
-    height: 5vh;
-    background-color: var(--green);
-    
-  }
-  
-  footer i{
-    font-size: 2.5rem;
-  }
   
   #comment{
     height: 30vh;
