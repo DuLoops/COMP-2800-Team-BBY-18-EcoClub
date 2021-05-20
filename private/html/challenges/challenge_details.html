@@ -44,7 +44,7 @@
       <div class="form-control" rows="9" id="comment"></div>
     </div>
     <div class="col-md-12 text-center">
-      <button type="button" id="btn" class="btn btn-lg">Take the challenge</button>
+      <button type="button" id="btn" class="btn btn-lg" onclick="take_challenge()">Take the challenge</button>
     </div>
 
 
@@ -57,6 +57,16 @@
   </footer>
   <script src="/private/js/challenge_details.js"> </script>
   <script src="/private/js/footer.js"></script>
+
+      <!-- Firebase libraries from CDN -->
+      <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+      <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+  
+      <!-- Your own Firebase API key information -->
+      <script src="../../database/firebase-api-EcoClub.js"> </script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 </body>
 
 </html>
