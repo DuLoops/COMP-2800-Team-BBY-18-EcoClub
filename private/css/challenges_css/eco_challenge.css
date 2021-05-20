@@ -13,22 +13,6 @@ body {
   padding: 1rem;
 }
 
-#back-icon {
-  float: left;
-  font-size: 3rem;
-  color: black;
-}
-
-#back {
-  color: black;
-  padding-left: 0.8rem;
-  font-size: 1.8rem;
-}
-
-#heading {
-  text-align: center;
-}
-
 
 .name {
   text-align: center;
