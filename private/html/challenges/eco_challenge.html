@@ -9,7 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/private/css/challenges_css/eco_challenge.css" />
-
+    <link rel="stylesheet" href="/private/css/footer.css">
     <!-- Font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -38,10 +38,12 @@
         <a href="/private/html/challenges/eco_challenge_list.html" id="btn" class="btn btn-lg" role="button" aria-disabled="true">Take a new Challenge</a>
     </div>
 
-    <footer class="footer">
-        <button type="button" class="btn btnFoot">Group</button>
-        <button type="button" class="btn btnFoot">Post</button>
-        <button type="button" class="btn btnFoot">Icon</button>
+    <footer>
+        <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
+                aria-hidden="true"></i></button>
+        <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+        <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
+                class="fas fa-user-circle"></i></button>
     </footer>
     <!-- Optional JavaScript; choose one of the two! -->
 
@@ -66,6 +68,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <script src="/private/js/eco_challenge.js"> </script>
+    <script src="/private/js/footer.js"></script>
 </body>
 
 </html>
