@@ -1,0 +1,98 @@
+:root {
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
+  --yellow: #FBEEC1;
+  --green: #28a745;
+  /* bootstrap: -success */
+  --grey: #f7f7f7;
+}
+
+body {
+  height: 100%;
+  margin: 0%;
+  padding: 1rem;
+}
+
+#back-icon {
+  float: left;
+  font-size: 3rem;
+  color: black;
+}
+
+#back {
+  color: black;
+  padding-left: 0.8rem;
+  font-size: 1.8rem;
+}
+
+#heading {
+  text-align: center;
+}
+
+
+.name {
+  text-align: center;
+  font-size: 7vw;
+  margin-top: 1.5vh;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--green);
+  text-align: center;
+  padding: 3px 0;
+}
+
+.btnFoot {
+  width: 32%;
+  height: 5vh;
+  background-color: var(--green);
+
+}
+
+#btn {
+  margin: 0%;
+  margin-top: 5vh;
+  background-color: var(--green);
+  color: black;
+}
+
+footer i {
+  font-size: 2.5rem;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 1%;
+  justify-content: space-between;
+  border: 2px solid rgb(100, 74, 74);
+  width: 95%;
+  padding: 2px;
+}
+
+.chalange_name {
+  margin: auto;
+  margin-left: 0%;
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+
+#list {
+  width: 95%;
+  margin: auto;
+}
+
+
+.button {
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  text-align: center;
+  margin-left: 2%;
+  text-decoration: none;
+  font-size: 16px;
+}

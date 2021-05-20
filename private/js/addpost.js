@@ -38,3 +38,20 @@ function uploadUserProfilePic(e) {
                      })
     })
 }
+
+
+// function displayUserProfilePic() {
+//     console.log("hi");
+//     firebase.auth().onAuthStateChanged(function (user) {      //get user object
+//         db.collection("users").doc(user.uid)                  //use user's uid
+//             .get()                                            //READ the doc
+//             .then(function (doc) {
+//                 var picUrl = doc.data().postPic;           //extract pic url
+
+//              // use this line if "mypicdiv" is a "div"
+//                 $("#mypic").append("<img src='" + picUrl + "'>")
+//             })
+//     })
+// }
+// displayUserProfilePic();
+}
