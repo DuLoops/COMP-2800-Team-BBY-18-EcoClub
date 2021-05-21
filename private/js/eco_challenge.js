@@ -1,16 +1,12 @@
 function createGrid() {
 
     firebase.auth().onAuthStateChanged(function (user) {
-        leader = (user.uid);
-    });
-    // I should change the example with leader
-
-    db.collection("users").doc("example")
-        .collection("user-challenges").get().then((querySnapshot) => {
+        db.collection("users").doc(user.uid)
+        .collection("user_challenges").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
                 // doc.data() is never undefined for query doc snapshots
-                console.log(doc.id);
-                console.log(doc.data().isCompleted);
+                // console.log(doc.id);
+                // console.log(doc.data().isCompleted);
                 // var div = $("<div class='jumbotron'>" + doc.data().desc + "</div>");
                 // var b1 = $("<a id='slot' type='button'></a><br>");
 
@@ -21,7 +17,7 @@ function createGrid() {
 
                 complete.click(async function () {
                     console.log(doc.id);
-                    await db.collection("users").doc(leader).collection("user-challenges").doc(doc.id).update({
+                    await db.collection("users").doc(user.uid).collection("user-challenges").doc(doc.id).update({
                         isCompleted: true
                     });
 
@@ -30,7 +26,7 @@ function createGrid() {
 
                 });
                 Delete.click(async function () {
-                    await db.collection("users").doc(leader)
+                    await db.collection("users").doc(user.uid)
                         .collection("user-challenges").doc(doc.id).delete().then(() => {
                             console.log("Document successfully deleted!");
                         }).catch((error) => {
@@ -45,5 +41,10 @@ function createGrid() {
                 $("#list").append(div);
             });
         });
+
+    });
+    // I should change the example with leader
+
+
 }
 createGrid();
