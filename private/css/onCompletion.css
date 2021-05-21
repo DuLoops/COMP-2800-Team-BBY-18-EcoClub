@@ -1,0 +1,24 @@
+body{
+    padding: 2rem;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card-text{
+    text-align: center;
+    text-transform: uppercase;
+  }
+  
+  #button {
+    background-color: #28a745;
+    width: 8rem;
+    display: block;
+    margin: auto;
+  }
+  
+  #head{
+    text-align: center;
+  }
+  
