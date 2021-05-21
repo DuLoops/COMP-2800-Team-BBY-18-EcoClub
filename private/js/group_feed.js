@@ -1,33 +1,33 @@
-// post group feed
-function getPosts() {
-  document.getElementById("feed_content").innerHTML = "";
-  firebase.auth().onAuthStateChanged(function (user) {
-    db.collection("users")
-      .doc(user.uid)
-      .get().then(function (doc) {
-        var groupID = doc.data().group;
-        console.log(groupID);
-        db.collection("groups")
-          .doc(groupID)
-          // .doc(getGroupID())
-          .collection("posts")
-          .get()
-          .then(function (snap) {
-            snap.forEach(function (doc) {
-              console.log("work");
-              var description = doc.data().groupDesc;
-              console.log(description);
-              // var poster = doc.data().poster;
-              // // var picURL = doc.data().postPic;
-              // console.log("int the main func ------ " + getPosterInfo(poster));
-              document.getElementById("feed_content").innerHTML += "<div class='post'>" + "<p class='post_desc'>" + description + "</p></div>";
-            });
-          });
-        // return groupID;
-      })
-  })
-}
-getPosts();
+// // post group feed
+// function getPosts() {
+//   document.getElementById("feed_content").innerHTML = "";
+//   firebase.auth().onAuthStateChanged(function (user) {
+//     db.collection("users")
+//       .doc(user.uid)
+//       .get().then(function (doc) {
+//         var groupID = doc.data().group;
+//         console.log(groupID);
+//         db.collection("groups")
+//           .doc(groupID)
+//           // .doc(getGroupID())
+//           .collection("posts")
+//           .get()
+//           .then(function (snap) {
+//             snap.forEach(function (doc) {
+//               console.log("work");
+//               var description = doc.data().groupDesc;
+//               console.log(description);
+//               // var poster = doc.data().poster;
+//               // // var picURL = doc.data().postPic;
+//               // console.log("int the main func ------ " + getPosterInfo(poster));
+//               document.getElementById("feed_content").innerHTML += "<div class='post'>" + "<p class='post_desc'>" + description + "</p></div>";
+//             });
+//           });
+//         // return groupID;
+//       })
+//   })
+// }
+// getPosts();
 
 function getGroupID() {
   firebase.auth().onAuthStateChanged(function (user) {
@@ -60,7 +60,7 @@ function getGroupID() {
   })
 }
 
-getPosts();
+getGroupID();
 
 
 // function getPosterInfo(userID) {
