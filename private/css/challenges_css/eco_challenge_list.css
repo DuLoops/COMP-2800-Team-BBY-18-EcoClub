@@ -1,27 +1,28 @@
-
-:root {
-  --blue: #659DBD;
-  /*  bootstrap: -info*/
-  --yellow: #FBEEC1;
-  --green: #28a745;
-  /* bootstrap: -success */
-  --grey: #f7f7f7;
-}
 body {
+<<<<<<< HEAD
   height: 100%;
+=======
+  font-family: 'Noto Serif', serif;
+  font-size: 23px;
+  padding: 1rem;
+>>>>>>> 6f2b4357823c23fe4eeb5b3f561aefb1946b815e
 }
 
 #button {
   display: block;
-  margin: auto;   
+  margin: auto;
   font-size: 1.5rem;
   width: 5rem;
   background-color: #28a745;
 }
 
+<<<<<<< HEAD
 
 
 /* .form-group {
+=======
+.form-group {
+>>>>>>> 6f2b4357823c23fe4eeb5b3f561aefb1946b815e
   display: flex;
   margin-left: 2%;
   margin-bottom: 0%;
@@ -30,6 +31,7 @@ body {
 .chalange_name {
   font-size: 3.7vw;
   width: 72%;
+  color: black;
 }
 
 
@@ -62,4 +64,11 @@ body {
 #list {
   width: 80%;
   margin: auto;
+}
+
+
+#slot {
+  background-color: rgb(238, 238, 238);
+  width: 100%;
+  text-decoration: none;
 }
