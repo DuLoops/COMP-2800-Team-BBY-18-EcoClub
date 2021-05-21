@@ -21,7 +21,8 @@ firebase.auth().onAuthStateChanged(function (user) {
           displayMembers(leader, members);
           //if the user is the admin
           if(user.uid == leader){
-            displayClubEdit();
+            console.log("Admin logged in");
+            document.getElementById("forAdmin").innerHTML = "<a id='group_edit' href='group_edit.html'>Edit Club Info</a>";
           }
 
         } else {
@@ -34,10 +35,6 @@ firebase.auth().onAuthStateChanged(function (user) {
     });
 
 });
-
-
-
-
 
 function getGroupID() {
   var groupID;
@@ -57,11 +54,15 @@ function getUserID() {
 function displayGroupInfo(groupCode, groupName, desc, groupPic) {
   document.getElementById("group_code").textContent = "#" + groupCode;
   document.getElementById("group_name").textContent = groupName;
-  document.getElementById("group_desc").textContent = desc;
+  document.getElementById("group_desc").textContent = "Description: " + desc;
 }
 
 function displayMembers(leader, members) {
-  document.getElementById("group_leader").textContent = leader;
+  db.collection("users")
+  .doc(leader)
+  .get().then((doc)=>{
+    document.getElementById("group_leader").textContent = "Admin: " + doc.data().name;
+  })
   members.forEach(member => {
     var user_member = db.collection("users").doc(member);
     // console.log(member);
@@ -80,12 +81,5 @@ function displayMembers(leader, members) {
     });
 
   });
-
-
-  function displayClubEdit() {
-    document.getElementById("forAdmin").innerHTML = "<a id='group_edit' href='group_edit.html'>Edit Club Info</a>";
-  }
-
-
 
 }

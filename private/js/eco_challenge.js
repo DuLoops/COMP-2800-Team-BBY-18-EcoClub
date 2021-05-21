@@ -37,6 +37,7 @@ function createGrid() {
                             console.error("Error removing document: ", error);
                         });
                     window.location.reload();
+
                 });
                 div.append(title);
                 div.append(complete);

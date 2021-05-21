@@ -36,6 +36,9 @@ body.welcome {
   margin: auto;
 }
 
+#head{
+  text-align: center;
+}
 .welcome .splash {
   height: 0px;
   padding: 0px;

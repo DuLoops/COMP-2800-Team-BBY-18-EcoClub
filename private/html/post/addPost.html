@@ -12,14 +12,20 @@
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="/private/css/post_css/addPost.css">
   <link rel="stylesheet" href="/private/css/footer.css">
+  <link rel="stylesheet" href="/private/css/navbar.css">
   <title>EcoClub</title>
   <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png" />
 </head>
 
 <body>
 
+  <a class="nav-link" aria-current="page" href="/private/html/main.html">
+    <i class="fa fa-arrow-circle-left" id="back-icon"></i>
+    <h2 id="heading">Post</h2>
+  </a><hr>
+
   <div class="container text-center py-3">
-    <img id="mypic-goes-here" src="" width=50 height=50 />
+    <img id="mypic-goes-here" src="" /> <br>
     <input type="file" id="mypic-input" accept="images/*" />
   </div>
   <div class="mb-3">
@@ -28,7 +34,8 @@
   </div>
 
   <button type="button" class="btn" id="button">Post</button>
-  <img id="ecoicon" src="/private/images/ecoicon.png" alt="eco icon">
+  <div class="footer_space" style="height:46.6px;"></div>
+
   <footer>
     <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
             aria-hidden="true"></i></button>

@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EcoClub</title>
   <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png" />
+
   <link rel="stylesheet" href="/private/css/footer.css">
   <!-- CSS-->
-  <link rel="stylesheet" href="/private/css/group_css/group_info.css">
+  <link rel="stylesheet" href="/private/css/group_css/group_edit.css">
   <!-- Font awesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -27,35 +28,34 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Edid Club</a>
     </li>
   </ul>
 
+  <h2 id="heading">Edit Club Info</h2> <br>
 
-  <div id="group_info_content">
-    <img src="/private/images/join.jpg" alt="Group images" id="groupImg">
-    <p id="group_name">Club Name</p>
-    <p id="group_desc"></p>
+  <div class="container text-center py-3">
+    <img id="groupImg" src="" height=100px/>
+    <input type="file" id="mypic-input" accept="images/*" />
   </div>
 
-  <div id="group_people">
-    <div id="group_leader_div">
-      <p id="group_leader_caption">Leader <p id="group_leader"></p>
-      </p>
-
-    </div>
+  <form class="col text-center">
+    <input type="text" id="name" class="inputClass" placeholder="Club Name"><br>
+    <input type="text" id="desc" class="inputClass" placeholder="Description"><br>
+    <button type="button" class="btn btn-success" id="button">Save</button>
+  </form>
+    
     <div id="group_members">
-      <div>
-        <p>Members</p>
-      </div>
-    </div>
-  </div>
+        <h3 id="members_heading">Members</h3>
 
+    </div>
+
+    <div class="footer_space" style="height:46.6px;"></div>
 
   <footer>
     <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
         aria-hidden="true"></i></button>
     <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+
     <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
         class="fas fa-user-circle"></i></button>
   </footer>
@@ -71,7 +71,7 @@
   <!-- Link to the api keys for your firebase project -->
   <script src="/private/database/firestore.js"></script>
 
-  <script src="/private/js/group_info.js"></script>
+  <script src="/private/js/group_edit.js"></script>
 
   <script src="/private/js/footer.js"></script>
 
