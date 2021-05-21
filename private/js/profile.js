@@ -12,13 +12,16 @@ function sayName() {
                     var email = doc.data().email;
                     var picUrl = doc.data().profilePic;
                     var groupID = doc.data().group;
+                    var bio = doc.data().bio;
                     // var groupId = doc.data().group;
                     console.log(picUrl);
                     // $("#image").append("<img src='" + picUrl + "'>")
                     if (name) {
                         $(".name-user").html(name);
+                        $(".bio-user").html(bio);
                         $(".points-user").html(points);
                         $(".email-user").html(email);
+
                     } else {
                         $(".name-user").html("EcoClub User");
                     }
