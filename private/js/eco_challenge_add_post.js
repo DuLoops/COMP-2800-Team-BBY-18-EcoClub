@@ -12,6 +12,13 @@ function uploadOnClick(e) {
 
 function uploadUserProfilePic(e) {
     firebase.auth().onAuthStateChanged(function (user) {
+        var loaderDiv = document.createElement("div");
+        loaderDiv.setAttribute("class", "loader");
+        document.body.appendChild(loaderDiv);
+        var updating = document.createElement("p");
+        updating.setAttribute("class", "text");
+        updating.innerHTML = "Posting..";
+        document.body.appendChild(updating);
         //store using this name
         var storageRef = storage.ref("images/" + user.uid + ".jpg");
 
@@ -34,10 +41,14 @@ function uploadUserProfilePic(e) {
                         })
                     })
                     .then(function () {
-                        console.log('Added Profile Pic URL to Firestore.');
+                        console.log('Added Post Pic URL to Firestore.');
+                        setTimeout(function () {
+                            location.replace("/private/html/group/group_feed.html")
+                        }, 2000)
                     })
             })
     })
+
 }
 
 function myFunction() {

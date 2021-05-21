@@ -9,13 +9,24 @@ function uploadOnClick(e) {
      image.src = blob;            // display this image
 }
 
-function uploadUserProfilePic(e) {
-    firebase.auth().onAuthStateChanged(function (user) {
+function uploadUserProfilePic() {
+    firebase.auth().onAuthStateChanged(async function (user) {
+        var loaderDiv = document.createElement("div");
+        loaderDiv.setAttribute("class", "loader");
+        document.body.appendChild(loaderDiv);
+        var updating = document.createElement("p");
+        updating.setAttribute("class", "text");
+        updating.innerHTML = "Posting..";
+        document.body.appendChild(updating);
+
+        
+        let name = Math.random().toString(36).substr(2, 9);
         //store using this name
-          var storageRef = storage.ref("images/" + user.uid + ".jpg"); 
+        console.log(name);
+        var storageRef = storage.ref("images/" + name + ".jpg"); 
                 
           //upload the picked file
-              storageRef.put(file) 
+              await storageRef.put(file) 
                     .then(function(){
                          console.log('Uploaded to Cloud Storage.');
                  })
@@ -29,11 +40,16 @@ function uploadUserProfilePic(e) {
                              var groupDesc = document.getElementById("post-desc").value;
                              db.collection("groups").doc(groupId).collection("posts").add({
                                  "postPic": url,
-                                 "groupDesc": groupDesc
+                                 "groupDesc": groupDesc,
+                                 "likes" : "0",
+                                 "postedBy" : user.uid
                              })
                          })
                          .then(function(){
-                             console.log('Added Profile Pic URL to Firestore.');
+                             console.log('Added Post Pic URL to Firestore.');
+                             setTimeout(function () {
+                                location.replace("/private/html/group/group_feed.html")
+                            }, 2000)
                          })
                      })
     })

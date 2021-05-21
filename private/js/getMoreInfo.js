@@ -1,5 +1,6 @@
 document.getElementById("add-button").addEventListener('click', uploadUserProfilePic);
 document.getElementById("mypic-input").addEventListener('change', uploadOnClick);
+
 let file;
 function uploadOnClick(e) {
 
@@ -10,7 +11,7 @@ function uploadOnClick(e) {
 }
 
 function uploadUserProfilePic(e) {
-    firebase.auth().onAuthStateChanged(function (user) {
+    firebase.auth().onAuthStateChanged(async function (user) {
         var loaderDiv = document.createElement("div");
         loaderDiv.setAttribute("class", "loader");
         document.body.appendChild(loaderDiv); 
@@ -22,7 +23,7 @@ function uploadUserProfilePic(e) {
           var storageRef = storage.ref("profile/" + user.uid + ".jpg"); 
                 
           //upload the picked file
-              storageRef.put(file) 
+               await storageRef.put(file) 
                     .then(function(){
                          console.log('Uploaded to Cloud Storage.');
                  })

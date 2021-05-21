@@ -1,73 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>EcoClub</title>
-    <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/private/css/challenges_css/eco_challenge_add_post.css" />
-
-    <!-- Font awesome-->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <!-- Font awesome-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/private/css/post_css/addPost.css">
+  <link rel="stylesheet" href="/private/css/footer.css">
+  <title>EcoClub</title>
+  <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png" />
 </head>
 
 <body>
 
-    <a class="nav-link" aria-current="page" href="/private/html/group/group_feed.html">
-        <i class="fa fa-arrow-circle-left" id="back-icon"></i>
-        <span id="back">Back
-        </span>
-    </a><br>
-    <h2 class="Pcenter">Eco Challenges</h2>
-    <p class="description">Add an image about your completion</p>
+  <div class="container text-center py-3">
+    <img id="mypic-goes-here" src="" width=50 height=50 />
+    <input type="file" id="mypic-input" accept="images/*" />
+  </div>
+  <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Add a description</label>
+    <input type="text" placeholder="Say something... " id="post-desc" class="inputClass">
+  </div>
 
-    <div class="addImage">
-        <img id="mypic-goes-here" src="" />
-        <br>
-        <input type="file" id="mypic-input" accept="images/*" />
-    </div>
+  <button type="button" class="btn" id="button">Post</button>
+  <img id="ecoicon" src="/private/images/ecoicon.png" alt="eco icon">
+  <div class="footer_space" style="height:46.6px;"></div>
 
-    <div class="addDescription">
-        <p class="Pcenter">Add a description</p>
-        <textarea rows="10" id="post-desc"></textarea>
-    </div>
-    <button type="button" class="btn" id="button">Post</button>
+  <footer>
+    <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
+            aria-hidden="true"></i></button>
+    <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+    <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
+            class="fas fa-user-circle"></i></button>
+</footer>
 
-    <footer>
-        <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
-        <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
-        <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
-                class="fas fa-user-circle"></i></button>
-    </footer>
-    <!-- Optional JavaScript; choose one of the two! -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
 
-    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
+  <script src="/private/database/firestore.js"></script>
 
+  <script src="/private/js/footer.js"></script>
+  <script src="/private/js/eco_challenge_add_post.js"> </script>
 
-
-    <!-- Firebase libraries from CDN -->
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
-
-    <!-- Your own Firebase API key information -->
-    <script src="../../database/firebase-api-EcoClub.js"> </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-    <script src="/private/js/eco_challenge_add_post.js"> </script>
-    <script src="/private/js/footer.js"></script>
 </body>
 
 </html>
