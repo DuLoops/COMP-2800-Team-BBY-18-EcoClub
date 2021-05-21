@@ -1,6 +1,7 @@
 function createGrid() {
-
     firebase.auth().onAuthStateChanged(function (user) {
+        document.getElementById("list").innerHTML = "";
+
         db.collection("users").doc(user.uid)
             .collection("user_challenges").get().then((querySnapshot) => {
                 querySnapshot.forEach((doc) => {
@@ -81,6 +82,7 @@ function createGrid() {
                     });
                 })
 
+
             });
 
     });
@@ -88,6 +90,7 @@ function createGrid() {
 
 
 }
+
 createGrid();
 
 function DeleteChallenge(attr) {

@@ -78,3 +78,7 @@
 #comment {
     height: 30vh;
 }
+
+#footer_tasks {
+    background-color: rgba(0, 0 ,0 , 0.2) !important;
+  }

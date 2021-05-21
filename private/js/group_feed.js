@@ -1,12 +1,11 @@
 // post group feed
 function getPosts() {
-  document.getElementById("feed_content").innerHTML = "";
   firebase.auth().onAuthStateChanged(function (user) {
+    document.getElementById("feed_content").innerHTML = "";
     db.collection("users")
       .doc(user.uid)
       .get().then(function (doc) {
         var groupID = doc.data().group;
-        console.log(groupID);
         db.collection("groups")
           .doc(groupID)
           .collection("posts")
@@ -40,7 +39,25 @@ function getPosts() {
       })
   })
 }
-getPosts();
+
+// call getPosts() function if the collection is not empty
+firebase.auth().onAuthStateChanged(function (user) {
+    db.collection("users").doc(user.uid).get()
+    .then((doc) =>{
+      let groupID = doc.data().group;
+      db.collection("groups")
+      .doc(groupID)
+      .collection("posts")
+      .get()
+      .then((doc) => {
+        if (!doc.empty) {
+          getPosts();
+        }
+      })
+    })
+
+});
+
 
 // function getPosterInfo(userID) {
 //   var user_member = db.collection("users").doc(userID);

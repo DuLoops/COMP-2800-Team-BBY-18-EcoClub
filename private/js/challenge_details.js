@@ -11,6 +11,8 @@ function displayDetails() {
         document.getElementById("eco_point_p").innerHTML = ecopoint + " eco-point";
     });
 }
+
+
 displayDetails();
 // async function take_challenge() {
 //     var docID = localStorage.getItem("docID");
@@ -44,6 +46,7 @@ displayDetails();
    // window.location.href = "/private/html/challenges/eco_challenge.html";
 
 function take_challenge() {
+
     var challengeID = localStorage.getItem("docID");
 
    firebase.auth().onAuthStateChanged(async function (user) {
@@ -52,5 +55,6 @@ function take_challenge() {
         });
         window.location.href = "/private/html/challenges/eco_challenge.html";
     });
-   
+//  window.location.href = "/private/html/challenges/eco_challenge.html";
+
 }

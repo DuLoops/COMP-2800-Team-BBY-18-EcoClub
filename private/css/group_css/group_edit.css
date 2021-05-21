@@ -38,9 +38,11 @@ input{
   margin: 5px;
 }
 
-.member p{
-  
+#desc{
+ width:100%;
+ margin-bottom: 20px;
 }
+
 .remove_member{
   float:right;
   margin:20px;
