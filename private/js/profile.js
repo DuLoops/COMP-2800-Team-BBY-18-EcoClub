@@ -18,7 +18,7 @@ function sayName() {
                     // $("#image").append("<img src='" + picUrl + "'>")
                     if (name) {
                         $(".name-user").html(name);
-                        $(".bio-user").html(bio);
+                        $(".bio-user").text("Bio: " + bio);
                         $(".points-user").html(points);
                         $(".email-user").html(email);
 

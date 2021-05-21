@@ -4,7 +4,7 @@ firebase.auth().onAuthStateChanged(function (user) {
   db.collection("users")
     .doc(user.uid)
     .get().then(function (doc) {
-      var groupID = doc.uid;
+      var groupID = doc.data().group;
       // console.log(groupID);
       var docRef = db.collection("groups").doc(groupID);
       docRef.get().then((doc) => {
@@ -13,22 +13,21 @@ firebase.auth().onAuthStateChanged(function (user) {
           var groupCode = doc.data().groupCode;
           var groupName = doc.data().groupName;
           var desc = doc.data().desc;
-          var groupPic = doc.data().groupPic;
           var leader = doc.data().leader;
           var members = doc.data().members;
-
-          displayGroupInfo(groupCode, groupName, desc, groupPic);
+          console.log(groupCode);
+          displayGroupInfo(groupCode, groupName, desc);
           displayMembers(leader, members);
           //if the user is the admin
           if(user.uid == leader){
             console.log("Admin logged in");
             document.getElementById("forAdmin").innerHTML = "<div id='admin_edit'><a id='group_edit' href='group_edit.html'>Edit Club Info</a><div>";
+          } else {
+            // doc.data() will be undefined in this case
+            console.log("Not an admin");
           }
 
-        } else {
-          // doc.data() will be undefined in this case
-          console.log("No such document!");
-        }
+        } 
       }).catch((error) => {
         console.log("Error getting document:", error);
       });
@@ -51,7 +50,8 @@ function getUserID() {
   return user.uid;
 }
 
-function displayGroupInfo(groupCode, groupName, desc, groupPic) {
+function displayGroupInfo(groupCode, groupName, desc) {
+  console.log("displaying");
   document.getElementById("group_code").textContent = "#" + groupCode;
   document.getElementById("group_name").textContent = "Club Name: " + groupName;
   document.getElementById("group_desc").textContent = "Description: " + desc;

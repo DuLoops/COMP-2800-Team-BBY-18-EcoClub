@@ -79,7 +79,6 @@ function DeleteChallenge(attr) {
         })
     } else {
         firebase.auth().onAuthStateChanged(function (user) {
-<<<<<<< HEAD
             db.collection("users").doc(user.uid).collection("user_challenges").where("challengeID", "==", challengeID)
                 .get().then(function (snap) {
                     snap.forEach(async function (doc) {
@@ -95,15 +94,6 @@ function DeleteChallenge(attr) {
                             window.location.reload();
                     })
                 })
-=======
-            await db.collection("users").doc(user.uid)
-                .collection("user_challenges").doc(doc.id).delete().then(() => {
-                    console.log("Document successfully deleted!");
-                }).catch((error) => {
-                    console.error("Error removing document: ", error);
-                });
-            window.location.reload();
->>>>>>> 93cf6554e4d8fe23af7eeed8e39f25845f47b8bc
         })
     }
 
@@ -115,32 +105,15 @@ function CompleteChallenge(attr) {
     var challengeID = (attr.getAttribute("challengeID"));
     localStorage.setItem('challengeID', challengeID);
     console.log(challengeID);
-<<<<<<< HEAD
-        firebase.auth().onAuthStateChanged(function (user) {
-            db.collection("users").doc(user.uid).collection("user_challenges").where("challengeID", "==", challengeID)
-                .get().then(function (snap) {
-                    snap.forEach(async function (doc) {
-                        console.log(doc.id);
-                        const yourDate = new Date();
-                        await db.collection("users").doc(user.uid)
-                            .collection("completedChallenge").add({
-                                         challengeID: challengeID,
-                                         date: yourDate.toISOString().split('T')[0]
-                                        });
-                            location.replace("/private/html/challenges/eco_challenge_add_post.html");
-                        
-                    })
-                })
-        })
-=======
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("users").doc(user.uid).collection("user_challenges").where("challengeID", "==", challengeID)
             .get().then(function (snap) {
                 snap.forEach(async function (doc) {
                     console.log(doc.id);
+                    const yourDate = new Date();
                     await db.collection("users").doc(user.uid)
                         .collection("completedChallenge").add({
-                            isCompleted: true,
+                            date: yourDate.toISOString().split('T')[0],
                             challengeID: challengeID
                         });
 
@@ -157,5 +130,4 @@ function CompleteChallenge(attr) {
                 })
             })
     })
->>>>>>> 93cf6554e4d8fe23af7eeed8e39f25845f47b8bc
 }
