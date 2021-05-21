@@ -5,9 +5,12 @@
     --green: #28a745;
     /* bootstrap: -success */
     --grey: #f7f7f7;
-  }
+}
+
 body {
-    padding-left: 1rem;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.5rem;
+    padding: 1rem;
 }
 
 .name {
@@ -44,7 +47,7 @@ body {
     text-align: center;
     font-size: 5vw;
     width: 100%;
-    
+
 
 }
 
@@ -64,7 +67,7 @@ body {
     margin-top: 5vh;
     background-color: var(--green);
 }
-  
-  #comment{
+
+#comment {
     height: 30vh;
 }
