@@ -26,7 +26,7 @@ function sayName() {
                         .then(function (doc) {
                             var teamName = doc.data().groupName;
                             var teamDesc = doc.data().desc
-                            if (name) {
+                            if (teamName) {
                                 $("#teamName").html(teamName);
                                 $("#teamDesc").html(teamDesc);
                             } else {

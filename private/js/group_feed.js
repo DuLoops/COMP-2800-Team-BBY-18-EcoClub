@@ -12,22 +12,28 @@ function getPosts() {
           .get()
           .then(function (snap) {
             snap.forEach(function (doc) {
-              var description = doc.data().desc;
+              var description = doc.data().groupDesc;
               var picURL = doc.data().postPic;
-              var likes = doc.data().likes;
-              // var poster = db.collection("users").doc(doc.data().poster);
+              var likesArray = doc.data().likes;
+                       // var poster = db.collection("users").doc(doc.data().poster);
               // var poster_name;
               // poster.get().then((doc)=>{
               //   poster_name = doc.data().name;
               // });
-              var poster = doc.data().posterName;
+              var posterid = doc.data().postedBy;
               var likedStatus = "btn-secondary unliked";
-              for (var i in likes) {
-                if (likes[i] == user.uid) {
+              for (var i in likesArray) {
+                if (likesArray[i] == user.uid) {
                   likedStatus = "btn-success liked"
                 } 
               }
-              document.getElementById("feed_content").innerHTML += "<div class='post'><p class='poster'>Posted by: "+poster+"</p><img class='post_pic' src='" + picURL + "' alt='postPic'><p class='post_desc'>" + description + "</p><div class='post_btn'><p class='likes'><i class='far fa-thumbs-up'></i>"+likes.length+"</p><div><button type='button' class='btn "+likedStatus+"' onclick='likePost(this)' groupID='"+groupID+"' postID='"+doc.id+"'>Like</button><button type='button' class='btn btn-success' onclick='postDetail(this)'>Comment</button></div></div></div>";
+              var name;
+              db.collection("users").doc(posterid).get().then(function(doc){
+                name = doc.data().name;
+                console.log(doc.id);
+               
+              })
+              document.getElementById("feed_content").innerHTML += "<div class='post'><p class='poster'>Posted by: "+ name +"</p><img class='post_pic' src='" + picURL + "' alt='postPic'><p class='post_desc'>" + description + "</p><div class='post_btn'><p class='likes'><i class='far fa-thumbs-up'></i>"+likesArray.length+"</p><div><button type='button' class='btn "+likedStatus+"' onclick='likePost(this)' groupID='"+groupID+"' postID='"+doc.id+"'>Like</button><button type='button' class='btn btn-success' onclick='postDetail(this)'>Comment</button></div></div></div>";
             });
           });
       })
@@ -75,6 +81,7 @@ function likePost(attr) {
   var groupID = (attr.getAttribute("groupID"));
   console.log(groupID);
   var postID = (attr.getAttribute("postID"));
+  console.log(postID);
   if (attr.classList.contains("unliked")){
     db.collection("groups")
           .doc(groupID)
