@@ -63,10 +63,10 @@ function displayMembers(members) {
 
   document.getElementById("save_btn").addEventListener("click", saveChanges);
 
-  function saveChanges() {
+  async function saveChanges() {
     var newName = document.getElementById("name").value;
     var newDesc = document.getElementById("desc").value;
-    firebase.auth().onAuthStateChanged(function (user) {
+    await firebase.auth().onAuthStateChanged(function (user) {
       db.collection("users")
         .doc(user.uid)
         .get().then(function (doc) {
@@ -77,5 +77,6 @@ function displayMembers(members) {
           })
         });
     });
+    window.location.href = "/private/html/challenges/eco_challenge.html";
   }
 }

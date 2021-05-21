@@ -38,6 +38,7 @@ function uploadUserProfilePic() {
                 console.log(url); // Save the URL into users collection
                 db.collection("users").doc(user.uid).get().then(function (doc) {
                         var groupId = doc.data().group;
+                        var name = doc.data().name;
                         var groupDesc = document.getElementById("post-desc").value;
                         
 
@@ -45,7 +46,7 @@ function uploadUserProfilePic() {
                         db.collection("groups").doc(groupId).collection("posts").add({
                             "postPic": url,
                             "groupDesc": groupDesc,
-                            "postedBy": user.uid,
+                            "postedBy": name,
                              "likes": [],
                         })
 
