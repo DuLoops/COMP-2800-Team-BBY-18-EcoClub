@@ -5,7 +5,6 @@
     --green: #28a745;
     /* bootstrap: -success */
     --grey: #f7f7f7;
-<<<<<<< HEAD
   }
 
   .clearfix {
@@ -15,14 +14,6 @@
   }
   
 body {
-=======
-}
-
-body {
-    font-family: 'Noto Serif', serif;
-    font-size: 1.5rem;
-    padding: 1rem;
->>>>>>> 6f2b4357823c23fe4eeb5b3f561aefb1946b815e
 }
 
 .name {
@@ -56,12 +47,7 @@ body {
     margin-top:20px;
     text-align: center;
     font-size: 5vw;
-<<<<<<< HEAD
     width:100%;
-=======
-    width: 100%;
-
->>>>>>> 6f2b4357823c23fe4eeb5b3f561aefb1946b815e
 
 }
 
@@ -72,18 +58,19 @@ body {
 #eco-point_div{
     display:block;
     margin:10px;
-    border:solid var(--green) 1px;
     border-radius: 4px;
     display:flex;
+    justify-content: center;
     align-items: center;
 }
 .img {
-    width: 50%;
-    height:150px;
+    width: 150px;
+    height:120px;
+    /* margin-right:5px; */
 }
 #eco_point_p{
     color:#28a745;
-    font-size:2rem;
+    font-size:1.5rem;
 }
 
 #btn {

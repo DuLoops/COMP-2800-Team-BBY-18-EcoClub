@@ -19,10 +19,10 @@ var uiConfig = {
                 db.collection("users").doc(user.uid).set({ //write to firestore
                         name: user.displayName, //"users" collection
                         email: user.email, //with authenticated user's ID (user.uid)
-                        ecopoint: "0",
-                        profilePic: "link",
-                        bio: "bio",
-                        group:""
+                        ecopoint: 0,
+                        profilePic: null,
+                        bio: null,
+                        group:null
                     })
                     .then(function () {
                         console.log("New user added to firestore");

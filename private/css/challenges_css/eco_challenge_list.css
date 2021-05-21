@@ -1,11 +1,5 @@
 body {
-<<<<<<< HEAD
   height: 100%;
-=======
-  font-family: 'Noto Serif', serif;
-  font-size: 23px;
-  padding: 1rem;
->>>>>>> 6f2b4357823c23fe4eeb5b3f561aefb1946b815e
 }
 
 #button {
@@ -16,13 +10,9 @@ body {
   background-color: #28a745;
 }
 
-<<<<<<< HEAD
 
 
 /* .form-group {
-=======
-.form-group {
->>>>>>> 6f2b4357823c23fe4eeb5b3f561aefb1946b815e
   display: flex;
   margin-left: 2%;
   margin-bottom: 0%;
@@ -53,6 +43,9 @@ body {
   padding-bottom: 40px;
   margin:10px 20px;
   border-radius: 10px;
+}
+a {
+  text-decoration: none;
 }
 .ecopoint{
   float:left;
