@@ -36,6 +36,12 @@ body {
   margin-top: 1.5vh;
 }
 
+#error {
+  color: red;
+  width: 80%;
+  margin: auto;
+}
+
 
 
 .feild_name {
