@@ -44,7 +44,6 @@ function uploadUserProfilePic(e) {
 
 
                 setTimeout(function () {
-                    alert("Updated Succesfully");
                     location.replace("/private/html/main.html")
                 }, 2000)
             })

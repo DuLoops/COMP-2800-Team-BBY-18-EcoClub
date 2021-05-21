@@ -14,9 +14,10 @@ displayDetails();
 
 function take_challenge() {
     var challengeID = localStorage.getItem("id");
-    firebase.auth().onAuthStateChanged(function (user) {
+    await firebase.auth().onAuthStateChanged(function (user) {
         db.collection("users").doc(user.uid).collection("user_challenges").doc().set({
             "challengeID": challengeID,
         });
     });
+ window.location.href = "/private/html/challenges/eco_challenge.html";
 }
