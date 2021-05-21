@@ -1,12 +1,13 @@
 document.getElementById("button").addEventListener('click', uploadUserProfilePic);
 document.getElementById("mypic-input").addEventListener('change', uploadOnClick);
 let file;
+
 function uploadOnClick(e) {
 
-     file = e.target.files[0];
-     const image = document.getElementById("mypic-goes-here"); // pointer #2
-     var blob = URL.createObjectURL(file);
-     image.src = blob;            // display this image
+    file = e.target.files[0];
+    const image = document.getElementById("mypic-goes-here"); // pointer #2
+    var blob = URL.createObjectURL(file);
+    image.src = blob; // display this image
 }
 
 function uploadUserProfilePic() {
@@ -19,39 +20,43 @@ function uploadUserProfilePic() {
         updating.innerHTML = "Posting..";
         document.body.appendChild(updating);
 
-        
+
         let name = Math.random().toString(36).substr(2, 9);
         //store using this name
         console.log(name);
-        var storageRef = storage.ref("images/" + name + ".jpg"); 
-                
-          //upload the picked file
-              await storageRef.put(file) 
-                    .then(function(){
-                         console.log('Uploaded to Cloud Storage.');
-                 })
-    
-                             //get the URL of stored file
-                 storageRef.getDownloadURL()
-                     .then(function (url) {   // Get URL of the uploaded file
-                         console.log(url);    // Save the URL into users collection
-                         db.collection("users").doc(user.uid).get().then(function(doc){
-                             var groupId = doc.data().group;
-                             var groupDesc = document.getElementById("post-desc").value;
-                             db.collection("groups").doc(groupId).collection("posts").add({
-                                 "postPic": url,
-                                 "groupDesc": groupDesc,
-                                 "likes" : "0",
-                                 "postedBy" : user.uid
-                             })
-                         })
-                         .then(function(){
-                             console.log('Added Post Pic URL to Firestore.');
-                             setTimeout(function () {
-                                location.replace("/private/html/group/group_feed.html")
-                            }, 2000)
-                         })
-                     })
+        var storageRef = storage.ref("images/" + name + ".jpg");
+
+        //upload the picked file
+        await storageRef.put(file)
+            .then(function () {
+                console.log('Uploaded to Cloud Storage.');
+            })
+
+        //get the URL of stored file
+        storageRef.getDownloadURL()
+            .then(function (url) { // Get URL of the uploaded file
+                console.log(url); // Save the URL into users collection
+                db.collection("users").doc(user.uid).get().then(function (doc) {
+                        var groupId = doc.data().group;
+                        var groupDesc = document.getElementById("post-desc").value;
+                        
+
+                        
+                        db.collection("groups").doc(groupId).collection("posts").add({
+                            "postPic": url,
+                            "groupDesc": groupDesc,
+                            "postedBy": user.uid,
+                             "likes": [],
+                        })
+
+                    })
+                    .then(function () {
+                        console.log('Added Post Pic URL to Firestore.');
+                        setTimeout(function () {
+                            location.replace("/private/html/group/group_feed.html")
+                        }, 2000)
+                    })
+            })
     })
 }
 

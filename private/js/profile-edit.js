@@ -11,8 +11,8 @@ function sayName() {
                     var bio = doc.data().bio;
 
                     if (name) {
-                        document.getElementById("name").placeholder = name;
-                        document.getElementById("bio").placeholder = bio;
+                        document.getElementById("name").value = name;
+                        document.getElementById("bio").value = bio;
                     } else {
                         document.getElementById("name").placeholder = "EcoClub User Name";
                         document.getElementById("bio").placeholder = "EcoClub User Bio";
@@ -36,6 +36,13 @@ function uploadOnClick(e) {
 }
 
 function uploadUserProfile(e) {
+    var loaderDiv = document.createElement("div");
+        loaderDiv.setAttribute("class", "loader");
+        document.body.appendChild(loaderDiv);
+        var updating = document.createElement("p");
+        updating.setAttribute("class", "text");
+        updating.innerHTML = "Updating..";
+        document.body.appendChild(updating);
     console.log("Working");
     // Let's assume my storage is only enabled for authenticated users 
     // This is set in your firebase console storage "rules" tab
@@ -65,7 +72,6 @@ function uploadUserProfile(e) {
                 console.log('Added Profile Pic URL to Firestore.');
 
                 setTimeout(function () {
-                    alert("Updated Succesfully");
                     location.replace("/private/html/profile/profile-main.html")
                 }, 2000)
             })

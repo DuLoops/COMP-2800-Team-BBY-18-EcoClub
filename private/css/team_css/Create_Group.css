@@ -11,29 +11,16 @@ body {
   font-size: 23px;
   padding: 1rem;
 }
-
-
-#back-icon{
-  float: left;
-  font-size:2rem;
-  color: black;
-}
-
-#back {
-  color: black;
-  padding-left: 0.4rem;
-  font-size: 1.2rem;
-}
-
-#heading {
-  text-align: center;
-}
-
-
 .name {
   text-align: center;
   font-size: 7vw;
   margin-top: 1.5vh;
+}
+
+#error {
+  color: red;
+  width: 80%;
+  margin: auto;
 }
 
 

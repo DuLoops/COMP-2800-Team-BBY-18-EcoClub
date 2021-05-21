@@ -12,13 +12,16 @@ function sayName() {
                     var email = doc.data().email;
                     var picUrl = doc.data().profilePic;
                     var groupID = doc.data().group;
+                    var bio = doc.data().bio;
                     // var groupId = doc.data().group;
                     console.log(picUrl);
                     // $("#image").append("<img src='" + picUrl + "'>")
                     if (name) {
                         $(".name-user").html(name);
+                        $(".bio-user").html(bio);
                         $(".points-user").html(points);
                         $(".email-user").html(email);
+
                     } else {
                         $(".name-user").html("EcoClub User");
                     }
@@ -26,7 +29,7 @@ function sayName() {
                         .then(function (doc) {
                             var teamName = doc.data().groupName;
                             var teamDesc = doc.data().desc
-                            if (name) {
+                            if (teamName) {
                                 $("#teamName").html(teamName);
                                 $("#teamDesc").html(teamDesc);
                             } else {
@@ -78,10 +81,9 @@ function leaveTeam() {
                         members: firebase.firestore.FieldValue.arrayRemove(somebody.uid)
                     });
                     db.collection("users").doc(somebody.uid).update({
-                            group: ""
+                            group: null
                     })
                     setTimeout(function(){
-                        alert("Updated Succesfully");
                         location.replace("/private/html/main.html")
                    },2000)
                 })
