@@ -6,22 +6,20 @@
     /* bootstrap: -success */
     --grey: #f7f7f7;
   }
+
+  .clearfix {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
 body {
-    padding-left: 1rem;
 }
 
 .name {
     text-align: center;
     font-size: 7vw;
     margin-top: 1.5vh;
-}
-
-
-
-.form-group {
-    display: flex;
-    margin-left: 12%;
-    margin-bottom: 0%;
 }
 
 .chalange_name {
@@ -39,12 +37,17 @@ body {
     margin: auto;
 }
 
-
-.chalange_details {
+.challenge_name{
     text-align: center;
     font-size: 5vw;
-    width: 100%;
-    
+    width:100%;
+}
+
+.chalange_details {
+    margin-top:20px;
+    text-align: center;
+    font-size: 5vw;
+    width:100%;
 
 }
 
@@ -52,16 +55,25 @@ body {
     background-color: #659DBD;
 }
 
+#eco-point_div{
+    display:block;
+    margin:10px;
+    border:solid var(--green) 1px;
+    border-radius: 4px;
+    display:flex;
+    align-items: center;
+}
 .img {
-    float: left;
-    width: 10vw;
-    height: 10vw;
-    margin-right: 2%;
+    width: 50%;
+    height:150px;
+}
+#eco_point_p{
+    color:#28a745;
+    font-size:2rem;
 }
 
 #btn {
     margin: 0%;
-    margin-top: 5vh;
     background-color: var(--green);
 }
   

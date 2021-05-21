@@ -14,28 +14,36 @@
     <!-- Font awesome-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        
+
 </head>
 
 <body>
 
     <a class="nav-link" aria-current="page" href="/private/html/profile/profile-main.html">
         <i class="fa fa-arrow-circle-left" id="back-icon"></i>
-        <h2 id="heading">Eco Challenges</h2> 
-      </a><hr>
+        <h2 id="heading">Eco Challenges</h2>
+    </a>
+    <hr>
+    <div id="content">
+        <div id="displayButton">
+            <button class='btn btn-success'>In-Progress</button>
+            <button class='btn btn-secondary'>Completed</button>
+        </div>
 
+        <div id="list">
+        </div>
 
-    <div id="list">
-    </div>
+        <div class="col-md-12 text-center">
+            <a href="/private/html/challenges/eco_challenge_add_post.html" id="btn" class="btn btn-lg" role="button"
+                aria-disabled="true">Share you idea <i class="far fa-plus-square"></i>
 
-    <div class="col-md-12 text-center">
-        <a href="/private/html/challenges/eco_challenge_add_post.html" id="btn" class="btn btn-lg" role="button"
-            aria-disabled="true">Share you idea (Add post)</a>
-    </div>
+            </a>
+        </div>
 
-    <div class="col-md-12 text-center">
-        <a href="/private/html/challenges/eco_challenge_list.html" id="btn" class="btn btn-lg" role="button"
-            aria-disabled="true">Take a new Challenge</a>
+        <div class="col-md-12 text-center">
+            <a href="/private/html/challenges/eco_challenge_list.html" id="btn" class="btn btn-lg" role="button"
+                aria-disabled="true">Take a new Challenge</a>
+        </div>
     </div>
 
     <footer>

@@ -9,17 +9,7 @@
 }
 body {
   height: 100%;
-  margin: 0%;
-  padding-left: 1rem;
 }
-
-
-.name {
-  text-align: center;
-  font-size: 7vw;
-  margin-top: 1.5vh;
-}
-
 
 #button {
   display: block;
@@ -31,7 +21,7 @@ body {
 
 
 
-.form-group {
+/* .form-group {
   display: flex;
   margin-left: 2%;
   margin-bottom: 0%;
@@ -45,13 +35,28 @@ body {
 
 .eco_points {
   font-size: 3.7vw;
-}
+} */
 
-.img {
+/* .img {
   float: left;
   width: 5vw;
   height: 5vw;
   margin-right: 2%;
+} */
+
+.item{
+  color:black;
+  background-color: rgba(40, 167, 69, 0.5);
+  padding:10px;
+  padding-bottom: 40px;
+  margin:10px 20px;
+  border-radius: 10px;
+}
+.ecopoint{
+  float:left;
+}
+.item button{
+  float:right;
 }
 
 #list {
