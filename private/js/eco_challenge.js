@@ -1,8 +1,8 @@
 function createGrid() {
 
-    // firebase.auth().onAuthStateChanged(function (user) {
-    //     leader = (user.uid);
-    // });
+    firebase.auth().onAuthStateChanged(function (user) {
+        leader = (user.uid);
+    });
     // I should change the example with leader
 
     db.collection("users").doc("example")
@@ -21,16 +21,16 @@ function createGrid() {
 
                 complete.click(async function () {
                     console.log(doc.id);
-                    await db.collection("users").doc("example").collection("user-challenges").doc(doc.id).update({
+                    await db.collection("users").doc(leader).collection("user-challenges").doc(doc.id).update({
                         isCompleted: true
                     });
 
                     localStorage.setItem("challenge_title", doc.id);
-                    window.location.href= "/private/html/challenges/eco_challenge_add_post.html";
+                    window.location.href = "/private/html/challenges/eco_challenge_add_post.html";
 
                 });
                 Delete.click(async function () {
-                    await db.collection("users").doc("example")
+                    await db.collection("users").doc(leader)
                         .collection("user-challenges").doc(doc.id).delete().then(() => {
                             console.log("Document successfully deleted!");
                         }).catch((error) => {
