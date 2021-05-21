@@ -29,17 +29,18 @@ function uploadComment() {
             async function myFunction() {
 
                 var comment = document.getElementById("comment").value;
-                db.collection("users").doc(user.uid).get().then(function (doc) {
+                db.collection("users").doc(user.uid).get().then(async function (doc) {
                     var groupId = doc.data().group;
                     var post = (localStorage.getItem('postID'));
                     console.log(post);
-                    db.collection("groups").doc(groupId).collection("posts").doc(post).collection("comment").add({
+                    await db.collection("groups").doc(groupId).collection("posts").doc(post).collection("comment").add({
                             "comment": comment,
                             "commenter": userId
                         })
                         .then(function () {
                             console.log('Added comment to Firestore.');
                         })
+                        window.location.reload();
                 })
             }
             myFunction();
@@ -75,9 +76,9 @@ function getChallenges() {
             db.collection("groups").doc(groupId).collection("posts").doc(post).collection("comment")
                 .get()
                 .then(function (snap) {
-                    snap.forEach(function (doc) {
+                    snap.forEach(async function (doc) {
                         var comment = doc.data().comment;
-                        db.collection("users").doc(user.uid).get().then(function (doc) {
+                        await db.collection("users").doc(user.uid).get().then(function (doc) {
                             var userName = doc.data().name;
                             var picUrl = doc.data().profilePic;
                             $(".profile-pic").attr("src", picUrl);
