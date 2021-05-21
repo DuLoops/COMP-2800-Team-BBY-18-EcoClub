@@ -1,18 +1,3 @@
-// db.collection("groups").doc("example").collection("posts").doc("example").collection("comment").get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//         // doc.data() is never undefined for query doc snapshots
-//         console.log(doc.id, " => ", doc.data());
-//         var nameId = doc.data().commenter;
-//         var comment = doc.data().comment;
-//         console.log(nameId);
-//         console.log(comment);
-//         db.collection("users").doc(nameId).get().then(function(doc){
-//             var name = doc.data().name;
-//             console.log(name);
-//         })
-//     });
-// });
-
 document.getElementById("post-btn").addEventListener("click", uploadComment);
 
 function uploadComment() {
@@ -32,7 +17,7 @@ function uploadComment() {
                 db.collection("users").doc(user.uid).get().then(async function (doc) {
                     var groupId = doc.data().group;
                     var post = (localStorage.getItem('postID'));
-                    console.log(post);
+                    console.log("postID " + post);
                     await db.collection("groups").doc(groupId).collection("posts").doc(post).collection("comment").add({
                             "comment": comment,
                             "commenter": userId

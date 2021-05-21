@@ -28,7 +28,19 @@ function createGrid() {
 
 }
 
-createGrid();
+firebase.auth().onAuthStateChanged(function (user) {
+    db.collection("users").doc(user.uid).collection("user_challenges").get()
+    .then((doc) =>{
+        if (doc.empty) {
+            console.log("empty");
+        } else {
+            console.log("not empty");
+            createGrid();
+        }
+    })
+
+});
+
 
 function DeleteChallenge(attr) {
 

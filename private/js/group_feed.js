@@ -15,11 +15,6 @@ function getPosts() {
               var description = doc.data().groupDesc;
               var picURL = doc.data().postPic;
               var likesArray = doc.data().likes;
-                       // var poster = db.collection("users").doc(doc.data().poster);
-              // var poster_name;
-              // poster.get().then((doc)=>{
-              //   poster_name = doc.data().name;
-              // });
               var posterid = doc.data().postedBy;
               var likedStatus = "btn-secondary unliked";
               for (var i in likesArray) {
@@ -30,8 +25,6 @@ function getPosts() {
               var name;
               db.collection("users").doc(posterid).get().then(function(doc){
                 name = doc.data().name;
-                console.log(doc.id);
-               
               })
               document.getElementById("feed_content").innerHTML += "<div class='post'><p class='poster'>Posted by: "+ name +"</p><img class='post_pic' src='" + picURL + "' alt='postPic'><p class='post_desc'>" + description + "</p><div class='post_btn'><p class='likes'><i class='far fa-thumbs-up'></i>"+likesArray.length+"</p><div><button type='button' class='btn "+likedStatus+"' onclick='likePost(this)' groupID='"+groupID+"' postID='"+doc.id+"'>Like</button><button type='button' class='btn btn-success' onclick='postDetail(this)'>Comment</button></div></div></div>";
             });
