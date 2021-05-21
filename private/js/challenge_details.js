@@ -13,11 +13,13 @@ function displayDetails() {
 displayDetails();
 
 function take_challenge() {
-    var challengeID = localStorage.getItem("id");
-    await firebase.auth().onAuthStateChanged(function (user) {
-        db.collection("users").doc(user.uid).collection("user_challenges").doc().set({
+    var challengeID = localStorage.getItem("docID");
+
+   firebase.auth().onAuthStateChanged(async function (user) {
+        await db.collection("users").doc(user.uid).collection("user_challenges").doc().set({
             "challengeID": challengeID,
         });
+        window.location.href = "/private/html/challenges/eco_challenge.html";
     });
- window.location.href = "/private/html/challenges/eco_challenge.html";
+    
 }
