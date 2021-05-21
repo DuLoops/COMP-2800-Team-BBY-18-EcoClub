@@ -9,10 +9,32 @@
 
 body {
   height: 100%;
-  margin: 0%;
-  padding: 1rem;
+
 }
 
+#content{
+  margin:5%;
+}
+#displayButton{
+  display:flex;
+  justify-content: center;
+  margin:5%;
+}
+#displayButton button{
+  margin-right:5px;
+}
+
+#list{
+  background-color: rgba(40, 167, 69, 0.1);
+  padding:10px;
+  border-radius: 5px;
+  width: 95%;
+  margin: auto;
+  height: 55vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
 
 .name {
   text-align: center;
@@ -22,37 +44,24 @@ body {
 
 #btn {
   margin: 0%;
-  margin-top: 5vh;
+  margin-top:20px;
   background-color: var(--green);
   color: black;
 }
 
 .form-group {
   display: flex;
-  margin-bottom: 1%;
   justify-content: space-between;
-  border: 2px solid rgb(100, 74, 74);
   width: 95%;
-  padding: 2px;
+  border:solid var(--green) 1px;
+  border-radius: 4px;
+  padding:2px;
 }
 
 .chalange_name {
-  margin: auto;
-  margin-left: 0%;
   font-size: 1.5rem;
   width: 50%;
 }
-
-
-#list {
-  width: 95%;
-  margin: auto;
-  height: 55vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  text-align: justify;
-}
-
 
 .button {
   background-color: #04AA6D;
@@ -66,4 +75,8 @@ body {
 
 #footer_tasks {
   background-color: rgba(0, 0 ,0 , 0.2) !important;
+}
+
+#heading{
+  margin-top: 20px;
 }

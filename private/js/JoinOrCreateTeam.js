@@ -32,7 +32,7 @@ function getCode() {
                             "group" : doc.id
                         })
                         setTimeout(function() {
-                            location.replace("/private/html/group/group_feed.html")},3000);
+                            location.replace("/private/html/challenges/eco_challenge.html")},3000);
                     })
                 })
     

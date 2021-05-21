@@ -1,16 +1,6 @@
 body {
-  font-family: 'Noto Serif', serif;
-  font-size: 23px;
-  padding: 1rem;
+  height: 100%;
 }
-
-
-.name {
-  text-align: center;
-  font-size: 7vw;
-  margin-top: 1.5vh;
-}
-
 
 #button {
   display: block;
@@ -20,7 +10,9 @@ body {
   background-color: #28a745;
 }
 
-.form-group {
+
+
+/* .form-group {
   display: flex;
   margin-left: 2%;
   margin-bottom: 0%;
@@ -35,13 +27,31 @@ body {
 
 .eco_points {
   font-size: 3.7vw;
-}
+} */
 
-.img {
+/* .img {
   float: left;
   width: 5vw;
   height: 5vw;
   margin-right: 2%;
+} */
+
+.item{
+  color:black;
+  background-color: rgba(40, 167, 69, 0.5);
+  padding:10px;
+  padding-bottom: 40px;
+  margin:10px 20px;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+}
+.ecopoint{
+  float:left;
+}
+.item button{
+  float:right;
 }
 
 #list {
