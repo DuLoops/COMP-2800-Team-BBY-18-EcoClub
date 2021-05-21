@@ -15,18 +15,18 @@ function getPosts() {
               var description = doc.data().groupDesc;
               var picURL = doc.data().postPic;
               var likesArray = doc.data().likes;
-              var posterid = doc.data().postedBy;
+              var PosterName = doc.data().postedBy;
               var likedStatus = "btn-secondary unliked";
               for (var i in likesArray) {
                 if (likesArray[i] == user.uid) {
                   likedStatus = "btn-success liked"
                 } 
               }
-              var name;
-              db.collection("users").doc(posterid).get().then(function(doc){
-                name = doc.data().name;
-              })
-              document.getElementById("feed_content").innerHTML += "<div class='post'><p class='poster'>Posted by: "+ name +"</p><img class='post_pic' src='" + picURL + "' alt='postPic'><p class='post_desc'>" + description + "</p><div class='post_btn'><p class='likes'><i class='far fa-thumbs-up'></i>"+likesArray.length+"</p><div><button type='button' class='btn "+likedStatus+"' onclick='likePost(this)' groupID='"+groupID+"' postID='"+doc.id+"'>Like</button><button type='button' class='btn btn-success' onclick='postDetail(this)'>Comment</button></div></div></div>";
+              
+
+              
+             
+              document.getElementById("feed_content").innerHTML += "<div class='post'><p class='poster'>Posted by: "+ PosterName +"</p><img class='post_pic' src='" + picURL + "' alt='postPic'><p class='post_desc'>" + description + "</p><div class='post_btn'><p class='likes'><i class='far fa-thumbs-up'></i>"+likesArray.length+"</p><div><button type='button' class='btn "+likedStatus+"' onclick='likePost(this)' groupID='"+groupID+"' postID='"+doc.id+"'>Like</button><button type='button' class='btn btn-success' onclick='postDetail(this)' postID='"+doc.id+"' groupID='"+groupID+"'>Comment</button></div></div></div>";
             });
           });
       })
@@ -50,6 +50,8 @@ firebase.auth().onAuthStateChanged(function (user) {
     })
 
 });
+
+
 
 
 // function getPosterInfo(userID) {
@@ -101,7 +103,6 @@ function postDetail(attr) {
   var postID = (attr.getAttribute("postID"));
   console.log(postID)
   window.localStorage.setItem("groupID", groupID);
-
   localStorage.setItem('postID', postID );
   location.replace("/private/html/post/postdetail.html");
   // window.localStorage.setItem("postID", postID);
