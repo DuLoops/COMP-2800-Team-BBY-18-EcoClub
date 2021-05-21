@@ -1,10 +1,11 @@
 body {
     font-family: sans-serif;
+    font-size: 1.5rem;
 }
 
-#back-icon {
+#back-icon{
     float: left;
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
 }
 
 #back-button {
@@ -17,71 +18,33 @@ body {
 }
 
 #link {
-    color: black;
+  color: black;
 }
 
-.Pcenter {
-    text-align: center;
-}
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #28a745;
-    text-align: center;
-    padding: 3px 0;
-}
-
-.btnFoot {
-    width: 32%;
-    height: 5vh;
-    /* background-color: rgb(75, 63, 63); */
-}
-
-.btn_post {
-    background-color: rgba(0, 0, 0, 0.2) !important;
-}
-
-.description {
-    text-align: center;
-    font-size: 2rem;
-}
-
-#mypic-goes-here {
-    display: table;
-    margin: 0 auto;
-}
-
-#button {
+#ecoicon {
+    padding-top: 4rem;
+    width: 15rem;
     display: block;
-    margin: auto;
-    margin-top: 20vh;
+    margin: auto; 
+}
+  
+  .btn_post {
+    background-color: rgba(0, 0 ,0 , 0.2) !important;
+  }
+  
+  #button {
+    display: block;
+    margin: auto;   
     font-size: 1.5rem;
-    width: 8rem;
+    width: 5rem;
     background-color: #28a745;
 }
 
-#post-desc {
-    width: 70vw;
+  #post-desc {
+    margin-top: 1rem;
+    width: 24rem;  
 }
 
-#mypic-input {
-    border: 1px solid black;
-}
-
-footer i {
-    font-size: 1.5rem;
-}
-
-.addImage {
-    display: table;
-    margin: 0 auto;
-}
-
-.addDescription {
-    display: table;
-    margin: 0 auto;
-    margin-top: 15%;
+#add-post, .mb-3 {
+    padding: 10px;
 }

@@ -1,7 +1,7 @@
 function getCode() {
     firebase.auth().onAuthStateChanged(function (user) {
         console.log("working");
-        document.getElementById("Joinbutton").addEventListener('click', function () {
+        document.getElementById("Joinbutton").addEventListener('click', async function () {
             console.log("working");
             var code = document.getElementById("code").value;
             console.log("working");
@@ -9,7 +9,7 @@ function getCode() {
             var i = 0;
     
             //read cities collection from firestore, with query
-            db.collection("groups")
+             await db.collection("groups")
                 .where("groupCode", "==", code)
                 .get()
                 .then(function (snap) {
