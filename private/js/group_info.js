@@ -5,7 +5,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     .doc(user.uid)
     .get().then(function (doc) {
       var groupID = doc.data().group;
-      console.log(groupID);
+      // console.log(groupID);
       var docRef = db.collection("groups").doc(groupID);
       docRef.get().then((doc) => {
         if (doc.exists) {
@@ -22,7 +22,7 @@ firebase.auth().onAuthStateChanged(function (user) {
           //if the user is the admin
           if(user.uid == leader){
             console.log("Admin logged in");
-            document.getElementById("forAdmin").innerHTML = "<a id='group_edit' href='group_edit.html'>Edit Club Info</a>";
+            document.getElementById("forAdmin").innerHTML = "<div id='admin_edit'><a id='group_edit' href='group_edit.html'>Edit Club Info</a><div>";
           }
 
         } else {
@@ -53,7 +53,7 @@ function getUserID() {
 
 function displayGroupInfo(groupCode, groupName, desc, groupPic) {
   document.getElementById("group_code").textContent = "#" + groupCode;
-  document.getElementById("group_name").textContent = groupName;
+  document.getElementById("group_name").textContent = "Club Name: " + groupName;
   document.getElementById("group_desc").textContent = "Description: " + desc;
 }
 

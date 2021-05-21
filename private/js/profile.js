@@ -78,10 +78,9 @@ function leaveTeam() {
                         members: firebase.firestore.FieldValue.arrayRemove(somebody.uid)
                     });
                     db.collection("users").doc(somebody.uid).update({
-                            group: ""
+                            group: null
                     })
                     setTimeout(function(){
-                        alert("Updated Succesfully");
                         location.replace("/private/html/main.html")
                    },2000)
                 })

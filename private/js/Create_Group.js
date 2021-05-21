@@ -25,7 +25,7 @@ async function myFunction() {
     });
 
 
-    window.location.href= "/private/html/group/group_feed.html";
+    window.location.href= "/private/html/challenges/eco_challenge.html";
 
     // firebase.auth().onAuthStateChanged(function (user) {
     //     db.collection("groups").doc(docRef.id).add();

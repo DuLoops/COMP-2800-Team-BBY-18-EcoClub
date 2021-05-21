@@ -8,6 +8,11 @@
   --ligth_green: #28a745;
 }
 
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 * {
 	box-sizing: border-box;
@@ -25,11 +30,15 @@ body {
   float:left;
 }
 
-#forAdmin{
+#admin_edit{
   margin:20px;
   float:right;
   border:solid var(--green) 2px;
   padding:3px;
+}
+#admin_edit a{
+  color:#28a745;
+  text-decoration: none;
 }
 
 #group_info_content{

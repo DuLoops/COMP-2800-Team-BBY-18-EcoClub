@@ -1,6 +1,7 @@
 function createGrid() {
-
     firebase.auth().onAuthStateChanged(function (user) {
+        document.getElementById("list").innerHTML = "";
+
         db.collection("users").doc(user.uid)
         .collection("user_challenges").get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
@@ -29,6 +30,7 @@ function createGrid() {
                     await db.collection("users").doc(user.uid)
                         .collection("user-challenges").doc(doc.id).delete().then(() => {
                             console.log("Document successfully deleted!");
+                            console.log(user.uid);
                         }).catch((error) => {
                             console.error("Error removing document: ", error);
                         });
@@ -47,4 +49,15 @@ function createGrid() {
 
 
 }
-createGrid();
+firebase.auth().onAuthStateChanged(function (user) {
+    db.collection("users").doc(user.uid).collection("user_challenges").get()
+    .then((doc) =>{
+        if (doc.empty) {
+            console.log("empty");
+        } else {
+            console.log("not empty");
+            createGrid();
+        }
+    })
+
+});

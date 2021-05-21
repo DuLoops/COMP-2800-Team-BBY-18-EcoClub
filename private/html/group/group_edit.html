@@ -33,16 +33,15 @@
 
   <h2 id="heading">Edit Club Info</h2> <br>
 
-  <div class="container text-center py-3">
-    <img id="groupImg" src="" height=100px/>
-    <input type="file" id="mypic-input" accept="images/*" />
-  </div>
+
 
   <form class="col text-center">
     <input type="text" id="name" class="inputClass" placeholder="Club Name"><br>
-    <input type="text" id="desc" class="inputClass" placeholder="Description"><br>
-    <button type="button" class="btn btn-success" id="button">Save</button>
+    <textarea type="text" id="desc" class="inputClass" placeholder="Description" ></textarea><br>
+    <button type="button" class="btn btn-success" id="save_btn">Save Changes</button>
+    <p id="saveStatus"></p>
   </form>
+
     
     <div id="group_members">
         <h3 id="members_heading">Members</h3>
