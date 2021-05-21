@@ -43,7 +43,6 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 
 function DeleteChallenge(attr) {
-
     var challengeID = (attr.getAttribute("challengeID"));
     console.log(challengeID);
     if(challengeID == "Easter"){
@@ -69,6 +68,7 @@ function DeleteChallenge(attr) {
                 .get().then(function (snap) {
                     snap.forEach(async function (doc) {
                         console.log(doc.id);
+                        
                         await db.collection("users").doc(user.uid)
                             .collection("user_challenges").doc(doc.id).delete().then(() => {
                                 console.log(user.uid);
@@ -96,11 +96,12 @@ function CompleteChallenge(attr) {
                 .get().then(function (snap) {
                     snap.forEach(async function (doc) {
                         console.log(doc.id);
+                        const yourDate = new Date();
                         await db.collection("users").doc(user.uid)
                             .collection("completedChallenge").add({
-                                         isCompleted: true,
-                                         challengeID: challengeID
-                            });
+                                         challengeID: challengeID,
+                                         date: yourDate.toISOString().split('T')[0]
+                                        });
                             location.replace("/private/html/challenges/eco_challenge_add_post.html");
                         
                     })
