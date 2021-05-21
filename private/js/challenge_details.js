@@ -12,35 +12,45 @@ function displayDetails() {
     });
 }
 displayDetails();
+// async function take_challenge() {
+//     var docID = localStorage.getItem("docID");
+//     var title;
+//     var desc;
+//     var ecopoint;
+//     var leader;
+//     await firebase.auth().onAuthStateChanged(
+//         function (user) {
+//             console.log(user.uid);
+//             leader = user.uid;
 
-async function take_challenge() {
-    var docID = localStorage.getItem("docID");
-    var title;
-    var desc;
-    var ecopoint;
-    var leader;
-    await firebase.auth().onAuthStateChanged(
-        function (user) {
-            console.log(user.uid);
-            leader = user.uid;
+//         });
+//     await db.collection("eco-challenges").doc(docID).get().then((doc) => {
+//         title = doc.data().title;
+//         desc = doc.data().desc;
+//         ecopoint = doc.data().ecopoint;
+//     });
+//     await db.collection("users").doc(leader).collection("user_challenges").doc().set({
+//         Title: title,
+//         Desc: desc,
+//         Ecopoints: ecopoint
+//     });
 
+
+
+
+
+
+
+   // window.location.href = "/private/html/challenges/eco_challenge.html";
+
+function take_challenge() {
+    var challengeID = localStorage.getItem("docID");
+
+   firebase.auth().onAuthStateChanged(async function (user) {
+        await db.collection("users").doc(user.uid).collection("user_challenges").doc().set({
+            "challengeID": challengeID,
         });
-    await db.collection("eco-challenges").doc(docID).get().then((doc) => {
-        title = doc.data().title;
-        desc = doc.data().desc;
-        ecopoint = doc.data().ecopoint;
+        window.location.href = "/private/html/challenges/eco_challenge.html";
     });
-    await db.collection("users").doc(leader).collection("user_challenges").doc().set({
-        Title: title,
-        Desc: desc,
-        Ecopoints: ecopoint
-    });
-
-
-
-
-
-
-
-    window.location.href = "/private/html/challenges/eco_challenge.html";
+   
 }
