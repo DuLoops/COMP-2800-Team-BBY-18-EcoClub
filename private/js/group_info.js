@@ -4,7 +4,7 @@ firebase.auth().onAuthStateChanged(function (user) {
   db.collection("users")
     .doc(user.uid)
     .get().then(function (doc) {
-      var groupID = doc.data().group;
+      var groupID = doc.uid;
       // console.log(groupID);
       var docRef = db.collection("groups").doc(groupID);
       docRef.get().then((doc) => {
