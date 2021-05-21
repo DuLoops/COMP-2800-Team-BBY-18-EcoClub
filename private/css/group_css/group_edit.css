@@ -8,11 +8,6 @@
   --ligth_green: #28a745;
 }
 
-.clearfix {
-  content: "";
-  clear: both;
-  display: table;
-}
 
 * {
 	box-sizing: border-box;
@@ -25,28 +20,33 @@ body {
 	height: 100%;
 }
 
-#group_code{
-  margin:20px;
-  float:left;
+
+#heading{
+  text-align: center;
+  margin-top:20px;
 }
 
-#admin_edit{
-  margin:20px;
-  float:right;
-  border:solid var(--green) 2px;
-  padding:3px;
-}
-#admin_edit a{
-  color:#28a745;
-  text-decoration: none;
+form{
+  display:block;
+  margin: 20px auto 20px auto;
+  width:80%;
 }
 
-#group_info_content{
-  padding:20px;
-}
-
-#info_contents {
+input{
   width:100%;
+  display:block;
+  margin: 5px;
+}
+
+#desc{
+ width:100%;
+ margin-bottom: 20px;
+}
+
+.remove_member{
+  float:right;
+  margin:20px;
+  display:block;
 }
 
 #groupImg {
@@ -58,28 +58,6 @@ body {
   border:solid var(--green) 1px;
 
 }
-#group_name{
-  margin:10px;
-}
-
-#group_desc{
-  border:solid var(--green) 1px;
-  border-radius: 4px;
-  padding:2px;
-}
-#group_people{
-  background-color: var(--grey);
-}
-
-#group_leader_div{
-  background-color: var(--green);
-  width:90%;
-  border-radius: 10px;
-  padding:3px;
-  margin-right:auto;
-  margin-left:auto;
-}
-
 
 #group_members{
   display:flex;
@@ -98,11 +76,27 @@ body {
   margin:5px;
 }
 
+
 .btn_club {
   background-color: rgba(0, 0 ,0 , 0.2) !important;
 }
 
+#back-icon{
+  float: left;
+  font-size:24px;
+  color: white;
+
+}
+
+#back {
+color: white;
+}
 
 #back-button {
   background-color: #28a745;
+}
+
+.nav-link {
+color: black;
+font-weight: bold;
 }

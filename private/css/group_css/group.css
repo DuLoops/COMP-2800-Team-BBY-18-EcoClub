@@ -21,30 +21,41 @@
   margin-right: auto;
   margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+
 }
+
+.content_exp{
+  margin:10px;
+  display:block;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding:10px;
+  border-radius: 5px;
+}
+
+.post img{
+  display:block;
+  border:solid var(--green) 1px;
+  padding:5px;
+  width: 80%;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.post_btn{
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.post_btn button{
+  margin-left: 5px;
+}
+
 
 /* footer */
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--green);
-  text-align: center;
-  padding: 3px 0;
-}
-
-.btnFoot {
-  width: 32%;
-  height: 5vh;
-}
 
 .btn_club {
   background-color: rgba(0, 0 ,0 , 0.2) !important;
-}
-
-footer i{
-  font-size: 1.5rem;
 }
 
 /* nav */
@@ -52,19 +63,6 @@ footer i{
   width:100%;
 }
 
-.feed_nav{
-  width:26%;
-}
-
-.nav-btn{
-  height:50px;
-  border-radius: 5px;
-}
-
-.nav-link {
-  color: white;
-  font-weight: bold;
-}
 
 .feed-btn{
   color: black;
@@ -76,13 +74,4 @@ footer i{
 }
 #back-button , #feed_li_challenge{
   background-color: #28a745;
-}
-
-#appName {
-  color: #28a745;
-}
-
-#links {
-  color: black;
-  font-weight: normal;
 }

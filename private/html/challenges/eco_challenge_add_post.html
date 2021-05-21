@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,18 +6,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> -->
-
-<!-- Bootstrap-->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
   <!-- Font awesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
-  <link rel="stylesheet" href="/private/css/profile_css/getMoreInfo.css">
+  <link rel="stylesheet" href="/private/css/challenges_css/eco_challenge_add_post.css">
+  <link rel="stylesheet" href="/private/css/footer.css">
   <link rel="stylesheet" href="/private/css/navbar.css">
   <title>EcoClub</title>
   <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png" />
@@ -26,20 +22,27 @@ integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolfl
   <a class="nav-link" aria-current="page" href="/private/html/main.html">
     <i class="fa fa-arrow-circle-left" id="back-icon"></i>
   </a>
-  <h2 id="heading">Create your Profile</h2>
+  <h2 id="heading">Post</h2>
   <hr>
-  <div class="container  py-3">
-    <img id="mypic-goes-here" src="" /> <br>
-    <label for="exampleFormControlTextarea1" class="form-label">Add a Profile Picture</label>
+  <div class="container text-center py-3">
+    <img id="mypic-goes-here" src="" />
     <input type="file" id="mypic-input" accept="images/*" />
   </div>
   <div class="mb-3">
-    <label for="exampleFormControlTextarea1" class="form-label">About yourself</label>
-    <input type="text" placeholder="Say something... " id="bio-desc" class="inputClass">
+    <label for="exampleFormControlTextarea1" class="form-label">Add a description</label>
+    <input type="text" placeholder="Say something... " id="post-desc" size="50" >
   </div>
-  <div id="btn-div">
-    <button type="button" class="btn" id="add-button">Add</button>
-  </div>
+
+  <button type="button" class="btn" id="button">Post</button>
+  <div class="footer_space" style="height:46.6px;"></div>
+
+  <footer>
+    <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
+            aria-hidden="true"></i></button>
+    <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+    <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
+            class="fas fa-user-circle"></i></button>
+</footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
@@ -48,9 +51,11 @@ integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolfl
   <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
 
-
   <script src="/private/database/firestore.js"></script>
-  <script src="/private/js/getMoreInfo.js"></script>
+
+  <script src="/private/js/footer.js"></script>
+  <script src="/private/js/eco_challenge_add_post.js"> </script>
+
 </body>
 
 </html>

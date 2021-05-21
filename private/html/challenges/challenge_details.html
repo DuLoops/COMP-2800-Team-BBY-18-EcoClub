@@ -3,59 +3,74 @@
 
 <head>
   <title>EcoClub</title>
-  <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png"/>
+  <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png" />
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
   <!-- Font awesome-->
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <!-- css -->
   <link rel="stylesheet" type="text/css" href="/private/css/challenges_css/challenge_details.css" />
-
+  <link rel="stylesheet" href="/private/css/navbar.css">
+  <link rel="stylesheet" href="/private/css/footer.css">
 </head>
 
 <body>
 
   <a class="nav-link" aria-current="page" href="/private/html/challenges/eco_challenge_list.html">
     <i class="fa fa-arrow-circle-left" id="back-icon"></i>
-    <span id="back">Back
-    </span>
-  </a><br>
-  <h2 id="heading">Challenge Details</h2> <br>
+    <h2 id="heading">Challenge Details</h2>
+  </a>
+  <hr>
+
   <div id="list">
   </div>
 
   <div class="container">
-    <div class="form-group">
-      <p class="chalange_name">Challenge Name</p>
-      <img src="/private/img/logos/eco_point.jpg" class="img" id="eco_point">
-      <p class="eco_points">Eco points</p>
-    </div>
+    <label class="challenge_name">Challenge Name</label>
 
     <div class="form-control cc" id="chalange_name_feild"></div>
-
-
     <div>
       <label class="chalange_details">Challenge Details</label>
       <div class="form-control" rows="9" id="comment"></div>
     </div>
-    <div class="col-md-12 text-center">
-      <button type="button" id="btn" class="btn btn-lg">Take the challenge</button>
+
+    <div id="eco-point_div">
+      <img src="/private/img/logos/eco_point.png" class="img" id="eco_point">
+      <p id="eco_point_p">Eco points: </p>
     </div>
 
-
+    <div class="clearfix"></div>
+    <div class="col-md-12 text-center">
+      <button type="button" id="btn" class="btn btn-lg" onclick="take_challenge()">Take the challenge</button>
+    </div>
   </div>
+
+
+  <div class="footer_space" style="height:46.6px;"></div>
   <footer>
+    <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
+        aria-hidden="true"></i></button>
     <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
-    <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
     <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
         class="fas fa-user-circle"></i></button>
   </footer>
+
+
+  <!-- Firebase libraries from CDN -->
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
+  <!-- Your own Firebase API key information -->
+  <script src="../../database/firestore.js"> </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="/private/js/challenge_details.js"> </script>
   <script src="/private/js/footer.js"></script>
 </body>

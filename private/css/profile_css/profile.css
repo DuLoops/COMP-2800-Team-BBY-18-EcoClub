@@ -9,13 +9,14 @@
 
 body {
     font-family: 'Noto Serif', serif;
+    padding: 1rem;
 }
 
 #userInfo {
     margin-top: 22px;
 }
 
-#ecoPoints, #email-address{
+#ecoPoints, #email-address, #bio{
     margin-top: 10px;
     text-align: center;
     font-size: 26px;
@@ -59,53 +60,21 @@ body {
     color: black;
     font-weight: bold;
 }
-
-#challenges-div{
-   padding: 1.2rem;
-    
-}
-.challenge-desc {
-    background-color: lightblue;
-}
-
-#challenge-title{
-    float: left;
-}
-
-#ecopoints{
-    float: right;
-}
-
-
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--green);
-    text-align: center;
-    padding: 3px 0;
-  }
-  
-  .btnFoot {
-    width: 32%;
-    height: 5vh;
-    
-  }
   
   .btn_profile {
     background-color: rgba(0, 0 ,0 , 0.2) !important;
   }
-  
-  footer i{
+
+  .card {
     font-size: 1.5rem;
   }
-  
-  #appName {
-    color: #28a745;
-  }
-  
-  #links {
-    color: black;
-    font-weight: normal;
-  }
+  #mypic-goes-here{
+    width: 50%;
+    display: block;
+    margin: auto;
+}
+
+#bio {
+    color:black;
+    margin-bottom:30px;
+}
