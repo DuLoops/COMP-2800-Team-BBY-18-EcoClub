@@ -34,7 +34,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 
 });
 
-function Completed(){
+function Completed() {
     firebase.auth().onAuthStateChanged(function (user) {
         document.getElementById("list").innerHTML = "";
         db.collection("users").doc(user.uid)
@@ -58,7 +58,6 @@ function Completed(){
 }
 
 function DeleteChallenge(attr) {
-
     var challengeID = (attr.getAttribute("challengeID"));
     console.log(challengeID);
     if (challengeID == "Easter") {
@@ -84,6 +83,7 @@ function DeleteChallenge(attr) {
                 .get().then(function (snap) {
                     snap.forEach(async function (doc) {
                         console.log(doc.id);
+                        
                         await db.collection("users").doc(user.uid)
                             .collection("user_challenges").doc(doc.id).delete().then(() => {
                                 console.log(user.uid);
@@ -91,7 +91,7 @@ function DeleteChallenge(attr) {
                             }).catch((error) => {
                                 console.error("Error removing document: ", error);
                             });
-                        window.location.reload();
+                            window.location.reload();
                     })
                 })
         })
@@ -110,11 +110,21 @@ function CompleteChallenge(attr) {
             .get().then(function (snap) {
                 snap.forEach(async function (doc) {
                     console.log(doc.id);
+                    const yourDate = new Date();
                     await db.collection("users").doc(user.uid)
                         .collection("completedChallenge").add({
-                            isCompleted: true,
+                            date: yourDate.toISOString().split('T')[0],
                             challengeID: challengeID
                         });
+
+
+                    await db.collection("users").doc(user.uid)
+                        .collection("user_challenges").doc(doc.id).delete().then(() => {
+                            console.log("Document successfully deleted!");
+                        }).catch((error) => {
+                            console.error("Error removing document: ", error);
+                        });
+
                     location.replace("/private/html/challenges/eco_challenge_add_post.html");
 
                 })

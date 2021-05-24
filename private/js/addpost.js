@@ -56,6 +56,7 @@ function uploadUserProfilePic() {
                         setTimeout(function () {
                             location.replace("/private/html/group/group_feed.html")
                         }, 2000)
+
                     })
             })
     })

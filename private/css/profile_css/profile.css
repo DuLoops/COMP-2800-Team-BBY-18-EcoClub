@@ -73,3 +73,8 @@ body {
     display: block;
     margin: auto;
 }
+
+#bio {
+    color:black;
+    margin-bottom:30px;
+}
