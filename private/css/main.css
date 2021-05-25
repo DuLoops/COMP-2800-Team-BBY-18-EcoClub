@@ -17,3 +17,9 @@ body{
     display: block;
     margin: auto;
 }
+
+#logout{
+    width: 30%;
+    display: block;
+    margin: auto;
+}
