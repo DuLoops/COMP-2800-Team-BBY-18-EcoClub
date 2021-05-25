@@ -62,13 +62,15 @@ function getChallenges() {
                 .get()
                 .then(function (snap) {
                     snap.forEach(async function (doc) {
+                        var commenterID = doc.data().commenter;
+                        console.log(commenterID);
                         var comment = doc.data().comment;
-                        await db.collection("users").doc(user.uid).get().then(function (doc) {
+                        await db.collection("users").doc(commenterID).get().then(function (doc) {
                             var userName = doc.data().name;
                             var picUrl = doc.data().profilePic;
-                            $(".profile-pic").attr("src", picUrl);
+                            console.log(commenterID);
                             document.getElementById("comment-box").innerHTML += "<div> <img class='profile-pic' src='" + picUrl
-                            + "' alt='profilePic'><span class='name'>" + userName + "</span><br><p>" + comment + "</p></div><hr>";
+                            + "' alt='profilePic'><span class='name' onclick='displayProfile(this)' commenterID='"+ commenterID+"'>" + userName + "</span><br><p>" + comment + "</p></div><hr>";
                         })
 
                     });
@@ -77,3 +79,20 @@ function getChallenges() {
     })
 }
 getChallenges();
+
+function displayProfile(attr){
+
+  var commenterID = (attr.getAttribute("commenterID"));
+  localStorage.setItem('commenterID', commenterID );
+  console.log(commenterID);
+  firebase.auth().onAuthStateChanged(function (user) {
+    if(commenterID == user.uid) {
+        location.replace("/private/html/profile/profile-main.html");
+      } else{
+        location.replace("/private/html/profile/commenterProfile.html");
+      }
+  })
+  
+  
+}
+
