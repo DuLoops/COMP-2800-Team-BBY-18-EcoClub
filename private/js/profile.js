@@ -1,3 +1,5 @@
+
+
 function sayName() {
     firebase.auth().onAuthStateChanged(function (somebody) {
         if (somebody) {
@@ -64,9 +66,7 @@ document.getElementById("leaveTeam").addEventListener("click", leaveTeam);
 function leaveTeam() {
     firebase.auth().onAuthStateChanged(function (somebody) {
         if (somebody) {
-            // db.collection("users").doc(somebody.uid).update({
-            //     group: ""
-            // })
+            
             db.collection("users")
                 .doc(somebody.uid)
                 // Read
@@ -75,17 +75,26 @@ function leaveTeam() {
                     var groupID = doc.data().group;
                     console.log(groupID);
                     var GroupRef = db.collection("groups").doc(groupID);
-
-                    // Atomically remove a region from the "regions" array field.
-                    GroupRef.update({
-                        members: firebase.firestore.FieldValue.arrayRemove(somebody.uid)
-                    });
-                    db.collection("users").doc(somebody.uid).update({
-                            group: null
+                    GroupRef.get().then(function(doc){
+                        var leaderId = doc.data().leader;
+                        if (leaderId == somebody.uid) {
+                           console.log("leader");
+                           document.getElementById("alert-text").innerHTML = "LEADER";
+                        } else{
+                            console.log("member");
+                            document.getElementById("alert-text").innerHTML = "MEMBER";
+                        }
                     })
-                    setTimeout(function(){
-                        location.replace("/private/html/main.html")
-                   },2000)
+                    // Atomically remove a region from the "regions" array field.
+                //     GroupRef.update({
+                //         members: firebase.firestore.FieldValue.arrayRemove(somebody.uid)
+                //     });
+                //     db.collection("users").doc(somebody.uid).update({
+                //             group: null
+                //     })
+                //     setTimeout(function(){
+                //         location.replace("/private/html/main.html")
+                //    },2000)
                 })
         } else {
             console.log("Invlaid");
