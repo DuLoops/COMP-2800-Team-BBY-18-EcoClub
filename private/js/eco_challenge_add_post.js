@@ -34,7 +34,6 @@ async function post() {
         //get the URL of stored file
         await storageRef.getDownloadURL()
             .then(function (url) { // Get URL of the uploaded file
-                console.log(url); // Save the URL into users collection
                 db.collection("users").doc(user.uid).get().then(function (doc) {
                         var groupId = doc.data().group;
                         var name = doc.data().name;
@@ -53,7 +52,6 @@ async function post() {
                     })
             })
             var challengeID = localStorage.getItem("challengeID");
-            console.log(challengeID);
             await firebase.auth().onAuthStateChanged(async function (user) {
                 await db.collection("users").doc(user.uid).collection("user_challenges").where("challengeID", "==", challengeID)
                     .get().then(function (snap) {
