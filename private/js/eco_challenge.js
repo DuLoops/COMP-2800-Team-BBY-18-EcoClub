@@ -102,6 +102,10 @@ function CompleteChallenge(attr) {
     var challengeID = (attr.getAttribute("challengeID"));
     localStorage.setItem('challengeID', challengeID);
     console.log(challengeID);
+    db.collection("eco-challenges").doc(challengeID).get().then(function(doc){
+        var challengeTitle = doc.data().title
+        localStorage.setItem('challengeTitle', challengeTitle);
+    })
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("users").doc(user.uid).collection("user_challenges").where("challengeID", "==", challengeID)
             .get().then(function (snap) {

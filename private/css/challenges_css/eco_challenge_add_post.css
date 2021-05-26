@@ -1,19 +1,6 @@
 body {
-<<<<<<< HEAD
   font-family: 'Lato', sans-serif;
     font-size: 1.5rem;
-=======
-  font-family: sans-serif;
->>>>>>> 992be03058c21e841a1dc3a5b954e137106c1aae
-}
-
-#back-icon {
-  float: left;
-  font-size: 1.5rem;
-}
-
-#back-button {
-  background-color: #28a745;
 }
 
 .nav-link {
