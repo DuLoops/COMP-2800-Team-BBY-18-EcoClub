@@ -51,6 +51,7 @@ var uiConfig = {
                         bio: null,
                         group: null
 
+
                     })
                     .then(function () {
                         console.log("New user added to firestore");
