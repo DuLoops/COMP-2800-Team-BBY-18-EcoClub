@@ -18,7 +18,7 @@ function sayName() {
                     // $("#image").append("<img src='" + picUrl + "'>")
                     if (name) {
                         $(".name-user").html(name);
-                        $(".bio-user").text("Bio: " + bio);
+                        $(".bio-user").text(bio);
                         $(".points-user").html(points);
                         $(".email-user").html(email);
 
@@ -60,13 +60,12 @@ sayName();
 //   getChallenges();
 
 document.getElementById("leaveTeam").addEventListener("click", leaveTeam);
+document.getElementById("callAlert").addEventListener("click", alert);
 
 function leaveTeam() {
     firebase.auth().onAuthStateChanged(function (somebody) {
         if (somebody) {
-            // db.collection("users").doc(somebody.uid).update({
-            //     group: ""
-            // })
+
             db.collection("users")
                 .doc(somebody.uid)
                 // Read
@@ -75,17 +74,77 @@ function leaveTeam() {
                     var groupID = doc.data().group;
                     console.log(groupID);
                     var GroupRef = db.collection("groups").doc(groupID);
+                    GroupRef.get().then(function (doc) {
+                        var leaderId = doc.data().leader;
+                        if (leaderId == somebody.uid) {
 
-                    // Atomically remove a region from the "regions" array field.
-                    GroupRef.update({
-                        members: firebase.firestore.FieldValue.arrayRemove(somebody.uid)
-                    });
-                    db.collection("users").doc(somebody.uid).update({
-                            group: null
+                            console.log("leader");
+                            db.collection("users").get().then(function (snap) {
+                                snap.forEach(function (doc) {
+                                    var userID = doc.id;
+                                    var groupId = doc.data().group;
+                                    if (groupId == groupID) {
+                                        console.log("found");
+                                        console.log(userID);
+                                        db.collection("users").doc(userID).update({
+                                            group: null
+                                        })
+                                    }
+                                })
+                            })
+
+                            db.collection("groups").doc(groupID).delete().then(() => {
+                                 console.log("Document successfully deleted!");
+                            }).catch((error) => {
+                                 console.error("Error removing document: ", error);
+                         });
+
+                        } else {
+                            console.log("member");
+                            // Atomically remove a region from the "regions" array field.
+                            GroupRef.update({
+                                members: firebase.firestore.FieldValue.arrayRemove(somebody.uid)
+                            });
+                            db.collection("users").doc(somebody.uid).update({
+                                group: null
+                            })
+                            setTimeout(function () {
+                                location.replace("/private/html/main.html")
+                            }, 2000)
+
+                        }
                     })
-                    setTimeout(function(){
-                        location.replace("/private/html/main.html")
-                   },2000)
+
+                })
+        } else {
+            console.log("Invlaid");
+        }
+    })
+}
+
+
+function alert() {
+    firebase.auth().onAuthStateChanged(function (somebody) {
+        if (somebody) {
+
+            db.collection("users")
+                .doc(somebody.uid)
+                // Read
+                .get()
+                .then(function (doc) {
+                    var groupID = doc.data().group;
+                    console.log(groupID);
+                    var GroupRef = db.collection("groups").doc(groupID);
+                    GroupRef.get().then(function (doc) {
+                        var leaderId = doc.data().leader;
+                        if (leaderId == somebody.uid) {
+                            console.log("leader");
+                            document.getElementById("alert-text").innerHTML = "This would delete the club.Are you sure you want to leave the club?";
+                        } else {
+                            console.log("member");
+                            document.getElementById("alert-text").innerHTML = "Are you sure you want to leave the club?";
+                        }
+                    })
                 })
         } else {
             console.log("Invlaid");

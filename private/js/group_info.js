@@ -74,7 +74,7 @@ function displayMembers(leader, members) {
         // doc.data() will be undefined in this case
         console.log("No such document!");
       }
-      document.getElementById("group_members").innerHTML += "<div class='member'><p class='member_name'>" +
+      document.getElementById("group_members").innerHTML += "<div class='member'><p class='member_name' onclick='displayProfile(this)' listID='"+ member +"'>" +
         userName + "</p><p class='member_point'>EcoPoint: " + userPoint + "</p></div>";
     }).catch((error) => {
       console.log("Error getting document:", error);
@@ -82,4 +82,19 @@ function displayMembers(leader, members) {
 
   });
 
+}
+
+function displayProfile(attr){
+
+  var listID = (attr.getAttribute("listID"));
+  localStorage.setItem('listID', listID );
+  console.log(listID);
+  firebase.auth().onAuthStateChanged(function (user){
+    if(listID == user.uid){
+      location.replace("/private/html/profile/profile-main.html");
+    } else{
+      location.replace("/private/html/profile/listProfile.html");
+    }
+  })    
+  
 }
