@@ -7,6 +7,10 @@
     --grey: #f7f7f7;
   }
 
+
+  body {
+    font-family: 'Lato', sans-serif;
+  }
   .clearfix {
     content: "";
     clear: both;

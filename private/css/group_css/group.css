@@ -13,6 +13,9 @@
 	padding: 0;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
 
 .post{
   min-height: 100px;
@@ -20,9 +23,18 @@
   margin-left:auto;
   margin-right: auto;
   margin-top: 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(0, 0, 0, 0.1); */
   padding: 10px;
 
+}
+
+#name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.post_desc{
+  font-size: 1.2rem;
 }
 
 .content_exp{
@@ -35,9 +47,8 @@
 
 .post img{
   display:block;
-  border:solid var(--green) 1px;
   padding:5px;
-  width: 80%;
+  width: 60%;
   margin-left:auto;
   margin-right: auto;
 }
@@ -73,5 +84,9 @@
   margin-right: 0.3rem;
 }
 #back-button , #feed_li_challenge{
+  background-color: #28a745;
+}
+
+#btn{
   background-color: #28a745;
 }
