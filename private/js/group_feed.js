@@ -16,17 +16,18 @@ function getPosts() {
               var picURL = doc.data().postPic;
               var likesArray = doc.data().likes;
               var PosterName = doc.data().postedBy;
+              var PosterID = doc.data().posterId;
               var likedStatus = "btn-secondary unliked";
               for (var i in likesArray) {
                 if (likesArray[i] == user.uid) {
                   likedStatus = "btn-success liked"
                 } 
               }
-              
+             
 
               
              
-              document.getElementById("feed_content").innerHTML += "<div class='post'><p class='poster'>Posted by: "+ PosterName +"</p><img class='post_pic' src='" + picURL + "' alt='postPic'><p class='post_desc'>" + description + "</p><div class='post_btn'><p class='likes'><i class='far fa-thumbs-up'></i>"+likesArray.length+"</p><div><button type='button' class='btn "+likedStatus+"' onclick='likePost(this)' groupID='"+groupID+"' postID='"+doc.id+"'>Like</button><button type='button' class='btn btn-success' onclick='postDetail(this)' postID='"+doc.id+"' groupID='"+groupID+"'>Comment</button></div></div></div>";
+              document.getElementById("feed_content").innerHTML += "<div class='post'><p class='poster'>Posted by:<span id='name' onclick='displayProfile(this)' posterID='"+PosterID+"'>"+  PosterName +"</span></p><img class='post_pic' src='" + picURL + "' alt='postPic'><p class='post_desc'>" + description + "</p><div class='post_btn'><p class='likes'><i class='far fa-thumbs-up'></i>"+likesArray.length+"</p><div><button type='button' class='btn "+likedStatus+"' onclick='likePost(this)' groupID='"+groupID+"' postID='"+doc.id+"'>Like</button><button type='button' class='btn btn-success' onclick='postDetail(this)' postID='"+doc.id+"' groupID='"+groupID+"'>Comment</button></div></div></div>";
             });
           });
       })
@@ -101,7 +102,7 @@ function likePost(attr) {
 function postDetail(attr) {
   var groupID = (attr.getAttribute("groupID"));
   var postID = (attr.getAttribute("postID"));
-  console.log(postID)
+  console.log(postID);
   window.localStorage.setItem("groupID", groupID);
   localStorage.setItem('postID', postID );
   location.replace("/private/html/post/postdetail.html");
@@ -109,7 +110,18 @@ function postDetail(attr) {
   // window.replace.href = .html;
 }
 
-function viewcomments() {
 
+function displayProfile(attr){
+
+  var posterID = (attr.getAttribute("posterID"));
+  localStorage.setItem('posterID', posterID );
+  console.log(posterID);
+  firebase.auth().onAuthStateChanged(function (user){
+    if(posterID == user.uid){
+      location.replace("/private/html/profile/profile-main.html");
+    } else{
+      location.replace("/private/html/profile/memberProfile.html");
+    }
+  })    
   
 }

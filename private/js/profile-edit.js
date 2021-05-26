@@ -47,11 +47,11 @@ function uploadUserProfile(e) {
     // Let's assume my storage is only enabled for authenticated users 
     // This is set in your firebase console storage "rules" tab
 
-    firebase.auth().onAuthStateChanged(function (user) {
+    firebase.auth().onAuthStateChanged(async function (user) {
         var storageRef = storage.ref("profile/" + user.uid + ".jpg");
 
         //upload the picked file
-        storageRef.put(file)
+        await storageRef.put(file)
             .then(function () {
                 console.log('Uploaded to Cloud Storage.');
             })
