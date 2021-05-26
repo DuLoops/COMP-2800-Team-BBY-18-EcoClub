@@ -1,0 +1,77 @@
+:root {
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
+  --yellow: #FBEEC1;
+  --green: #28a745;
+  /* bootstrap: -success */
+  --grey: #f7f7f7;
+}
+
+body {
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+#content{
+  margin:5%;
+}
+#displayButton{
+  display:flex;
+  justify-content: center;
+  margin:5%;
+}
+#displayButton button{
+  margin-right:5px;
+}
+
+#list{
+  background-color: rgba(40, 167, 69, 0.1);
+  padding:10px;
+  border-radius: 5px;
+  width: 95%;
+  margin: auto;
+  height: 55vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
+
+.name {
+  text-align: center;
+  font-size: 7vw;
+  margin-top: 1.5vh;
+}
+
+#btn {
+  margin: 0%;
+  margin-top:20px;
+  background-color: var(--green);
+  color: black;
+}
+
+.form-group {
+  display: block; 
+}
+
+.chalange_name {
+  font-size: 1.3rem;
+  width: 50%;
+}
+
+.button {
+  background-color: #28a745;
+  margin-left: 2%;
+  }
+
+#footer_tasks {
+  background-color: rgba(0, 0 ,0 , 0.2) !important;
+}
+
+#heading{
+  margin-top: 20px;
+}
+
+.btn{
+  background-color: #28a745;
+  font-size: 1.2rem;
+}

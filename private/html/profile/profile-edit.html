@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +14,25 @@
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
     <link rel="stylesheet" href="/private/css/profile_css/profile-edit.css">
     <title>EcoClub</title>
+    <link rel="stylesheet" href="/private/css/footer.css">
+    <link rel="stylesheet" href="/private/css/navbar.css">
     <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png"/>
   </head>
 
 <body>
     <a class="nav-link" aria-current="page" href="/private/html/profile/profile-main.html">
         <i class="fa fa-arrow-circle-left" id="back-icon"></i>
-        <span id="back">Back
-        </span>
-      </a><br>
-      <h2 id="heading">Edit Profile</h2> <br>
+      </a>
+      <h2 id="heading">Edit Profile</h2> 
+      <hr>
+      
+      <div class="container  py-3">
+        <img id="mypic-goes-here" src=""  /> <hr>
+        <label for="exampleFormControlTextarea1" class="form-label">Change Profile Picture</label>
+        <!-- <input type="file" id="mypic-input" accept="images/*" /> -->
+        <input type="file" id="mypic-input" name="myfile">
+      </div>
 
-
-
-    <hr>
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label heading1">Name</label><br>
         <input type="text" id="name" class="inputClass"><br>
@@ -38,18 +44,23 @@
         <button type="button" class="btn" id="done-button">Done</button>
       </div>
 
+      <div class="footer_space" style="height:46.6px;"></div>
+
       <footer>
-        <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
-        <button type="button" class="btn btnFoot btn_post" id="footer_post"><i class="far fa-plus-square"></i></button>
-        <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i class="fas fa-user-circle"></i></button>
+        <button type="button" class="btn btnFoot btn_post" id="footer_tasks"><i class="fa fa-tasks"
+          aria-hidden="true"></i></button>
+  <button type="button" class="btn btnFoot btn_club" id="footer_group"><i class="fas fa-users"></i></button>
+  <button type="button" class="btn btnFoot btn_profile" id="footer_profile"><i
+          class="fas fa-user-circle"></i></button>
       </footer>
     
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
 
     <script src="/private/database/firestore.js"></script>
     <script src="/private/js/profile-edit.js"></script>

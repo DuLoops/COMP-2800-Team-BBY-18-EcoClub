@@ -1,0 +1,103 @@
+:root {
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
+  --yellow: #FBEEC1;
+  --green: #28a745;
+  /* bootstrap: -success */
+  --grey: #f7f7f7;
+  --ligth_green: #28a745;
+}
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.html,
+body {
+	height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+
+#heading{
+  text-align: center;
+  margin-top:20px;
+}
+
+form{
+  display:block;
+  margin: 20px auto 20px auto;
+  width:80%;
+}
+
+input{
+  width:100%;
+  display:block;
+  margin: 5px;
+}
+
+#desc{
+ width:100%;
+ margin-bottom: 20px;
+}
+
+.remove_member{
+  float:right;
+  margin:20px;
+  display:block;
+}
+
+#groupImg {
+  width:90%;
+  display:block;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  border:solid var(--green) 1px;
+
+}
+
+#group_members{
+  display:flex;
+  flex-direction: column;
+  background-color: var(--grey);
+  padding:10px;
+}
+
+.member{
+  border-radius: 1rem;
+  background-color: rgba(40, 167, 69, 0.5);
+  margin:10px
+}
+
+.member p{
+  margin:5px;
+}
+
+
+.btn_club {
+  background-color: rgba(0, 0 ,0 , 0.2) !important;
+}
+
+#back-icon{
+  float: left;
+  font-size:24px;
+  color: white;
+
+}
+
+#back {
+color: white;
+}
+
+#back-button {
+  background-color: #28a745;
+}
+
+.nav-link {
+color: black;
+font-weight: bold;
+}

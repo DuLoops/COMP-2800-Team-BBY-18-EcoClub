@@ -8,6 +8,11 @@
   --ligth_green: #28a745;
 }
 
+.clearfix {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 * {
 	box-sizing: border-box;
@@ -18,7 +23,23 @@
 .html,
 body {
 	height: 100%;
+  font-family: 'Lato', sans-serif;
+}
 
+#group_code{
+  margin:20px;
+  float:left;
+}
+
+#admin_edit{
+  margin:20px;
+  float:right;
+  border:solid var(--green) 2px;
+  padding:3px;
+}
+#admin_edit a{
+  color:#28a745;
+  text-decoration: none;
 }
 
 #group_info_content{
@@ -35,21 +56,37 @@ body {
   margin-left:auto;
   margin-right: auto;
   margin-top: 1rem;
+  border:solid var(--green) 1px;
+
+}
+#group_name{
+  margin:10px;
 }
 
+#group_desc{
+  border:solid var(--green) 1px;
+  border-radius: 4px;
+  padding:2px;
+}
 #group_people{
   background-color: var(--grey);
 }
 
 #group_leader_div{
   background-color: var(--green);
+  width:90%;
+  border-radius: 10px;
+  padding:3px;
+  margin-right:auto;
+  margin-left:auto;
 }
+
 
 #group_members{
   display:flex;
   flex-direction: column;
   background-color: var(--grey);
-  
+  padding:10px;
 }
 
 .member{
@@ -62,48 +99,11 @@ body {
   margin:5px;
 }
 
-
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: var(--green);
-  text-align: center;
-  padding: 3px 0;
-  
-}
-
-.btnFoot {
-  width: 32%;
-  height: 5vh;
-  background-color: rgb(75, 63, 63);
-}
-
 .btn_club {
   background-color: rgba(0, 0 ,0 , 0.2) !important;
 }
 
-footer i{
-  font-size: 1.5rem;
-} 
-
-#back-icon{
-  float: left;
-  font-size:24px;
-  color: white;
-
-}
-
-#back {
-color: white;
-}
 
 #back-button {
   background-color: #28a745;
-}
-
-.nav-link {
-color: black;
-font-weight: bold;
 }

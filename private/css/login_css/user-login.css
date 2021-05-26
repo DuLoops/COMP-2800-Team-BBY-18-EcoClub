@@ -1,5 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
+    width:100%;
 }
 #app-logo {
     padding-top: 1.5rem;
@@ -35,15 +36,9 @@ body {
     width: 18rem;
     padding-top: 5rem;
     text-align: center;
-<<<<<<< HEAD
-    font-size: 22px;
-    color: #006600;
-}
-=======
     margin: auto;
     font-size: 1.4rem;
     color: #28a745;
     font-weight: bold;
 }
 
->>>>>>> 2e9f16d1911b13cd4d6c63fa288dcea2b34a6a92

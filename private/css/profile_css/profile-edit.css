@@ -1,84 +1,84 @@
 :root {
-    --blue: #659DBD;
-    /*  bootstrap: -info*/
-    --yellow: #FBEEC1;
-    --green: #28a745;
-    /* bootstrap: -success */
-    --grey: #f7f7f7;
-  }
-  
+  --blue: #659DBD;
+  /*  bootstrap: -info*/
+  --yellow: #FBEEC1;
+  --green: #28a745;
+  /* bootstrap: -success */
+  --grey: #f7f7f7;
+}
+
 
 body {
-    font-size: 25px;
+  font-size: 1.3rem;
+  padding: 1rem;
+  font-family: 'Lato', sans-serif;
 }
 
-#buttons {
-    margin-top: 40px;
+#mypic-goes-here {
+  width: 10rem;
+  display: block;
+  margin: auto;
 }
 
-.btn-text{
-    font-size: 25px;
-}
-#back-icon{
-    float: left;
-    font-size:2rem;
-    color: black;
-  }
-  
-  #back {
-    color: black;
-    padding-left: 0.8rem;
-    font-size: 1.4rem;
-  }
-  
-  #heading {
-    text-align: center;
-  }
-
-
-#back-button {
-    background-color: #28a745;
-}
-
-#head{
-    color: black;
+.py-3 {
+  width: 70%;
+  display: block;
+  margin: auto;
 }
 
 #btn-div {
-    padding: 1rem;
-    margin-left: 9rem;
+  padding: 1rem;
+  margin-left: 9rem;
 }
 
 #done-button {
-    background-color: #28a745;
-    color: white;
-    width: 5rem
+  background-color: #28a745;
+  color: white;
+  width: 5rem
 }
 
-.mb-3{
-    text-align: center;
+.mb-3 {
+  text-align: center;
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--green);
-    text-align: center;
-    padding: 3px 0;
+.btn_profile {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.text {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
   }
-  
-  .btnFoot {
-    width: 32%;
-    height: 5vh;
-    
+
+  100% {
+    -webkit-transform: rotate(360deg);
   }
-  
-  .btn_profile {
-    background-color: rgba(0, 0 ,0 , 0.2) !important;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
   }
-  
-  footer i{
-    font-size: 1.5rem;
+
+  100% {
+    transform: rotate(360deg);
   }
+}

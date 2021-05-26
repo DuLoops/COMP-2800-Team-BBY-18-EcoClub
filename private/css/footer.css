@@ -1,0 +1,19 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #28a745;
+    text-align: center;
+    padding: 3px 0;
+  }
+  
+  .btnFoot {
+    background-color: #28a745;
+    width: 32%;
+    height: 5vh;
+  }
+  
+  footer i{
+    font-size: 1.5rem;
+  }

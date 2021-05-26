@@ -6,40 +6,21 @@
     /* bootstrap: -success */
     --grey: #f7f7f7;
   }
-body {
-    padding: 1rem;
-}
 
 
-
-#back-icon{
-    float: left;
-    font-size:3rem;
-    color: black;
+  body {
+    font-family: 'Lato', sans-serif;
   }
-  
-  #back {
-    color: black;
-    padding-left: 0.8rem;
-    font-size: 1.8rem;
-  }
-  
-  #heading {
-    text-align: center;
+  .clearfix {
+    content: "";
+    clear: both;
+    display: table;
   }
 
 .name {
     text-align: center;
     font-size: 7vw;
     margin-top: 1.5vh;
-}
-
-
-
-.form-group {
-    display: flex;
-    margin-left: 12%;
-    margin-bottom: 0%;
 }
 
 .chalange_name {
@@ -57,12 +38,17 @@ body {
     margin: auto;
 }
 
-
-.chalange_details {
+.challenge_name{
     text-align: center;
     font-size: 5vw;
-    width: 100%;
-    margin-top: 5vh;
+    width:100%;
+}
+
+.chalange_details {
+    margin-top:20px;
+    text-align: center;
+    font-size: 5vw;
+    width:100%;
 
 }
 
@@ -70,40 +56,33 @@ body {
     background-color: #659DBD;
 }
 
+#eco-point_div{
+    display:block;
+    margin:10px;
+    border-radius: 4px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 .img {
-    float: left;
-    width: 10vw;
-    height: 10vw;
-    margin-right: 2%;
+    width: 150px;
+    height:120px;
+    /* margin-right:5px; */
+}
+#eco_point_p{
+    color:#28a745;
+    font-size:1.5rem;
 }
 
 #btn {
     margin: 0%;
-    margin-top: 5vh;
     background-color: var(--green);
 }
 
-footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--green);
-    text-align: center;
-    padding: 3px 0;
-  }
-  
-  .btnFoot {
-    width: 32%;
-    height: 5vh;
-    background-color: var(--green);
-    
-  }
-  
-  footer i{
-    font-size: 2.5rem;
-  }
-  
-  #comment{
+#comment {
     height: 30vh;
 }
+
+#footer_tasks {
+    background-color: rgba(0, 0 ,0 , 0.2) !important;
+  }
