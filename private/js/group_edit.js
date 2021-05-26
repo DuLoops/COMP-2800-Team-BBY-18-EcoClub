@@ -1,45 +1,34 @@
 // Displaying group info
 //change "example" to the getGroupID function
-firebase.auth().onAuthStateChanged(function (user) {
-  db.collection("users")
-    .doc(user.uid)
-    .get().then(function (doc) {
-      var groupID = doc.data().group;
-      var docRef = db.collection("groups").doc(groupID);
-      docRef.get().then((doc) => {
-        if (doc.exists) {
-          var groupName = doc.data().groupName;
-          var desc = doc.data().desc;
-          var members = doc.data().members;
-          $("#name").val(groupName);
-          $("#desc").val(desc);
-          displayMembers(members);
-          console.log(members);
-        } else {
-          // doc.data() will be undefined in this case
-          console.log("No such document!");
-        }
-      }).catch((error) => {
-        console.log("Error getting document:", error);
+function displayGroupInfo() {
+  firebase.auth().onAuthStateChanged(function (user) {
+    db.collection("users")
+      .doc(user.uid)
+      .get().then(function (doc) {
+        var groupID = doc.data().group;
+        var docRef = db.collection("groups").doc(groupID);
+        docRef.get().then((doc) => {
+          if (doc.exists) {
+            var groupName = doc.data().groupName;
+            var desc = doc.data().desc;
+            var members = doc.data().members;
+            $("#name").val(groupName);
+            $("#desc").val(desc);
+            document.getElementById("group_members").innerHTML = "";
+            displayMembers(members);
+          } else {
+            // doc.data() will be undefined in this case
+            console.log("No such document!");
+          }
+        }).catch((error) => {
+          console.log("Error getting document:", error);
+        });
       });
-    });
-
-});
-
-function getGroupID() {
-  var groupID;
-  db.collection("users")
-    .doc(getUserId())
-    .get().then((doc) => {
-      groupID = doc.data().group;
-    })
-  return groupID;
+  
+  });
 }
 
-function getUserID() {
-  var user = firebase.auth().currentUser;
-  return user.uid;
-}
+displayGroupInfo();
 
 function displayMembers(members) {
   members.forEach(member => {
@@ -54,7 +43,7 @@ function displayMembers(members) {
         console.log("No such document!");
       }
       document.getElementById("group_members").innerHTML += "<div class='member'><p class='member_name'>" +
-        userName + "</p><p class='member_point'>EcoPoint: " + userPoint + "</p><button class='remove_member btn btn-danger' onClick='removeMember(this) memberID='" + doc.id + "'>Remove</button></div>";
+        userName + "</p><p class='member_point'>EcoPoint: " + userPoint + "</p><button class='remove_member btn btn-danger' onClick='removeMember(this)' memberID='" + doc.id + "'>Remove</button></div>";
     }).catch((error) => {
       console.log("Error getting document:", error);
     });
@@ -62,7 +51,6 @@ function displayMembers(members) {
   });
 
   document.getElementById("save_btn").addEventListener("click", saveChanges);
-
   async function saveChanges() {
     var newName = document.getElementById("name").value;
     var newDesc = document.getElementById("desc").value;
@@ -77,6 +65,27 @@ function displayMembers(members) {
           })
         });
     });
-    window.location.href = "/private/html/challenges/eco_challenge.html";
+    window.location.href = "/private/html/group/group_info.html";
   }
+}
+
+async function removeMember(attr) {
+  var memberID = attr.getAttribute("memberID");
+  await db.collection("users").doc(memberID).update({
+    group: null
+  });
+
+  await firebase.auth().onAuthStateChanged( function (user) {
+     db.collection("users")
+      .doc(user.uid)
+      .get().then( function (doc) {
+        var groupID = doc.data().group;
+         db.collection("groups").doc(groupID).update({
+          members: firebase.firestore.FieldValue.arrayRemove(memberID)
+        });
+        console.log(memberID);
+      });
+  });
+
+  displayGroupInfo();
 }
