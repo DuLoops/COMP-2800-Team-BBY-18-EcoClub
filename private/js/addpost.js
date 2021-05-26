@@ -47,6 +47,7 @@ function uploadUserProfilePic() {
                             "postPic": url,
                             "groupDesc": groupDesc,
                             "postedBy": name,
+                            "posterId": user.uid,
                              "likes": [],
                         })
 

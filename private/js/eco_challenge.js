@@ -50,6 +50,7 @@ function Completed() {
                     var id = doc.data().challengeID;
                     db.collection("eco-challenges").doc(id).get().then(function (doc) {
                         var name = doc.data().title;
+
                         var desc = doc.data().desc;
                         
                         document.getElementById("list").innerHTML += "<div class='accordion accordion-flush' id='accordionFlushExample'><div class='accordion-item' >" 
@@ -111,6 +112,10 @@ function CompleteChallenge(attr) {
     var challengeID = (attr.getAttribute("challengeID"));
     localStorage.setItem('challengeID', challengeID);
     console.log(challengeID);
+    db.collection("eco-challenges").doc(challengeID).get().then(function(doc){
+        var challengeTitle = doc.data().title
+        localStorage.setItem('challengeTitle', challengeTitle);
+    })
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("users").doc(user.uid).collection("user_challenges").where("challengeID", "==", challengeID)
             .get().then(function (snap) {

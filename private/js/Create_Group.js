@@ -6,7 +6,7 @@ async function myFunction() {
         .get()
         .then(function (snap) {
             snap.forEach(function (doc) {
-                document.getElementById("error").innerHTML = "Club name already exists!"
+                document.getElementById("error").innerHTML = "Invalid Club Name!"
                 i = 1;
             })
         })
