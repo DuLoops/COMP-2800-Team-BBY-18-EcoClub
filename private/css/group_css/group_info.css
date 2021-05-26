@@ -30,10 +30,9 @@ body {
 
 
 #admin_edit{
-  margin:20px;
-  float:right;
   border:solid var(--green) 2px;
   padding:3px;
+  text-align: center;
 }
 #admin_edit a{
   color:#28a745;
