@@ -1,3 +1,5 @@
+
+
 document.getElementById("button").addEventListener('click', uploadUserProfilePic);
 document.getElementById("mypic-input").addEventListener('change', uploadOnClick);
 let file;
