@@ -1,20 +1,19 @@
 body {
-    font-family: sans-serif;
-    font-size: 1.5rem;
+  font-family: sans-serif;
 }
 
-#back-icon{
-    float: left;
-    font-size: 1.5rem; 
+#back-icon {
+  float: left;
+  font-size: 1.5rem;
 }
 
 #back-button {
-    background-color: #28a745;
+  background-color: #28a745;
 }
 
 .nav-link {
-    color: white;
-    font-weight: bold;
+  color: white;
+  font-weight: bold;
 }
 
 #link {
@@ -22,65 +21,75 @@ body {
 }
 
 #ecoicon {
-    padding-top: 4rem;
-    width: 15rem;
-    display: block;
-    margin: auto; 
-}
-  
-  .btn_post {
-    background-color: rgba(0, 0 ,0 , 0.2) !important;
-  }
-  
-  #button {
-    display: block;
-    margin: auto;   
-    font-size: 1.5rem;
-    width: 5rem;
-    background-color: #28a745;
+  padding-top: 4rem;
+  width: 15rem;
+  display: block;
+  margin: auto;
 }
 
-  #post-desc {
-    margin-top: 1rem;
-    width: 24rem;
+.btn_post {
+  background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
-#add-post, .mb-3 {
-    padding: 10px;
+#button {
+  display: block;
+  margin: auto;
+  font-size: 1.5rem;
+  width: 5rem;
+  background-color: #28a745;
+}
+
+#post-desc {
+  margin-top: 1rem;
+  width: 60%;
+}
+
+#add-post,
+.mb-3 {
+  padding: 10px;
 }
 
 #mypic-goes-here {
-    width :50%;
-    display: block;
-    margin: auto; 
-  }
-  
+  width: 50%;
+  display: block;
+  margin: auto;
+}
 
-.text{
-    text-align: center;
-    font-size: 1.2rem;
-  }
-  
-  .loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid black;
-    width: 60px;
-    height: 60px;
-    margin: auto;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-  }
-  
+
+.text {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid black;
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  -webkit-animation: spin 2s linear infinite;
   /* Safari */
-  @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
   }
-  
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg);
   }
-  
-  
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
