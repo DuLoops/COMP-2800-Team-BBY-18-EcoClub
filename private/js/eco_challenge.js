@@ -9,8 +9,8 @@ function createGrid() {
                         var name = doc.data().title;
                         var div = $("<div class='form-group'></div><br>");
                         var title = $("<p class='chalange_name'>" + name + "</p>");
-                        var complete = $("<button class='button button5' onclick='CompleteChallenge(this)' challengeID='" + doc.id + "'>Complete</button>");
-                        var Delete = $("<button class='button button5' onclick='DeleteChallenge(this)' challengeID='" + doc.id + "'>Delete</button>");
+                        var complete = $("<button class='btn button ' onclick='CompleteChallenge(this)' challengeID='" + doc.id + "'>Complete</button>");
+                        var Delete = $("<button type='button' class='btn button  ' onclick='DeleteChallenge(this)' challengeID='" + doc.id + "'>Delete</button>");
                         div.append(title);
                         div.append(complete);
                         div.append(Delete);
@@ -45,11 +45,8 @@ function Completed() {
                         var name = doc.data().title;
                         var div = $("<div class='form-group'></div><br>");
                         var title = $("<p class='chalange_name'>" + name + "</p>");
-                        var complete = $("<button class='button button5' onclick='CompleteChallenge(this)' challengeID='" + doc.id + "'>Complete</button>");
-                        var Delete = $("<button class='button button5' onclick='DeleteChallenge(this)' challengeID='" + doc.id + "'>Delete</button>");
+                        
                         div.append(title);
-                        div.append(complete);
-                        div.append(Delete);
                         $("#list").append(div);
                     });
                 })
@@ -105,6 +102,10 @@ function CompleteChallenge(attr) {
     var challengeID = (attr.getAttribute("challengeID"));
     localStorage.setItem('challengeID', challengeID);
     console.log(challengeID);
+    db.collection("eco-challenges").doc(challengeID).get().then(function(doc){
+        var challengeTitle = doc.data().title
+        localStorage.setItem('challengeTitle', challengeTitle);
+    })
     firebase.auth().onAuthStateChanged(function (user) {
         db.collection("users").doc(user.uid).collection("user_challenges").where("challengeID", "==", challengeID)
             .get().then(function (snap) {
