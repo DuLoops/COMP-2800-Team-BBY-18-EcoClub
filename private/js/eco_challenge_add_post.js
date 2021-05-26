@@ -118,7 +118,7 @@ function uploadUserProfilePic() {
     })
 }
 function myFunction() {
-    document.getElementById("post-desc").value = "I have completed " + localStorage.getItem("challenge_title");
+    document.getElementById("post-desc").value = "I have completed " + localStorage.getItem("challengeTitle");
 }
 
 myFunction();

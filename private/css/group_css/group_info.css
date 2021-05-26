@@ -23,28 +23,22 @@
 .html,
 body {
 	height: 100%;
+  padding: 2rem;
   font-family: 'Lato', sans-serif;
 }
 
-#group_code{
-  margin:20px;
-  float:left;
-}
+
 
 #admin_edit{
-  margin:20px;
-  float:right;
   border:solid var(--green) 2px;
   padding:3px;
+  text-align: center;
 }
 #admin_edit a{
   color:#28a745;
   text-decoration: none;
 }
 
-#group_info_content{
-  padding:20px;
-}
 
 #info_contents {
   width:100%;
@@ -59,51 +53,31 @@ body {
   border:solid var(--green) 1px;
 
 }
-#group_name{
-  margin:10px;
+#group_desc{
+  font-size: 1.2rem;
 }
 
-#group_desc{
-  border:solid var(--green) 1px;
-  border-radius: 4px;
-  padding:2px;
-}
-#group_people{
-  background-color: var(--grey);
-}
 
 #group_leader_div{
-  background-color: var(--green);
   width:90%;
-  border-radius: 10px;
-  padding:3px;
   margin-right:auto;
   margin-left:auto;
 }
 
-
+.member_name{
+  padding-left: 1rem;
+}
 #group_members{
   display:flex;
   flex-direction: column;
-  background-color: var(--grey);
-  padding:10px;
+  font-size: 1.2rem;
 }
-
-.member{
-  border-radius: 1rem;
-  background-color: rgba(40, 167, 69, 0.5);
-  margin:10px
+#group_leader{
+  font-size: 1.4rem;
 }
-
-.member p{
-  margin:5px;
+#profilePic{
+  width: 20%;
 }
-
 .btn_club {
   background-color: rgba(0, 0 ,0 , 0.2) !important;
-}
-
-
-#back-button {
-  background-color: #28a745;
 }
