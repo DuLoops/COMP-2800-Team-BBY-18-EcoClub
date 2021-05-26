@@ -41,9 +41,7 @@ input{
 }
 
 .remove_member{
-  float:right;
-  margin:20px;
-  display:block;
+  float: right;
 }
 
 #groupImg {
@@ -56,17 +54,20 @@ input{
 
 }
 
+.labels {
+  font-size: 1.3rem;
+}
+
 #group_members{
   display:flex;
   flex-direction: column;
-  background-color: var(--grey);
-  padding:10px;
+  padding: 10px;
 }
 
 .member{
-  border-radius: 1rem;
-  background-color: rgba(40, 167, 69, 0.5);
-  margin:10px
+  margin:10px;
+  padding: 10px;
+  background-color: var(--grey);
 }
 
 .member p{

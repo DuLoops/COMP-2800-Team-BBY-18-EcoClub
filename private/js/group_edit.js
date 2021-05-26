@@ -14,7 +14,7 @@ function displayGroupInfo() {
             var members = doc.data().members;
             $("#name").val(groupName);
             $("#desc").val(desc);
-            document.getElementById("group_members").innerHTML = "";
+            // document.getElementById("group_members").innerHTML = "";
             displayMembers(members);
           } else {
             // doc.data() will be undefined in this case
@@ -42,8 +42,8 @@ function displayMembers(members) {
         // doc.data() will be undefined in this case
         console.log("No such document!");
       }
-      document.getElementById("group_members").innerHTML += "<div class='member'><p class='member_name'>" +
-        userName + "</p><p class='member_point'>EcoPoint: " + userPoint + "</p><button class='remove_member btn btn-danger' onClick='removeMember(this)' memberID='" + doc.id + "'>Remove</button></div>";
+      document.getElementById("group_members").innerHTML += "<div class='member'><span class='member_name'>" +
+        userName + "</span><span class='member_point'> | EcoPoint: " + userPoint + "</span><button class='remove_member btn btn-danger' onClick='removeMember(this)' memberID='" + doc.id + "'>Remove</button></div>";
     }).catch((error) => {
       console.log("Error getting document:", error);
     });
