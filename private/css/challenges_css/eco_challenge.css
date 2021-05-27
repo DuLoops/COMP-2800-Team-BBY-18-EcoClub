@@ -42,12 +42,6 @@ body {
   margin-top: 1.5vh;
 }
 
-#btn {
-  margin: 0%;
-  margin-top:20px;
-  background-color: var(--green);
-  color: black;
-}
 
 .form-group {
   display: block; 
@@ -75,7 +69,13 @@ body {
   margin-top: 20px;
 }
 
-.btn{
+
+
+.bottom_btn{
   background-color: #28a745;
   font-size: 1.2rem;
+  margin: 0%;
+  margin-top:20px;
+  background-color: var(--green);
+  color: black;
 }

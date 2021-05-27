@@ -14,6 +14,24 @@ firebase.auth()
         var token = credential.accessToken;
         // The signed-in user info.
         var user = result.user;
+        db.collection("users").doc(user.uid).set({ //write to firestore
+            name: user.displayName, //"users" collection
+            email: user.email, //with authenticated user's ID (user.uid)
+            ecopoint: 0,
+            profilePic: null,
+            bio: null,
+            group: null
+
+
+        })
+        .then(function () {
+            console.log("New user added to firestore");
+            window.location.assign(
+                "/private/html/main.html"); //re-direct to main.html after signup
+        })
+        .catch(function (error) {
+            console.log("Error adding new user: " + error);
+        });
         // ...
     }).catch((error) => {
         // Handle Errors here.
