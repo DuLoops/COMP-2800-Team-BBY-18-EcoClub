@@ -168,3 +168,9 @@ function displayUserProfilePic() {
     })
 }
 displayUserProfilePic();
+
+function leaveClub(){
+    setTimeout(function () {
+        location.replace("/private/html/main.html")
+    }, 2000)
+}

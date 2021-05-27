@@ -70,22 +70,28 @@ function displayMembers(members) {
 }
 
 async function removeMember(attr) {
+
   var memberID = attr.getAttribute("memberID");
-  await db.collection("users").doc(memberID).update({
-    group: null
-  });
+  var r = confirm("Are you sure you want to remove this member?");
+  if( r == true){
+    console.log("removed");
+    await db.collection("users").doc(memberID).update({
+      group: null
+    });
 
-  await firebase.auth().onAuthStateChanged( function (user) {
-     db.collection("users")
-      .doc(user.uid)
-      .get().then( function (doc) {
-        var groupID = doc.data().group;
-         db.collection("groups").doc(groupID).update({
-          members: firebase.firestore.FieldValue.arrayRemove(memberID)
+    await firebase.auth().onAuthStateChanged( function (user) {
+       db.collection("users")
+        .doc(user.uid)
+        .get().then( function (doc) {
+          var groupID = doc.data().group;
+           db.collection("groups").doc(groupID).update({
+            members: firebase.firestore.FieldValue.arrayRemove(memberID)
+          });
+          console.log(memberID);
         });
-        console.log(memberID);
-      });
-  });
-
-  displayGroupInfo();
+    });
+    setTimeout(function () {
+      window.location.reload();
+  }, 2000)
+  }
 }
