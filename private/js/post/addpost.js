@@ -1,71 +1,118 @@
-
-
 document.getElementById("button").addEventListener('click', uploadUserProfilePic);
 document.getElementById("mypic-input").addEventListener('change', uploadOnClick);
 let file;
 
 function uploadOnClick(e) {
 
-    file = e.target.files[0];
-    const image = document.getElementById("mypic-goes-here"); // pointer #2
-    var blob = URL.createObjectURL(file);
-    image.src = blob; // display this image
+  file = e.target.files[0];
+  const image = document.getElementById("mypic-goes-here"); // pointer #2
+  var blob = URL.createObjectURL(file);
+  image.src = blob; // display this image
 }
 
 function uploadUserProfilePic() {
-    firebase.auth().onAuthStateChanged(async function (user) {
-        var loaderDiv = document.createElement("div");
-        loaderDiv.setAttribute("class", "loader");
-        document.body.appendChild(loaderDiv);
-        var updating = document.createElement("p");
-        updating.setAttribute("class", "text");
-        updating.innerHTML = "Posting..";
-        document.body.appendChild(updating);
+  firebase.auth().onAuthStateChanged(async function (user) {
+    var loaderDiv = document.createElement("div");
+    loaderDiv.setAttribute("class", "loader");
+    document.body.appendChild(loaderDiv);
+    var updating = document.createElement("p");
+    updating.setAttribute("class", "text");
+    updating.innerHTML = "Posting..";
+    document.body.appendChild(updating);
 
 
-        let name = Math.random().toString(36).substr(2, 9);
-        //store using this name
-        console.log(name);
-        var storageRef = storage.ref("images/" + name + ".jpg");
+    let name = Math.random().toString(36).substr(2, 9);
+    //store using this name
+    console.log(name);
+    var storageRef = storage.ref("images/" + name + ".jpg");
 
-        //upload the picked file
-        await storageRef.put(file)
-            .then(function () {
-                console.log('Uploaded to Cloud Storage.');
+    //upload the picked file
+    await storageRef.put(file)
+      .then(function () {
+        console.log('Uploaded to Cloud Storage.');
+      })
+
+    //get the URL of stored file
+    storageRef.getDownloadURL()
+      .then(function (url) { // Get URL of the uploaded file
+        console.log(url); // Save the URL into users collection
+        db.collection("users").doc(user.uid).get().then(function (doc) {
+            var groupId = doc.data().group;
+            var name = doc.data().name;
+            var groupDesc = document.getElementById("post-desc").value;
+
+
+            var timestamp = firebase.firestore.FieldValue.serverTimestamp();
+            db.collection("groups").doc(groupId).collection("posts").add({
+              "postPic": url,
+              "groupDesc": groupDesc,
+              "postedBy": name,
+              "posterId": user.uid,
+              "likes": [],
+              "time": timestamp
             })
 
-        //get the URL of stored file
-        storageRef.getDownloadURL()
-            .then(function (url) { // Get URL of the uploaded file
-                console.log(url); // Save the URL into users collection
-                db.collection("users").doc(user.uid).get().then(function (doc) {
-                        var groupId = doc.data().group;
-                        var name = doc.data().name;
-                        var groupDesc = document.getElementById("post-desc").value;
-                        
+          })
+          .then(function () {
+            console.log('Added Post Pic URL to Firestore.');
+            setTimeout(function () {
+              location.replace("/private/html/group/group_feed.html")
+            }, 2000)
 
-                        var timestamp = firebase.firestore.FieldValue.serverTimestamp(); 
-                        db.collection("groups").doc(groupId).collection("posts").add({
-                            "postPic": url,
-                            "groupDesc": groupDesc,
-                            "postedBy": name,
-                            "posterId": user.uid,
-                             "likes": [],
-                             "time": timestamp
-                        })
-
-                    })
-                    .then(function () {
-                        console.log('Added Post Pic URL to Firestore.');
-                        setTimeout(function () {
-                            location.replace("/private/html/group/group_feed.html")
-                        }, 2000)
-
-                    })
-            })
-    })
+          })
+      })
+  })
 }
 
+(function () {
+  if (window.__twitterIntentHandler) return;
+  var intentRegex = /twitter\.com\/intent\/(\w+)/,
+    windowOptions = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes',
+    width = 550,
+    height = 420,
+    winHeight = screen.height,
+    winWidth = screen.width;
+
+  function handleIntent(e) {
+    e = e || window.event;
+    var target = e.target || e.srcElement,
+      m, left, top;
+
+    while (target && target.nodeName.toLowerCase() !== 'a') {
+      target = target.parentNode;
+    }
+
+    if (target && target.nodeName.toLowerCase() === 'a' && target.href) {
+      m = target.href.match(intentRegex);
+      if (m) {
+        left = Math.round((winWidth / 2) - (width / 2));
+        top = 0;
+
+        if (winHeight > height) {
+          top = Math.round((winHeight / 2) - (height / 2));
+        }
+
+        window.open(target.href, 'intent', windowOptions + ',width=' + width +
+          ',height=' + height + ',left=' + left + ',top=' + top);
+        e.returnValue = false;
+        e.preventDefault && e.preventDefault();
+      }
+    }
+  }
+
+  if (document.addEventListener) {
+    document.addEventListener('click', handleIntent, false);
+  } else if (document.attachEvent) {
+    document.attachEvent('onclick', handleIntent);
+  }
+  window.__twitterIntentHandler = true;
+}());
+
+$("#tweet").click(function () {
+  var desc = document.getElementById("post-desc").value;
+  var href = "https://twitter.com/intent/tweet?hashtags=EcoClub&text=Posted%20from%20EcoClub:%20" + desc + "&tw_p=tweetbutton&url=https://ecoclub-a9e9e.web.app/";
+  $("#tweet").attr('href', href);
+});
 
 // function displayUserProfilePic() {
 //     console.log("hi");

@@ -151,3 +151,9 @@ myFunction();
     }
     window.__twitterIntentHandler = true;
   }());
+
+  $("#tweet").click(function () {
+    var desc = document.getElementById("post-desc").value;
+    var href = "https://twitter.com/intent/tweet?hashtags=EcoClub&text=Posted%20from%20EcoClub:%20" + desc + "&tw_p=tweetbutton&url=https://ecoclub-a9e9e.web.app/";
+    $("#tweet").attr('href', href);
+  });

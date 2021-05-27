@@ -25,8 +25,8 @@
     <hr>
     <div id="content">
         <div id="displayButton">
-            <button class='btn' onclick="createGrid()">In-Progress</button>
-            <button class='btn' onclick="Completed()">Completed</button>
+            <button class='btn btn-success' onclick="createGrid()" id="btn_progress">In-Progress</button>
+            <button class='btn btn-secondary' onclick="Completed()" id="btn_completed">Completed</button>
         </div>
 
         <div id="list">
@@ -35,13 +35,13 @@
         </div>
 
         <div class="col-md-12 text-center">
-            <a href="/private/html/post/addPost.html" id="btn" class="btn btn-lg" role="button"
+            <a href="/private/html/post/addPost.html" id="btn" class="btn btn-lg bottom_btn" role="button"
                 aria-disabled="true">Share your idea <i class="far fa-plus-square"></i>
             </a>
         </div>
 
         <div class="col-md-12 text-center">
-            <a href="/private/html/challenges/eco_challenge_list.html" id="btn" class="btn btn-lg" role="button"
+            <a href="/private/html/challenges/eco_challenge_list.html" id="btn" class="btn btn-lg bottom_btn" role="button"
                 aria-disabled="true">Take a new Challenge</a>
         </div>
     </div>
