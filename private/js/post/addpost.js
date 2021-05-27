@@ -44,13 +44,14 @@ function uploadUserProfilePic() {
                         var groupDesc = document.getElementById("post-desc").value;
                         
 
-                        
+                        var timestamp = firebase.firestore.FieldValue.serverTimestamp(); 
                         db.collection("groups").doc(groupId).collection("posts").add({
                             "postPic": url,
                             "groupDesc": groupDesc,
                             "postedBy": name,
                             "posterId": user.uid,
                              "likes": [],
+                             "time": timestamp
                         })
 
                     })

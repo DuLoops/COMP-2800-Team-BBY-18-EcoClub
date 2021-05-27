@@ -45,6 +45,11 @@ body {
   border-radius: 5px;
 }
 
+#date {
+  font-size: 1rem;
+  color: grey;
+}
+
 .post img{
   display:block;
   padding:5px;

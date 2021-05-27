@@ -38,12 +38,14 @@ async function post() {
                         var groupId = doc.data().group;
                         var name = doc.data().name;
                         var groupDesc = document.getElementById("post-desc").value;
+                        var timestamp = firebase.firestore.FieldValue.serverTimestamp(); 
                         
                         db.collection("groups").doc(groupId).collection("posts").add({
                             "postPic": url,
                             "groupDesc": groupDesc,
                             "postedBy": name,
                              "likes": [],
+                             "time": timestamp
                         })
 
                     })
@@ -75,7 +77,7 @@ async function post() {
             })
 
             setTimeout(function () {
-                location.replace("/private/html/OnCompletion.html")
+                location.replace("/private/html/challenges/OnCompletion.html")
             }, 2000)
 
         })
