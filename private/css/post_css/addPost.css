@@ -92,3 +92,16 @@ body {
     transform: rotate(360deg);
   }
 }
+
+#tweet{
+  background-color: lightblue;
+  border: solid #45A8E2 1px;
+  padding: 0.5em;
+  float:right;
+  margin:1rem;
+  text-decoration: none;
+}
+
+#tweet img{
+  height: 2rem;
+}

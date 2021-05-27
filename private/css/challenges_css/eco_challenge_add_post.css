@@ -1,7 +1,5 @@
 body {
   font-family: 'Lato', sans-serif;
-    font-size: 1.5rem;
-
 }
 
 #back-icon {
@@ -94,4 +92,18 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+#tweet{
+  background-color: lightblue;
+  border: solid #45A8E2 1px;
+  padding: 0.5em;
+  float:right;
+  margin:1rem;
+  text-decoration: none;
+}
+
+#tweet img{
+  height: 2rem;
 }
