@@ -77,7 +77,7 @@ async function post() {
             })
 
             setTimeout(function () {
-                location.replace("/private/html/OnCompletion.html")
+                location.replace("/private/html/challenges/OnCompletion.html")
             }, 2000)
 
         })

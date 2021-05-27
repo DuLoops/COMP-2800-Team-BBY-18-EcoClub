@@ -61,21 +61,24 @@ function displayMembers(leader, members) {
   db.collection("users")
   .doc(leader)
   .get().then((doc)=>{
-    document.getElementById("group_leader").textContent = "Admin: " + doc.data().name;
+    document.getElementById("group_leader").innerHTML = "<img id='profilePic' src = '" + picUrl + "'><span id='leader' onclick='displayProfile(this)' listID='"+ doc.id +"' > " + doc.data().name + "</span>";
+    var picUrl = doc.data().profilePic;
+    $("#profilePic").attr("src", picUrl);
   })
   members.forEach(member => {
     var user_member = db.collection("users").doc(member);
     // console.log(member);
-    user_member.orderBy("ecopoint","desc").get().then((doc) => {
+    user_member.get().then((doc) => {
       if (doc.exists) {
         var userName = doc.data().name;
         var userPoint = doc.data().ecopoint;
+        var pic = doc.data().profilePic;
       } else {
         // doc.data() will be undefined in this case
         console.log("No such document!");
       }
-      document.getElementById("group_members").innerHTML += "<div class='member'><p class='member_name' onclick='displayProfile(this)' listID='"+ member +"'>" +
-        userName + "</p><p class='member_point'>EcoPoint: " + userPoint + "</p></div>";
+      document.getElementById("group_members").innerHTML += "<div class='member'><img id='profilePic' src= '" + pic + "'><span class='member_name' onclick='displayProfile(this)' listID='"+ member +"'>" +
+        userName + "</span><span class='member_point'> | EcoPoints: " + userPoint + "</span></div><hr>";
     }).catch((error) => {
       console.log("Error getting document:", error);
     });
@@ -89,6 +92,8 @@ function displayProfile(attr){
   var listID = (attr.getAttribute("listID"));
   localStorage.setItem('listID', listID );
   console.log(listID);
+  // var leaderID = (attr.getAttribute("leaderID"));
+  // localStorage.setItem('leaderID', leaderID );
   firebase.auth().onAuthStateChanged(function (user){
     if(listID == user.uid){
       location.replace("/private/html/profile/profile-main.html");
