@@ -93,35 +93,47 @@ body {
   }
 }
 
-#tweet{
+#tweet {
   background-color: lightblue;
   border: solid #45A8E2 1px;
+  border-radius: 5px;
   padding: 0.5em;
-  margin:1rem;
+  display: block;
+  margin-top: -4px;
+  margin-left: 12%;
   text-decoration: none;
-  width:8rem;
+  width: 35%;
+  float: left;
 }
 
-#share_btn{
-  display:flex;
+#share_btn {
+  display: flex;
   flex-direction: column;
 }
 
-#tweet img{
-  height: 2rem;
+#tweet img {
+  height: 1rem;
 }
 
-.fb-root{
-  margin:1rem;
-  transform: scale(2);
-  -ms-transform: scale(2);
+.facebook {
+
+  display: block;
+  margin-left: 66%;
   -webkit-transform: scale(2);
+
+  /* transform: scale(2);
+  -ms-transform: scale(2);
+  -webkit-transform: scale(1.7);
   -o-transform: scale(2);
-  -moz-transform: scale(2);
-  transform-origin: top left;
+  -moz-transform: scale(2); */
+  /* transform-origin: top left;
   -ms-transform-origin: top left;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
-  -webkit-transform-origin: top left;
+  -webkit-transform-origin: top left; */
 }
 
+#fbIcon {
+
+  width: 45%;
+}
