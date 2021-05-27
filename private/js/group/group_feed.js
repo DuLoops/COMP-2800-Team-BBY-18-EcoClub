@@ -27,9 +27,6 @@ function getPosts() {
                 } 
               }
              
-
-              
-             
               document.getElementById("feed_content").innerHTML += "<div class='post'><p class='poster'><span id='name' onclick='displayProfile(this)' posterID='"+PosterID+"'>"+  PosterName +"</span></p><img class='post_pic' src='" + picURL + "' alt='postPic'><p class='post_desc'>" + description + "<br><span id='date'>" + time.toString()  + "</span></p><div class='post_btn'><p class='likes'><i class='far fa-thumbs-up'></i>"+likesArray.length+"</p><div><button type='button' id='btn'class='btn' "+likedStatus+"' onclick='likePost(this)' groupID='"+groupID+"' postID='"+doc.id+"'>Like</button><button type='button'id='btn' class='btn' onclick='postDetail(this)' postID='"+doc.id+"' groupID='"+groupID+"'>Comment</button></div></div></div><hr>";
             });
           });

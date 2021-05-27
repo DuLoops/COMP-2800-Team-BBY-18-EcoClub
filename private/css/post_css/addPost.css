@@ -1,5 +1,6 @@
 body {
   font-family: 'Lato', sans-serif;
+  font-size: 1.3rem;
 }
 
 #back-icon {
@@ -97,7 +98,6 @@ body {
   background-color: lightblue;
   border: solid #45A8E2 1px;
   padding: 0.5em;
-  float:right;
   margin:1rem;
   text-decoration: none;
 }
