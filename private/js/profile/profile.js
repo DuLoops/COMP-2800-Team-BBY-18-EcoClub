@@ -96,9 +96,13 @@ function leaveTeam() {
 
                             db.collection("groups").doc(groupID).delete().then(() => {
                                  console.log("Document successfully deleted!");
+                                 setTimeout(function () {
+                                location.replace("/private/html/main.html")
+                            }, 2000)
                             }).catch((error) => {
                                  console.error("Error removing document: ", error);
                          });
+                         
 
                         } else {
                             console.log("member");
