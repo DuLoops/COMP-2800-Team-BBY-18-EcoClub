@@ -15,6 +15,7 @@ function sayName() {
                     var bio = doc.data().bio;
                     // var groupId = doc.data().group;
                     console.log(picUrl);
+                    console.log(groupID);
                     // $("#image").append("<img src='" + picUrl + "'>")
                     if (name) {
                         $(".name-user").html(name);

@@ -2,48 +2,48 @@
 var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 
-$("#googleSignIn").click(function () {
-    var provider = new firebase.auth.GoogleAuthProvider();
-firebase.auth()
-    .signInWithPopup(provider)
-    .then((result) => {
-        /** @type {firebase.auth.OAuthCredential} */
-        var credential = result.credential;
+// $("#googleSignIn").click(function () {
+//     var provider = new firebase.auth.GoogleAuthProvider();
+//     firebase.auth()
+//         .signInWithPopup(provider)
+//         .then((result) => {
+//             /** @type {firebase.auth.OAuthCredential} */
+//             var credential = result.credential;
 
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = credential.accessToken;
-        // The signed-in user info.
-        var user = result.user;
-        db.collection("users").doc(user.uid).set({ //write to firestore
-            name: user.displayName, //"users" collection
-            email: user.email, //with authenticated user's ID (user.uid)
-            ecopoint: 0,
-            profilePic: null,
-            bio: null,
-            group: null
+//             // This gives you a Google Access Token. You can use it to access the Google API.
+//             var token = credential.accessToken;
+//             // The signed-in user info.
+//             var user = result.user;
+//             db.collection("users").doc(user.uid).set({ //write to firestore
+//                     name: user.displayName, //"users" collection
+//                     email: user.email, //with authenticated user's ID (user.uid)
+//                     ecopoint: 0,
+//                     profilePic: null,
+//                     bio: null,
+//                     group: null
 
 
-        })
-        .then(function () {
-            console.log("New user added to firestore");
-            window.location.assign(
-                "/private/html/main.html"); //re-direct to main.html after signup
-        })
-        .catch(function (error) {
-            console.log("Error adding new user: " + error);
-        });
-        // ...
-    }).catch((error) => {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-    });
-})
+//                 })
+//                 .then(function () {
+//                     console.log("New user added to firestore");
+//                     window.location.assign(
+//                         "/private/html/main.html"); //re-direct to main.html after signup
+//                 })
+//                 .catch(function (error) {
+//                     console.log("Error adding new user: " + error);
+//                 });
+//             // ...
+//         }).catch((error) => {
+//             // Handle Errors here.
+//             var errorCode = error.code;
+//             var errorMessage = error.message;
+//             // The email of the user's account used.
+//             var email = error.email;
+//             // The firebase.auth.AuthCredential type that was used.
+//             var credential = error.credential;
+//             // ...
+//         });
+// });
 
 var uiConfig = {
     callbacks: {
@@ -68,8 +68,6 @@ var uiConfig = {
                         profilePic: null,
                         bio: null,
                         group: null
-
-
                     })
                     .then(function () {
                         console.log("New user added to firestore");
@@ -92,7 +90,7 @@ var uiConfig = {
     signInSuccessUrl: '/private/html/main.html',
     signInOptions: [
         // Leave the lines as is for the providers you want to offer your users.
-        // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
         //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
         //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
         //firebase.auth.GithubAuthProvider.PROVIDER_ID,
@@ -104,5 +102,7 @@ var uiConfig = {
     // Privacy policy url.
     privacyPolicyUrl: '<your-privacy-policy-url>'
 };
+
+
 // The start method will wait until the DOM is loaded.
 ui.start('#firebaseui-auth-container', uiConfig);
