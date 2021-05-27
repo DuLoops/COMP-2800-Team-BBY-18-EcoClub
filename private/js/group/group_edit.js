@@ -24,7 +24,7 @@ function displayGroupInfo() {
           console.log("Error getting document:", error);
         });
       });
-  
+
   });
 }
 
@@ -49,25 +49,31 @@ function displayMembers(members) {
     });
 
   });
-
-  document.getElementById("save_btn").addEventListener("click", saveChanges);
-  async function saveChanges() {
-    var newName = document.getElementById("name").value;
-    var newDesc = document.getElementById("desc").value;
-    await firebase.auth().onAuthStateChanged(function (user) {
-      db.collection("users")
-        .doc(user.uid)
-        .get().then(function (doc) {
-          var groupID = doc.data().group;
-          db.collection("groups").doc(groupID).update({
-            "groupName": newName,
-            "desc": newDesc
-          })
-        });
-    });
-    window.location.href = "/private/html/group/group_info.html";
-  }
 }
+
+document.getElementById("save_btn").addEventListener("click", async function () {
+  var newName = document.getElementById("name").value;
+  var newDesc = document.getElementById("desc").value;
+  await firebase.auth().onAuthStateChanged(async function (user) {
+    await db.collection("users")
+      .doc(user.uid)
+      .get().then(function (doc) {
+        var groupID = doc.data().group;
+        db.collection("groups").doc(groupID).update({
+          "groupName": newName,
+          "desc": newDesc
+        })
+      }).then(function() {
+        console.log("groupname changes");
+        setTimeout(function () {
+          location.replace("/private/html/group/group_info.html")
+      }, 2000)
+      })
+  });
+});
+
+
+
 
 async function removeMember(attr) {
   var memberID = attr.getAttribute("memberID");
@@ -75,12 +81,12 @@ async function removeMember(attr) {
     group: null
   });
 
-  await firebase.auth().onAuthStateChanged( function (user) {
-     db.collection("users")
+  await firebase.auth().onAuthStateChanged(function (user) {
+    db.collection("users")
       .doc(user.uid)
-      .get().then( function (doc) {
+      .get().then(function (doc) {
         var groupID = doc.data().group;
-         db.collection("groups").doc(groupID).update({
+        db.collection("groups").doc(groupID).update({
           members: firebase.firestore.FieldValue.arrayRemove(memberID)
         });
         console.log(memberID);
