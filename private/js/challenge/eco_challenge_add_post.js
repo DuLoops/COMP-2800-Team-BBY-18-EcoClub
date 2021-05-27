@@ -157,3 +157,12 @@ myFunction();
     var href = "https://twitter.com/intent/tweet?hashtags=EcoClub&text=Posted%20from%20EcoClub:%20" + desc + "&tw_p=tweetbutton&url=https://ecoclub-a9e9e.web.app/";
     $("#tweet").attr('href', href);
   });
+
+  // facebook
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=1122768921575874"; // appId must be valid
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
