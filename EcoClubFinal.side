@@ -1,0 +1,3370 @@
+{
+  "id": "3bd5a02e-8bda-4bb8-8ea6-348eefd5a559",
+  "version": "2.0",
+  "name": "EcoClub",
+  "url": "https://ecoclub-a9e9e.web.app",
+  "tests": [{
+    "id": "8447309b-0e1e-4591-8bb1-3660224729d5",
+    "name": "8.1 Viewing eco-point of other members",
+    "commands": [{
+      "id": "7865dfc5-f267-4a25-9f2c-388a55f35bb7",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55068d06-ee1e-4774-a046-eef7940078bf",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "796x865",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4538287-1c04-48c8-a2cf-fd3c28636c9d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "445401a2-5b1d-40c8-be47-17e24c6628db",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "example@g.com"
+    }, {
+      "id": "77ced7f0-2109-4185-8497-c075cf182687",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d76c9db3-df3f-4e19-a0a4-5f80c5b100ec",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "example"
+    }, {
+      "id": "83d5ec69-45c8-4f40-8b01-947b63c48268",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "53e1ab9a-b95f-49d6-9709-650e65b5591e",
+      "comment": "",
+      "command": "click",
+      "target": "id=footer_group",
+      "targets": [
+        ["id=footer_group", "id"],
+        ["css=#footer_group", "css:finder"],
+        ["xpath=//button[@id='footer_group']", "xpath:attributes"],
+        ["xpath=//footer/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9509885-a577-478e-ad64-952ed2db3920",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-toggler-icon",
+      "targets": [
+        ["css=.navbar-toggler-icon", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfc66da5-3e51-406f-8354-47f183a1d98c",
+      "comment": "",
+      "command": "click",
+      "target": "id=links",
+      "targets": [
+        ["id=links", "id"],
+        ["linkText=Club Info", "linkText"],
+        ["xpath=//a[contains(text(),'Club Info')]", "xpath:link"],
+        ["xpath=//a[@id='links']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavAltMarkup']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/group/group_info.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Club Info')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "740bc5f3-2357-45f3-bb5c-1bc75ba0388f",
+      "comment": "",
+      "command": "click",
+      "target": "id=leader",
+      "targets": [
+        ["id=leader", "id"],
+        ["css=#leader", "css:finder"],
+        ["xpath=//span[@id='leader']", "xpath:attributes"],
+        ["xpath=//div[@id='group_leader']/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,' example')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f125db1d-71f6-41df-82c1-359de1e526b6",
+    "name": "7.1 View my profile",
+    "commands": [{
+      "id": "84e441a9-c455-4f31-b6cf-7f77b7452a6f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e65aadf-6f0d-4283-9744-6c944a9dbd8b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x880",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87d6f43d-0c18-4905-b425-6e370f061fb2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "11eaf89c-c2cf-4843-9f29-848627ba8741",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bcf178d4-5ba5-4c00-9b3f-f78a895ce055",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "example@g.com"
+    }, {
+      "id": "8f8c20d5-e228-4296-b30e-34b8da4305d0",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "99e6a24d-682b-46e2-bcaa-922c39df8f7a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "example"
+    }, {
+      "id": "07c4622b-ecdb-4acc-b999-50d002f5672d",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "dc6f797c-ac1b-4164-afdb-6de299dbf316",
+      "comment": "",
+      "command": "click",
+      "target": "id=footer_profile",
+      "targets": [
+        ["id=footer_profile", "id"],
+        ["css=#footer_profile", "css:finder"],
+        ["xpath=//button[@id='footer_profile']", "xpath:attributes"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "fe2274cc-ef52-4720-8d65-e88312811eca",
+    "name": "7.2 Edit my profile name",
+    "commands": [{
+      "id": "2fcc9bd3-11eb-4c64-91f2-17fa6f0f2093",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2ee3d49-fa65-45f7-b6cc-268a8eee61c0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "795x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc2efdaf-5661-44a9-b2ca-dd23b2b4c05f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-list",
+      "targets": [
+        ["css=.firebaseui-idp-list", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul", "xpath:idRelative"],
+        ["xpath=//ul", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "66ef27f3-1822-4520-8ef4-660eee0ad1f0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ca39893-45ba-4bb5-805e-6eeebd1a78c1",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "example@g.com"
+    }, {
+      "id": "004e1a74-9676-472d-9431-1b0febbd02ef",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "054eaeeb-8738-4573-b893-8258f3abf242",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "example"
+    }, {
+      "id": "cf39ad64-7342-4885-9259-082c433e82f0",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "d0a9b78a-30b5-4b68-9401-4882b49a863d",
+      "comment": "",
+      "command": "click",
+      "target": "id=footer_profile",
+      "targets": [
+        ["id=footer_profile", "id"],
+        ["css=#footer_profile", "css:finder"],
+        ["xpath=//button[@id='footer_profile']", "xpath:attributes"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ea89a14-bb8c-463c-b14e-12c646ab2e63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-toggler-icon",
+      "targets": [
+        ["css=.navbar-toggler-icon", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12e9ed5e-03e6-4042-886b-560e29e68e97",
+      "comment": "",
+      "command": "click",
+      "target": "id=links",
+      "targets": [
+        ["id=links", "id"],
+        ["linkText=Edit Profile", "linkText"],
+        ["xpath=//a[contains(text(),'Edit Profile')]", "xpath:link"],
+        ["xpath=//a[@id='links']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavAltMarkup']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/profile/profile-edit.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit Profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b6d3eb6-0592-4b4d-ba1f-0ecd5e8670d1",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "644c7242-cc83-4d66-9602-016899a57225",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "new name"
+    }, {
+      "id": "6ddd1447-9595-4fbd-a4a2-b09776b32d32",
+      "comment": "",
+      "command": "click",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "517fad9b-a08c-4d53-b591-f932d63fa916",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ac43bf2-1c3d-42a0-a36d-7a99a9db5559",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "615d16e7-6148-40d0-87cd-50cf0dbeb526",
+      "comment": "",
+      "command": "click",
+      "target": "css=.name-user",
+      "targets": [
+        ["css=.name-user", "css:finder"],
+        ["xpath=//div[@id='userInfo']/h1", "xpath:idRelative"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'new name')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "367bb6e9-f411-44ed-8d9b-ae0e2178ab4f",
+    "name": "7.3Edit bio",
+    "commands": [{
+      "id": "79290006-9e2d-4272-8b31-3e9513475b92",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7ac1d3e-d08f-4c4c-ac0f-a30c50c21b6c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "795x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58970b78-0de1-40ba-94ba-82e6900163f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3430287d-1cc7-4fc7-a588-5fac5a74b446",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "example@g.com"
+    }, {
+      "id": "a0b83a6a-1ae7-4d5f-bc33-12f06a0acd4e",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "736f057d-7ae1-4f17-82dc-573e359a537f",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "example"
+    }, {
+      "id": "a3168e68-61bf-4175-bc39-518b8630a722",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "f0032f47-c0a1-4905-9a8e-c67d52251427",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-user-circle",
+      "targets": [
+        ["css=.fa-user-circle", "css:finder"],
+        ["xpath=//button[@id='footer_profile']/i", "xpath:idRelative"],
+        ["xpath=//button[3]/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d28e6476-59d6-41b5-95d2-93f005e57ec2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-toggler-icon",
+      "targets": [
+        ["css=.navbar-toggler-icon", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "385fb3f1-3df8-425f-9256-8a2442018f4d",
+      "comment": "",
+      "command": "click",
+      "target": "id=links",
+      "targets": [
+        ["id=links", "id"],
+        ["linkText=Edit Profile", "linkText"],
+        ["xpath=//a[contains(text(),'Edit Profile')]", "xpath:link"],
+        ["xpath=//a[@id='links']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavAltMarkup']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/profile/profile-edit.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit Profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9290290a-c849-422b-83bd-b1d94304ee35",
+      "comment": "",
+      "command": "click",
+      "target": "id=bio",
+      "targets": [
+        ["id=bio", "id"],
+        ["css=#bio", "css:finder"],
+        ["xpath=//input[@id='bio']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "18790971-0cea-4469-840b-59e7fa473287",
+      "comment": "",
+      "command": "type",
+      "target": "id=bio",
+      "targets": [
+        ["id=bio", "id"],
+        ["css=#bio", "css:finder"],
+        ["xpath=//input[@id='bio']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "new bio"
+    }, {
+      "id": "cb6a0631-2b7f-43f3-9d47-ba4c04ca054a",
+      "comment": "",
+      "command": "click",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ef5c926-a3a0-4e21-8ddd-f7e9de8b59ef",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be3bbc32-058e-4770-bec3-29db6c08c894",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a00821f9-8829-47ec-8fa7-b10eefa59339",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bio-user",
+      "targets": [
+        ["css=.bio-user", "css:finder"],
+        ["xpath=//h3[@id='bio']/span", "xpath:idRelative"],
+        ["xpath=//h3/span", "xpath:position"],
+        ["xpath=//span[contains(.,'new bio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "5f0c817f-5cd4-4987-819b-5d6d3c79249e",
+    "name": "7.4 Edit profile picture",
+    "commands": [{
+      "id": "a0338d86-2400-4c73-845b-5dec2a76b498",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62c46d29-ce67-4691-b39c-7554d0858c5d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "795x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6cdc700e-4f44-4aa0-ac4f-d80be11a2e52",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38d90a00-760e-469b-a187-77fe4861e268",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "example@g.com"
+    }, {
+      "id": "ee60d467-84a0-4973-8010-9e6fe2838dd6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "ced35307-f090-4c17-a6e5-a7fa23d6cf6f",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "example"
+    }, {
+      "id": "edc5208e-9a21-4087-a9ed-7cc6e7201397",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "712b707d-dc6e-42ae-9a9a-33e250e912e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-user-circle",
+      "targets": [
+        ["css=.fa-user-circle", "css:finder"],
+        ["xpath=//button[@id='footer_profile']/i", "xpath:idRelative"],
+        ["xpath=//button[3]/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bdf50fe-9258-40c2-b55d-1c1734d54565",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-toggler",
+      "targets": [
+        ["css=.navbar-toggler", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "656e21e4-7fbe-42f2-8b48-370df590719f",
+      "comment": "",
+      "command": "click",
+      "target": "id=links",
+      "targets": [
+        ["id=links", "id"],
+        ["linkText=Edit Profile", "linkText"],
+        ["xpath=//a[contains(text(),'Edit Profile')]", "xpath:link"],
+        ["xpath=//a[@id='links']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavAltMarkup']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/profile/profile-edit.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit Profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae69772e-be26-4c0b-851e-5ff68c408188",
+      "comment": "",
+      "command": "click",
+      "target": "id=mypic-input",
+      "targets": [
+        ["id=mypic-input", "id"],
+        ["name=myfile", "name"],
+        ["css=#mypic-input", "css:finder"],
+        ["xpath=//input[@id='mypic-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "887a43a0-e718-4123-9f56-1e5ff13f7b3c",
+      "comment": "",
+      "command": "click",
+      "target": "id=mypic-input",
+      "targets": [
+        ["id=mypic-input", "id"],
+        ["name=myfile", "name"],
+        ["css=#mypic-input", "css:finder"],
+        ["xpath=//input[@id='mypic-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e977db6-4854-4140-a5c4-675bab5c5b31",
+      "comment": "",
+      "command": "type",
+      "target": "id=mypic-input",
+      "targets": [
+        ["id=mypic-input", "id"],
+        ["name=myfile", "name"],
+        ["css=#mypic-input", "css:finder"],
+        ["xpath=//input[@id='mypic-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\253018.jpg"
+    }, {
+      "id": "30845fc1-3b26-443f-847d-3c1592455a96",
+      "comment": "",
+      "command": "click",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50b9bce0-a7c8-4693-8987-f4b617f94004",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d9c7cc4-01aa-4da5-9bbe-eff1bccf30ea",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "b5d3a63c-735d-47a1-ac88-41a0ebcf5555",
+    "name": "9.1 Edit club name",
+    "commands": [{
+      "id": "3a7e5b2c-54a4-4c66-9418-f17379855c5a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70e37b7f-7fa3-4d1e-a559-b2bd0c208bce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "795x864",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "43754394-afd0-4a06-a5d2-40de15f7df4f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e464972e-fe36-41a5-92e2-6e8758b8c03f",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "example@g.com"
+    }, {
+      "id": "c97bc153-15b8-4a76-8db6-a34b4c6febd6",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "1849e4ec-0b98-4a92-bd96-a42aeb3ef924",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "example"
+    }, {
+      "id": "01f33dcf-f194-4b2a-b242-8d586e45a218",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "31389ef6-4df1-4e0b-a91a-a4a3e7f486ec",
+      "comment": "",
+      "command": "click",
+      "target": "id=footer_group",
+      "targets": [
+        ["id=footer_group", "id"],
+        ["css=#footer_group", "css:finder"],
+        ["xpath=//button[@id='footer_group']", "xpath:attributes"],
+        ["xpath=//footer/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "256893c3-240d-4e70-805c-b0c24d2dba46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar-toggler-icon",
+      "targets": [
+        ["css=.navbar-toggler-icon", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "19af8123-ed75-4506-9aea-96b440dae4db",
+      "comment": "",
+      "command": "click",
+      "target": "id=links",
+      "targets": [
+        ["id=links", "id"],
+        ["linkText=Club Info", "linkText"],
+        ["xpath=//a[contains(text(),'Club Info')]", "xpath:link"],
+        ["xpath=//a[@id='links']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarNavAltMarkup']/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/group/group_info.html')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Club Info')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e050ec1-089a-493c-8254-66d8cfec0504",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25c07bf0-9ccb-4133-bb96-06a80d87e0e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=admin_edit",
+      "targets": [
+        ["id=admin_edit", "id"],
+        ["css=#admin_edit", "css:finder"],
+        ["xpath=//div[@id='admin_edit']", "xpath:attributes"],
+        ["xpath=//div[@id='forAdmin']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9345c655-8276-47a5-b52f-0f2f09c8d656",
+      "comment": "",
+      "command": "click",
+      "target": "id=group_edit",
+      "targets": [
+        ["id=group_edit", "id"],
+        ["linkText=Edit Club Info", "linkText"],
+        ["css=#group_edit", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit Club Info')]", "xpath:link"],
+        ["xpath=//a[@id='group_edit']", "xpath:attributes"],
+        ["xpath=//div[@id='admin_edit']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'group_edit.html')]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit Club Info')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9d7b904-cc52-4b8c-a4ad-2c4e72d05557",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "2182952f-80ed-4a6d-9f14-009ff9f00101",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  [{
+    "id": "b346dc10-49e0-41a0-b4d5-fdfdf27932a2",
+    "name": "login",
+    "commands": [{
+      "id": "3c6d89a9-5f30-4d54-95f6-38c777bcfe5a",
+      "comment": "",
+      "command": "open",
+      "target": "/?mode=select",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2d92c0f9-094f-4212-9dd5-c2766d26df9e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "640db5a8-68a2-453e-9c97-205ef8319dce",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "242d06b4-5a4f-4472-82ca-f55876c455f1",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadih1992@gmail.com"
+    }, {
+      "id": "91779d18-d4d1-4b5d-b811-bf1b09a6341d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e867afc-37d1-4f14-9ebf-9f0fc014521d",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "ee687ed0-ac81-494a-b719-2926678af255",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6d05b922-10db-4891-bcc0-e7c9d0493f62",
+    "name": "Create profile",
+    "commands": [{
+      "id": "c01c5935-db66-4a11-b3d6-f8f546631293",
+      "comment": "",
+      "command": "open",
+      "target": "/?mode=select",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96232397-e21e-4613-96dd-b9a69ebd2a16",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e219d35a-a58c-4381-8cbc-de6969b8d59e",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b1c39f4-e28f-40c5-ab5d-ec29eb9420bd",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "19acb7f2-eadf-46a0-9f7f-892f9b7fc15c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5dcae4e-36ca-491d-ada7-253741da4757",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2356152-b06b-490a-bc78-d6fa5e8dddfa",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "b508a459-66a6-4cf1-a744-096ae0f47d19",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "216930d9-f2fa-46f2-a641-8cd26fa64fd0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create profile",
+      "targets": [
+        ["linkText=Create profile", "linkText"],
+        ["css=#build_profile .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Create profile')]", "xpath:link"],
+        ["xpath=//div[@id='build_profile']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/profile/getMoreInfo.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3e3c090-2596-4310-a098-a68db3773277",
+      "comment": "",
+      "command": "click",
+      "target": "id=mypic-input",
+      "targets": [
+        ["id=mypic-input", "id"],
+        ["name=myfile", "name"],
+        ["css=#mypic-input", "css:finder"],
+        ["xpath=//input[@id='mypic-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0f61f12-cd41-414b-b516-c6f0f9786bd2",
+      "comment": "",
+      "command": "type",
+      "target": "id=mypic-input",
+      "targets": [
+        ["id=mypic-input", "id"],
+        ["name=myfile", "name"],
+        ["css=#mypic-input", "css:finder"],
+        ["xpath=//input[@id='mypic-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\star.png"
+    }, {
+      "id": "cb6cd377-13ee-44ac-adb3-ebfb756db6fb",
+      "comment": "",
+      "command": "click",
+      "target": "id=bio-desc",
+      "targets": [
+        ["id=bio-desc", "id"],
+        ["css=#bio-desc", "css:finder"],
+        ["xpath=//input[@id='bio-desc']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a246d819-50b1-47cc-bc4b-d7c5ad15e9a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=bio-desc",
+      "targets": [
+        ["id=bio-desc", "id"],
+        ["css=#bio-desc", "css:finder"],
+        ["xpath=//input[@id='bio-desc']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "hi"
+    }, {
+      "id": "42b0f9d0-015b-4fc9-8e46-600e38f552be",
+      "comment": "",
+      "command": "click",
+      "target": "id=add-button",
+      "targets": [
+        ["id=add-button", "id"],
+        ["css=#add-button", "css:finder"],
+        ["xpath=//button[@id='add-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9da8a4d1-e552-43b5-ba66-e881341111bc",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=add-button",
+      "targets": [
+        ["id=add-button", "id"],
+        ["css=#add-button", "css:finder"],
+        ["xpath=//button[@id='add-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "cf0285a3-84e9-49a2-98b2-3505a013d64f",
+    "name": "Edit profile",
+    "commands": [{
+      "id": "baadbcc3-da1b-4cf4-b579-04a01f0a5148",
+      "comment": "",
+      "command": "open",
+      "target": "/?mode=select",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a759f753-de67-4d8f-8b8c-485a715b7da0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ded5afc9-9e21-4aa3-96bc-2fc639a63586",
+      "comment": "",
+      "command": "click",
+      "target": "css=.center-text",
+      "targets": [
+        ["css=.center-text", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "140a0237-efa7-477c-9a63-ec826030b795",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6987338-3b07-4c06-bda1-7f48d43df80b",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "cf7640dc-c587-4b44-8f9f-6f014c780751",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73965979-79be-4e3d-9b85-5ec40c3b1cce",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23f0e6cc-8c75-4e17-9e51-b30e3f4e6a8b",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "b8a06780-c74c-4b42-aa18-cdad95032092",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3ce7b86f-1e12-4555-8f6c-f8c23ba957a7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit profile",
+      "targets": [
+        ["linkText=Edit profile", "linkText"],
+        ["css=#edit_profile .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit profile')]", "xpath:link"],
+        ["xpath=//div[@id='edit_profile']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/profile/profile-edit2.html')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37650a59-42b9-4082-a4cf-2c30a1c60842",
+      "comment": "",
+      "command": "click",
+      "target": "id=bio",
+      "targets": [
+        ["id=bio", "id"],
+        ["css=#bio", "css:finder"],
+        ["xpath=//input[@id='bio']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e9657df-9f33-4acf-934c-98d075b98871",
+      "comment": "",
+      "command": "type",
+      "target": "id=bio",
+      "targets": [
+        ["id=bio", "id"],
+        ["css=#bio", "css:finder"],
+        ["xpath=//input[@id='bio']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "bye"
+    }, {
+      "id": "667ace41-3005-4718-876b-d3a5fe689219",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ab5c24e-a07a-49f9-82b4-625f232a60f9",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "fadi basheer"
+    }, {
+      "id": "0ba64705-13b8-4f37-93ab-9eb973b9a5e0",
+      "comment": "",
+      "command": "click",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "373b1cc8-99f3-4f6b-a120-cb43077a5370",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=done-button",
+      "targets": [
+        ["id=done-button", "id"],
+        ["css=#done-button", "css:finder"],
+        ["xpath=//button[@id='done-button']", "xpath:attributes"],
+        ["xpath=//div[@id='btn-div']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Done')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "af82c2bc-d5da-463e-a92c-918509e98c1c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Edit profile",
+      "targets": [
+        ["linkText=Edit profile", "linkText"],
+        ["css=#edit_profile .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Edit profile')]", "xpath:link"],
+        ["xpath=//div[@id='edit_profile']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/profile/profile-edit2.html')]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Edit profile')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "343fc31b-ab2b-4db3-84c1-b57012499413",
+    "name": "Create invalid Club name",
+    "commands": [{
+      "id": "b463edc8-977c-481e-b8e6-e045c2336aa4",
+      "comment": "",
+      "command": "open",
+      "target": "/?mode=select",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24870c2e-5024-4dd0-ba7e-eb7fe1d82339",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a9679d2-6e9e-47a3-8d6a-2d2f9eb8cf57",
+      "comment": "",
+      "command": "click",
+      "target": "css=.center-text",
+      "targets": [
+        ["css=.center-text", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "580d9634-576c-4763-bfcf-139febd9dfa3",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "362a977b-33e7-4840-8df1-542fc9166511",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "89a2584b-f337-4b7d-b73e-fdab72cd7884",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec191eb4-12e5-4d7e-ada1-fbe8ecac03ea",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "9608e0db-52a6-4e65-9eff-4474d5c89263",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "771862a7-71cf-4ef2-a8a3-93681aac1044",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here",
+      "targets": [
+        ["linkText=Click here", "linkText"],
+        ["css=.card:nth-child(5) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here')]", "xpath:link"],
+        ["xpath=//div[@id='cards']/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/team/JoinOrCreateTeam.html')]", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c21d14e5-4f66-4226-9412-7fb29901abcb",
+      "comment": "",
+      "command": "click",
+      "target": "id=button",
+      "targets": [
+        ["id=button", "id"],
+        ["css=#button", "css:finder"],
+        ["xpath=//button[@id='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "abc4137b-7bf8-41de-9181-ce68942f3bb9",
+      "comment": "",
+      "command": "click",
+      "target": "id=group_name",
+      "targets": [
+        ["id=group_name", "id"],
+        ["css=#group_name", "css:finder"],
+        ["xpath=//input[@id='group_name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8579e05b-00ac-489d-a468-cf2543a3014e",
+      "comment": "",
+      "command": "type",
+      "target": "id=group_name",
+      "targets": [
+        ["id=group_name", "id"],
+        ["css=#group_name", "css:finder"],
+        ["xpath=//input[@id='group_name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "team 18"
+    }, {
+      "id": "206a06a3-f8e0-4730-969a-fd50926213d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=group_description",
+      "targets": [
+        ["id=group_description", "id"],
+        ["css=#group_description", "css:finder"],
+        ["xpath=//textarea[@id='group_description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c8928fe-ea28-48ad-83a4-9c5494bf0cd7",
+      "comment": "",
+      "command": "type",
+      "target": "id=group_description",
+      "targets": [
+        ["id=group_description", "id"],
+        ["css=#group_description", "css:finder"],
+        ["xpath=//textarea[@id='group_description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "best team"
+    }, {
+      "id": "a6dc68ec-24e5-4c92-809a-66682901f3b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn",
+      "targets": [
+        ["id=btn", "id"],
+        ["css=#btn", "css:finder"],
+        ["xpath=//button[@id='btn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Club')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "dd4c93dd-ee78-42cf-ae8a-1c73b3358b8a",
+    "name": "2 Create Club",
+    "commands": [{
+      "id": "fd67c68e-2804-4b9b-a754-9b5204ecff38",
+      "comment": "",
+      "command": "open",
+      "target": "/?mode=select",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "453ce1a1-e0e5-4774-bdca-7bbb05ea9a97",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4567e407-57ee-4ce6-8f22-f458df80dfcf",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcfd6e53-2ee0-4a2b-96ef-2f9bf6007c6a",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "4673702d-fcb8-4235-9dea-119d4f82ac97",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3c78780-1384-425d-92c5-8187448990e6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-secondary-link",
+      "targets": [
+        ["css=.firebaseui-id-secondary-link", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c65fdf68-5365-4dea-809b-2e7d7fca0230",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "6b9cc847-68bb-48de-b0b9-f991e93fb097",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "226261fc-4602-4174-9386-c780e0eab75f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here",
+      "targets": [
+        ["linkText=Click here", "linkText"],
+        ["css=.card:nth-child(5) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here')]", "xpath:link"],
+        ["xpath=//div[@id='cards']/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/team/JoinOrCreateTeam.html')]", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91df59d9-424f-4aa3-b594-a070b75c6ebc",
+      "comment": "",
+      "command": "click",
+      "target": "id=button",
+      "targets": [
+        ["id=button", "id"],
+        ["css=#button", "css:finder"],
+        ["xpath=//button[@id='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0211c2c-879e-421e-839f-17824da51dcf",
+      "comment": "",
+      "command": "click",
+      "target": "id=group_name",
+      "targets": [
+        ["id=group_name", "id"],
+        ["css=#group_name", "css:finder"],
+        ["xpath=//input[@id='group_name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95858523-e469-4849-8cf4-9d90411db0e3",
+      "comment": "",
+      "command": "type",
+      "target": "id=group_name",
+      "targets": [
+        ["id=group_name", "id"],
+        ["css=#group_name", "css:finder"],
+        ["xpath=//input[@id='group_name']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "team2"
+    }, {
+      "id": "583b72cf-3eea-4b0e-aa13-8755cc801a24",
+      "comment": "",
+      "command": "click",
+      "target": "id=group_description",
+      "targets": [
+        ["id=group_description", "id"],
+        ["css=#group_description", "css:finder"],
+        ["xpath=//textarea[@id='group_description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fea042fd-54fc-4bc4-902c-2e9443730d09",
+      "comment": "",
+      "command": "type",
+      "target": "id=group_description",
+      "targets": [
+        ["id=group_description", "id"],
+        ["css=#group_description", "css:finder"],
+        ["xpath=//textarea[@id='group_description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "goood"
+    }, {
+      "id": "d4c781b3-f27c-4c22-b875-967e937db07d",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn",
+      "targets": [
+        ["id=btn", "id"],
+        ["css=#btn", "css:finder"],
+        ["xpath=//button[@id='btn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Create Club')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7795602f-5440-4a5e-98a0-3e1f328efcdc",
+    "name": "Join club",
+    "commands": [{
+      "id": "36b9be88-e644-492d-a675-74e36542a1e8",
+      "comment": "",
+      "command": "open",
+      "target": "/?mode=select",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "02f012b1-73df-4631-8286-903be4df00dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca58d0cb-ecd2-416a-a0e5-a7e57af312a7",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "599f3b3f-1c54-41f2-b3cf-8ca427b2b197",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadsi@gmail.com"
+    }, {
+      "id": "aab84942-624f-4f9b-abd1-66004cc3fc5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1b923ac-4194-4920-a035-23ff4dca0277",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.firebaseui-id-name", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi"
+    }, {
+      "id": "80682048-3dc8-4c71-9ab8-310643cf0865",
+      "comment": "",
+      "command": "click",
+      "target": "css=.center-text",
+      "targets": [
+        ["css=.center-text", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9225a568-71d7-4a05-8aad-931d972bde7a",
+      "comment": "",
+      "command": "click",
+      "target": "name=newPassword",
+      "targets": [
+        ["name=newPassword", "name"],
+        ["css=.firebaseui-id-new-password", "css:finder"],
+        ["xpath=//input[@name='newPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b85963c-5449-4815-8248-659c3662c452",
+      "comment": "",
+      "command": "type",
+      "target": "name=newPassword",
+      "targets": [
+        ["name=newPassword", "name"],
+        ["css=.firebaseui-id-new-password", "css:finder"],
+        ["xpath=//input[@name='newPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "6232b158-970e-4b47-9bb5-d1642abcabbe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0392cb6-3c36-48a5-8a2b-742e3d1e42c6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here",
+      "targets": [
+        ["linkText=Click here", "linkText"],
+        ["css=.card:nth-child(5) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here')]", "xpath:link"],
+        ["xpath=//div[@id='cards']/div[3]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/team/JoinOrCreateTeam.html')]", "xpath:href"],
+        ["xpath=//div[3]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c8a4042-87fb-45e6-afe5-055943d4a9ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=body",
+      "targets": [
+        ["css=body", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc048dc8-f47d-460a-9d55-f977d2cc5691",
+      "comment": "",
+      "command": "click",
+      "target": "id=code",
+      "targets": [
+        ["id=code", "id"],
+        ["css=#code", "css:finder"],
+        ["xpath=//input[@id='code']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28349c9f-0ad0-486e-8257-1c25dca5dd2b",
+      "comment": "",
+      "command": "type",
+      "target": "id=code",
+      "targets": [
+        ["id=code", "id"],
+        ["css=#code", "css:finder"],
+        ["xpath=//input[@id='code']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Y3FbJ2"
+    }, {
+      "id": "73328aab-a531-47db-9455-1e2775499196",
+      "comment": "",
+      "command": "click",
+      "target": "id=Joinbutton",
+      "targets": [
+        ["id=Joinbutton", "id"],
+        ["css=#Joinbutton", "css:finder"],
+        ["xpath=//button[@id='Joinbutton']", "xpath:attributes"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Join Club')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "8aae58c3-9b7b-441a-9422-a2843b4d8225",
+    "name": "Take a challenge",
+    "commands": [{
+      "id": "7f942e39-f50c-4c01-a457-0e5e916f5c99",
+      "comment": "",
+      "command": "open",
+      "target": "/?mode=select",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13182b90-9a88-4da2-90e1-7c053a915cc4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6389611b-3577-4bc5-aa50-a2a1f4c5d522",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "afb4f481-4b83-4640-a477-1a50226d0b9d",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "a89791ca-59d1-4931-b0b1-46b52599a16e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cdd4c79-8dee-402f-a25f-e06d9e51b7fb",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a719a068-ae08-45cb-9c6b-c8cd7725c25a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "49cd86a8-64a4-4430-a221-92f7be986839",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d21f0b64-8b29-4323-9cbc-07d741df79ed",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Take a new Challenge",
+      "targets": [
+        ["linkText=Take a new Challenge", "linkText"],
+        ["css=.col-md-12:nth-child(4) > #btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Take a new Challenge')]", "xpath:link"],
+        ["xpath=(//a[@id='btn'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/challenges/eco_challenge_list.html')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Take a new Challenge')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6437ef5-012d-42cd-9ffb-4dad6098b09a",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) .desc",
+      "targets": [
+        ["css=a:nth-child(2) .desc", "css:finder"],
+        ["xpath=//div[@id='challenge_list']/a[2]/div/p", "xpath:idRelative"],
+        ["xpath=//a[2]/div/p", "xpath:position"],
+        ["xpath=//p[contains(.,'EASTER CHALLENGE...')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b35f8adb-9911-4a44-b01f-c07124045840",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn",
+      "targets": [
+        ["id=btn", "id"],
+        ["css=#btn", "css:finder"],
+        ["xpath=//button[@id='btn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Take the challenge')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ab0f3ad-906e-4fd4-aff1-47c5417b98bb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Take a new Challenge",
+      "targets": [
+        ["linkText=Take a new Challenge", "linkText"],
+        ["css=.col-md-12:nth-child(4) > #btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Take a new Challenge')]", "xpath:link"],
+        ["xpath=(//a[@id='btn'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/challenges/eco_challenge_list.html')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Take a new Challenge')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "554efa2e-b55b-408f-8d1d-e1e3175f0608",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(3) > .item",
+      "targets": [
+        ["css=a:nth-child(3) > .item", "css:finder"],
+        ["xpath=//div[@id='challenge_list']/a[3]/div", "xpath:idRelative"],
+        ["xpath=//a[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2401bf0-8b9b-47d5-a66f-2dc8d0d0e2fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn",
+      "targets": [
+        ["id=btn", "id"],
+        ["css=#btn", "css:finder"],
+        ["xpath=//button[@id='btn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Take the challenge')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "488de89a-2397-45b9-bb3e-d313f31e3584",
+    "name": "Delete a challenge",
+    "commands": [{
+      "id": "870e50df-f7ab-4a1f-90f7-335c7d0f4a39",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "510b582b-92f3-4d39-8f31-2cece3a7305e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d537980-9ce4-4b0c-ab7c-d678e8ae510b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.center-text",
+      "targets": [
+        ["css=.center-text", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25ad71af-7c9e-406d-8fc4-e21b8942ac0b",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c28b8f2-98dc-4885-a0f5-483f28ac8a57",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "47a2882d-b9a1-435a-b1b7-23c645414cd1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fd5dc5a-6b46-47dd-9135-c3b5a9ae44b5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4de9b13-69d6-4ea4-b0fe-2100f04f36e1",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "cf4205d8-6570-4e0b-beaa-10d823cb4908",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ba44d64-27be-43e5-a422-cc71f951ed15",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@type='button'])[2]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=(//h2[@id='flush-headingOne']/button)[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/h2/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Title')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee657bdb-895a-4ab0-946d-1075fd48be5c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@onclick='DeleteChallenge(this)'])[2]",
+      "targets": [
+        ["xpath=(//button[@onclick='DeleteChallenge(this)'])[2]", "xpath:attributes"],
+        ["xpath=(//div[@id='flush-collapseOne']/div/button[2])[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "04f3cf32-67f8-4afa-896c-55b544315bd2",
+    "name": "Delete Easter challenge",
+    "commands": [{
+      "id": "015473aa-2c30-42d3-9457-ab135dd0c03e",
+      "comment": "",
+      "command": "open",
+      "target": "/?mode=select",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4cabcbf-9ce8-479f-9f7a-949eee8cd85c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ceaf14a1-abbe-4450-a79c-4ce78f0c7705",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "224a4e54-02ee-4d27-bf20-1b6a5974254f",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "0de97a4f-93ce-45d2-989e-3e11bb700cc0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bdccac4-8f43-4a10-a76e-cd56837a1994",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14175323-6d20-4850-803a-0fd17c4f1818",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "8d653b64-7112-45f7-8074-ebec6cbd67b5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "00409080-ae6f-4f04-8ee0-749e1a9c75ef",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@type='button']",
+      "targets": [
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//h2[@id='flush-headingOne']/button", "xpath:idRelative"],
+        ["xpath=//h2/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Easter Challenge')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c464f39f-72d6-4337-85d9-1722d2aa10c0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//button[@onclick='DeleteChallenge(this)']",
+      "targets": [
+        ["xpath=//button[@onclick='DeleteChallenge(this)']", "xpath:attributes"],
+        ["xpath=//div[@id='flush-collapseOne']/div/button[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Delete')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60e80170-fea3-455b-810e-6764e22e4ce6",
+      "comment": "",
+      "command": "click",
+      "target": "id=button",
+      "targets": [
+        ["id=button", "id"],
+        ["linkText=Go Back", "linkText"],
+        ["css=#button", "css:finder"],
+        ["xpath=//a[contains(text(),'Go Back')]", "xpath:link"],
+        ["xpath=//a[@id='button']", "xpath:attributes"],
+        ["xpath=//div[@id='card']/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/challenges/eco_challenge.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Go Back')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f8287899-8b65-429d-a5f8-3f791cd76817",
+    "name": "Share your idea",
+    "commands": [{
+      "id": "251e0ea3-6171-4b92-aa76-b2bf3c2f7dd3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "563b6823-094f-4ca3-8db0-70d62819ede2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8c91760c-86ad-442f-95ab-254a6b1f1469",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "851721cf-0f84-4f7d-b239-4a0495cecd0a",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "d5e810c8-522f-431a-8005-0a6ef523598e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e9d0e51-7e1d-4cee-8731-6e5636469145",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "31219f9a-8391-45c5-8b00-7ec05d8be83c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "402c6610-cef5-4224-922f-a952780f3bbe",
+      "comment": "",
+      "command": "click",
+      "target": "id=btn",
+      "targets": [
+        ["id=btn", "id"],
+        ["linkText=Share your idea", "linkText"],
+        ["css=.col-md-12:nth-child(3) > #btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Share your idea')]", "xpath:link"],
+        ["xpath=//a[@id='btn']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/post/addPost.html')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Share your idea ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43ede24f-1f63-4c41-a13f-11377b45b994",
+      "comment": "",
+      "command": "click",
+      "target": "id=mypic-input",
+      "targets": [
+        ["id=mypic-input", "id"],
+        ["name=myfile", "name"],
+        ["css=#mypic-input", "css:finder"],
+        ["xpath=//input[@id='mypic-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01eacc16-93bf-4c35-8ac0-aabe3bf77c1b",
+      "comment": "",
+      "command": "type",
+      "target": "id=mypic-input",
+      "targets": [
+        ["id=mypic-input", "id"],
+        ["name=myfile", "name"],
+        ["css=#mypic-input", "css:finder"],
+        ["xpath=//input[@id='mypic-input']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "C:\\fakepath\\star.png"
+    }, {
+      "id": "c63321ab-79d7-42a8-b18e-c9aa48d3dd5a",
+      "comment": "",
+      "command": "click",
+      "target": "id=post-desc",
+      "targets": [
+        ["id=post-desc", "id"],
+        ["css=#post-desc", "css:finder"],
+        ["xpath=//input[@id='post-desc']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42cf7a42-aa08-46f2-91ae-d9ea4416c3b2",
+      "comment": "",
+      "command": "type",
+      "target": "id=post-desc",
+      "targets": [
+        ["id=post-desc", "id"],
+        ["css=#post-desc", "css:finder"],
+        ["xpath=//input[@id='post-desc']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "hello"
+    }, {
+      "id": "7a11acc9-39c9-4682-8107-1e6141aaeb9a",
+      "comment": "",
+      "command": "click",
+      "target": "id=button",
+      "targets": [
+        ["id=button", "id"],
+        ["css=#button", "css:finder"],
+        ["xpath=//button[@id='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a9e25eb-1aa4-4621-8acf-4a24bef98102",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=button",
+      "targets": [
+        ["id=button", "id"],
+        ["css=#button", "css:finder"],
+        ["xpath=//button[@id='button']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d8bc0401-7290-4165-8ed1-9672ead2e79e",
+    "name": "Add Comment",
+    "commands": [{
+      "id": "b77f1959-5ea7-47c6-af1e-7ad9645e42c3",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fcac00ee-21e8-4139-802c-293d0c92c211",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f202f21b-c1b2-4abd-b26b-1cbcdf6cc578",
+      "comment": "",
+      "command": "click",
+      "target": "css=figure",
+      "targets": [
+        ["css=figure", "css:finder"],
+        ["xpath=//div[@id='logo']/figure", "xpath:idRelative"],
+        ["xpath=//figure", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a175530c-9ea9-4e0f-bfd6-fd7092d66c7b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e5df492-c099-4db3-bb80-8b4d584408ce",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadih1992@gmail.com"
+    }, {
+      "id": "d5e42cc3-77c9-4145-857e-4389f9aacacd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "48d34274-8769-47b4-954c-519c9e3104f8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50f25d0e-8c2c-4921-867e-79aee4ce7a72",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "d1b958da-4b6e-4e69-b0df-35734c813da4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa5b5ec4-ee78-4e28-a99d-108ea562a1e9",
+      "comment": "",
+      "command": "click",
+      "target": "id=footer_group",
+      "targets": [
+        ["id=footer_group", "id"],
+        ["css=#footer_group", "css:finder"],
+        ["xpath=//button[@id='footer_group']", "xpath:attributes"],
+        ["xpath=//footer/button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fb8cb5a-ba1c-4e01-bf9c-2566ffe3a6a5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@id='btn'])[2]",
+      "targets": [
+        ["xpath=(//button[@id='btn'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='feed_content']/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Comment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55da323c-d01c-4515-adae-ee542dab45e1",
+      "comment": "",
+      "command": "click",
+      "target": "id=comment",
+      "targets": [
+        ["id=comment", "id"],
+        ["css=#comment", "css:finder"],
+        ["xpath=//input[@id='comment']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0879ef4a-2cc6-4004-818b-1e77c27d6542",
+      "comment": "",
+      "command": "type",
+      "target": "id=comment",
+      "targets": [
+        ["id=comment", "id"],
+        ["css=#comment", "css:finder"],
+        ["xpath=//input[@id='comment']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "great"
+    }, {
+      "id": "79873a30-656c-44a9-9a32-fc2db68d821a",
+      "comment": "",
+      "command": "click",
+      "target": "id=post-btn",
+      "targets": [
+        ["id=post-btn", "id"],
+        ["css=#post-btn", "css:finder"],
+        ["xpath=//button[@id='post-btn']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Post')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "04392c70-91e5-4616-bbd9-385d9d7ee2f2",
+      "comment": "",
+      "command": "click",
+      "target": "id=back-icon",
+      "targets": [
+        ["id=back-icon", "id"],
+        ["css=#back-icon", "css:finder"],
+        ["xpath=//i[@id='back-icon']", "xpath:attributes"],
+        ["xpath=//i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01816776-b543-4fdf-b401-1f5137e1482f",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@id='btn'])[2]",
+      "targets": [
+        ["xpath=(//button[@id='btn'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='feed_content']/div/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Comment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7c6dc86-cb99-4bd6-a748-a21c37fe6822",
+      "comment": "",
+      "command": "click",
+      "target": "id=heading",
+      "targets": [
+        ["id=heading", "id"],
+        ["css=#heading", "css:finder"],
+        ["xpath=//h1[@id='heading']", "xpath:attributes"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Comments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "f3f5e4ef-a308-4f05-9963-03123eeb176e",
+    "name": "Leave Club",
+    "commands": [{
+      "id": "1d2e0982-35e0-495b-a1be-633bb8d82ce1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b08fe82-1da8-436f-9bef-0f47b4ebd901",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa245489-f1b4-4e34-8643-db92e1136f21",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5b53b33-63ff-4ef5-819b-e44b8b7e47ca",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8a515f8-2ad1-4088-a410-eaf8351c8e2e",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadih1992@gmail.com"
+    }, {
+      "id": "87beca27-519a-4161-a057-dd48cf3b62d4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eff59a61-c506-45fb-8534-36fa42451f2b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d013f0e-ddd4-4edc-b77e-346b92126542",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "b97af602-79ea-4c6f-bb3d-b039e8c39478",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e673562-f342-466e-8a64-006ee0b2b621",
+      "comment": "",
+      "command": "click",
+      "target": "id=footer_profile",
+      "targets": [
+        ["id=footer_profile", "id"],
+        ["css=#footer_profile", "css:finder"],
+        ["xpath=//button[@id='footer_profile']", "xpath:attributes"],
+        ["xpath=//button[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fe177792-d39b-4b83-b0b7-3d4f585084d3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=callAlert",
+      "targets": [
+        ["id=callAlert", "id"],
+        ["css=#callAlert", "css:finder"],
+        ["xpath=//button[@id='callAlert']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Leave Club')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4fb7078-50f9-4ebf-9aff-f9d642d96ad4",
+      "comment": "",
+      "command": "click",
+      "target": "id=callAlert",
+      "targets": [
+        ["id=callAlert", "id"],
+        ["css=#callAlert", "css:finder"],
+        ["xpath=//button[@id='callAlert']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Leave Club')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "27c17cff-c688-4b71-8e5b-55c73f7f469a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=callAlert",
+      "targets": [
+        ["id=callAlert", "id"],
+        ["css=#callAlert", "css:finder"],
+        ["xpath=//button[@id='callAlert']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Leave Club')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6538b6c4-9300-40b5-a674-8cc166bbd688",
+      "comment": "",
+      "command": "click",
+      "target": "id=leaveTeam",
+      "targets": [
+        ["id=leaveTeam", "id"],
+        ["css=#leaveTeam", "css:finder"],
+        ["xpath=//button[@id='leaveTeam']", "xpath:attributes"],
+        ["xpath=//div[@id='staticBackdrop']/div/div/div[3]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "abe0eae7-7d77-4753-8f7d-914d388390e1",
+    "name": "About us Page",
+    "commands": [{
+      "id": "2e4a36db-edc1-462e-8e1f-df03b090012c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdd7ebc3-57f0-4ae1-982a-888a9fec4044",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "65406034-4eb7-4a8b-8090-c19a783c489e",
+      "comment": "",
+      "command": "click",
+      "target": "id=app-name",
+      "targets": [
+        ["id=app-name", "id"],
+        ["css=#app-name", "css:finder"],
+        ["xpath=//figcaption[@id='app-name']", "xpath:attributes"],
+        ["xpath=//div[@id='logo']/figure/figcaption", "xpath:idRelative"],
+        ["xpath=//figcaption", "xpath:position"],
+        ["xpath=//figcaption[contains(.,'EcoClub')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9254bd95-d462-4e02-bc4b-7bb9c51ae813",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c27127ef-6b57-494f-9066-e4b9af81398f",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "1d6238a3-bfa6-4c17-a20f-2fc6fa3bd494",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4597babc-36ad-40f8-b96a-16b0cf522b81",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e193048c-23b9-4d7c-a7ec-c0ae6ab444f4",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.firebaseui-id-password", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "320f6c58-ade6-4445-8aeb-209ee8763403",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec03d0c3-83b7-489c-a084-9e9b36618038",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Meet our Team",
+      "targets": [
+        ["linkText=Meet our Team", "linkText"],
+        ["css=.card:nth-child(7) .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Meet our Team')]", "xpath:link"],
+        ["xpath=//div[@id='cards']/div[4]/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/private/html/aboutUs.html')]", "xpath:href"],
+        ["xpath=//div[4]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Meet our Team')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bb548d2-f3bc-4d53-8f12-ee8320533530",
+      "comment": "",
+      "command": "click",
+      "target": "id=return",
+      "targets": [
+        ["id=return", "id"],
+        ["css=#return", "css:finder"],
+        ["xpath=//button[@id='return']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Go to main page')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3840b89c-a1ca-4e15-9ad5-9ab74e23a840",
+    "name": "Complete a challenge",
+    "commands": [{
+      "id": "429058b8-8368-4e0e-a9ad-837ff50a8e73",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3bc04aa6-b085-4e4c-b3ad-0d20a1aafd5d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "555fdd85-d7a4-45e1-a51f-7aa0d7c0548b",
+      "comment": "",
+      "command": "click",
+      "target": "css=figure",
+      "targets": [
+        ["css=figure", "css:finder"],
+        ["xpath=//div[@id='logo']/figure", "xpath:idRelative"],
+        ["xpath=//figure", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "959cab05-a41c-4e3d-943d-c8469bc380f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23516d8a-e093-4998-a297-20211e38f2b0",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "9913a46a-e693-4282-9ab5-7ed77fb49ef7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8991790a-1629-4468-af9a-d33771b2993a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3f03d482-e5f3-42b4-a1c2-787f0cbba0aa",
+    "name": "1.1 create new account",
+    "commands": [{
+      "id": "ab557207-b568-4ee5-aff9-498bddb085cb",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db87be0d-8028-4fa0-bc5b-82f8dec49e78",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1696x1026",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "37cc9587-be75-4d5b-8492-670d838306e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-idp-password > .firebaseui-idp-text-long",
+      "targets": [
+        ["css=.firebaseui-idp-password > .firebaseui-idp-text-long", "css:finder"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/div/form/ul/li[2]/button/span[2]", "xpath:idRelative"],
+        ["xpath=//li[2]/button/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with email')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6d35612-01b4-4203-a61a-0a85a7c900d7",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "658595fa-a3c2-4ec7-bd15-34b01a3b91ed",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=.mdl-textfield__input", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "fadi.basheer1992@gmail.com"
+    }, {
+      "id": "df6c2413-eac7-4a64-9902-20330b4bb9c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb0f53c1-3ed1-44d4-be1c-b8890e8347b9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95bd3427-51ef-49a5-8fc3-18eb3932e4aa",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.firebaseui-id-name", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "fadi"
+    }, {
+      "id": "1ceea93c-17ba-4b4c-9b47-6b2ea0e8fa64",
+      "comment": "",
+      "command": "click",
+      "target": "name=newPassword",
+      "targets": [
+        ["name=newPassword", "name"],
+        ["css=.firebaseui-id-new-password", "css:finder"],
+        ["xpath=//input[@name='newPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2bc641e7-81f6-40f3-b2df-898e5bdd6c3e",
+      "comment": "",
+      "command": "type",
+      "target": "name=newPassword",
+      "targets": [
+        ["name=newPassword", "name"],
+        ["css=.firebaseui-id-new-password", "css:finder"],
+        ["xpath=//input[@name='newPassword']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[2]/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "fadi1992"
+    }, {
+      "id": "9fb23b25-a7ad-4f61-a199-42b047653429",
+      "comment": "",
+      "command": "click",
+      "target": "css=.firebaseui-id-submit",
+      "targets": [
+        ["css=.firebaseui-id-submit", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='firebaseui-auth-container']/div/form/div[3]/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "17c823af-a59f-4b96-8352-1d93cbf3c79f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b346dc10-49e0-41a0-b4d5-fdfdf27932a2"]
+  }],
+  "urls": ["https://ecoclub-a9e9e.web.app/"],
+  "plugins": []
+}

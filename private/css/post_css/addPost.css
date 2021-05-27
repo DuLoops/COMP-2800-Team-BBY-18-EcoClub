@@ -1,6 +1,5 @@
 body {
   font-family: 'Lato', sans-serif;
-  font-size: 1.3rem;
 }
 
 #back-icon {
@@ -112,7 +111,7 @@ body {
   height: 2rem;
 }
 
-#fb-root{
+.fb-root{
   margin:1rem;
   transform: scale(2);
   -ms-transform: scale(2);
@@ -125,3 +124,4 @@ body {
   -moz-transform-origin: top left;
   -webkit-transform-origin: top left;
 }
+
