@@ -8,6 +8,7 @@
   <link rel="shortcut icon" type="image/jpg" href="/private/img/logos/favicon.png" />
 
   <link rel="stylesheet" href="/private/css/footer.css">
+  <link rel="stylesheet" href="/private/css/navbar.css">
   <!-- CSS-->
   <link rel="stylesheet" href="/private/css/group_css/group_edit.css">
   <!-- Font awesome-->
@@ -20,23 +21,17 @@
 </head>
 
 <body>
-  <ul class="nav nav-pills nav-fill">
-    <li class="nav-item btn" id="back-button">
-      <a class="nav-link" aria-current="page" href="group_feed.html">
-        <i class="fa fa-arrow-circle-left" id="back-icon"></i>
-        <span id="back">Back</span>
-      </a>
-    </li>
-    <li class="nav-item">
-    </li>
-  </ul>
-
-  <h2 id="heading">Edit Club Info</h2> <br>
-
+  <a class="nav-link" aria-current="page" href="/private/html/group/group_info.html">
+    <i class="fa fa-arrow-circle-left" id="back-icon"></i>
+  </a>
+  <h2 id="heading">Edit Club Info</h2>
+  <hr>
 
 
   <form class="col text-center">
+    <label class="labels">Club Name</label>
     <input type="text" id="name" class="inputClass" placeholder="Club Name"><br>
+    <label class="labels">Club Description</label>
     <textarea type="text" id="desc" class="inputClass" placeholder="Description" ></textarea><br>
     <button type="button" class="btn btn-success" id="save_btn">Save Changes</button>
     <p id="saveStatus"></p>
@@ -45,7 +40,6 @@
     
     <div id="group_members">
         <h3 id="members_heading">Members</h3>
-
     </div>
 
     <div class="footer_space" style="height:46.6px;"></div>

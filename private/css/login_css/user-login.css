@@ -8,7 +8,6 @@ body {
     margin:auto;
     width: 15rem;
 }
-
 #app-name {
     text-align: center;
     font-size: 1.8rem;
@@ -16,29 +15,25 @@ body {
     font-weight: bold;
     font-family: 'Noto Serif', serif;
 }
-
 #app-tagline {
     font-size: 1.4rem;
     text-align: center;
-
-    
 }
-
 #container{
     border: 1px solid white;
-    height: 18rem;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     width: 22rem;
     margin: auto;
 }
-
 #footer {
     width: 18rem;
-    padding-top: 5rem;
+    padding-top: 1rem;
     text-align: center;
     margin: auto;
     font-size: 1.4rem;
     color: #28a745;
     font-weight: bold;
 }
-
+#googleSignIn {
+    margin: 1rem 0;
+}

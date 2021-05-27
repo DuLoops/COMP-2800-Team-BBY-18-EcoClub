@@ -22,10 +22,6 @@ body {
 }
 
 
-#heading{
-  text-align: center;
-  margin-top:20px;
-}
 
 form{
   display:block;
@@ -45,9 +41,7 @@ input{
 }
 
 .remove_member{
-  float:right;
-  margin:20px;
-  display:block;
+  float: right;
 }
 
 #groupImg {
@@ -60,17 +54,20 @@ input{
 
 }
 
+.labels {
+  font-size: 1.3rem;
+}
+
 #group_members{
   display:flex;
   flex-direction: column;
-  background-color: var(--grey);
-  padding:10px;
+  padding: 10px;
 }
 
 .member{
-  border-radius: 1rem;
-  background-color: rgba(40, 167, 69, 0.5);
-  margin:10px
+  margin:10px;
+  padding: 10px;
+  background-color: var(--grey);
 }
 
 .member p{
@@ -80,24 +77,4 @@ input{
 
 .btn_club {
   background-color: rgba(0, 0 ,0 , 0.2) !important;
-}
-
-#back-icon{
-  float: left;
-  font-size:24px;
-  color: white;
-
-}
-
-#back {
-color: white;
-}
-
-#back-button {
-  background-color: #28a745;
-}
-
-.nav-link {
-color: black;
-font-weight: bold;
 }

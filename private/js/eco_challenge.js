@@ -108,37 +108,13 @@ function DeleteChallenge(attr) {
 
 }
 
-function CompleteChallenge(attr) {
+async function CompleteChallenge(attr) {
     var challengeID = (attr.getAttribute("challengeID"));
     localStorage.setItem('challengeID', challengeID);
     console.log(challengeID);
-    db.collection("eco-challenges").doc(challengeID).get().then(function(doc){
+    await db.collection("eco-challenges").doc(challengeID).get().then(function(doc){
         var challengeTitle = doc.data().title
         localStorage.setItem('challengeTitle', challengeTitle);
     })
-    firebase.auth().onAuthStateChanged(function (user) {
-        db.collection("users").doc(user.uid).collection("user_challenges").where("challengeID", "==", challengeID)
-            .get().then(function (snap) {
-                snap.forEach(async function (doc) {
-                    console.log(doc.id);
-                    const yourDate = new Date();
-                    await db.collection("users").doc(user.uid)
-                        .collection("completedChallenge").add({
-                            date: yourDate.toISOString().split('T')[0],
-                            challengeID: challengeID
-                        });
-
-
-                    await db.collection("users").doc(user.uid)
-                        .collection("user_challenges").doc(doc.id).delete().then(() => {
-                            console.log("Document successfully deleted!");
-                        }).catch((error) => {
-                            console.error("Error removing document: ", error);
-                        });
-
-                    location.replace("/private/html/challenges/eco_challenge_add_post.html");
-
-                })
-            })
-    })
+    location.replace("/private/html/challenges/eco_challenge_add_post.html");
 }
