@@ -34,7 +34,7 @@ https://ecoclub-a9e9e.web.app/
 - fontawesome
 
 ## IDEs
-VScode
+- VScode
 
 ## Database
 Firebase database
@@ -58,10 +58,18 @@ https://console.firebase.google.com/project/ecoclub-a9e9e/overview
 ## Hosting 
 - Firebase hosting
 
+## Test
+- SeleniumIDE
+
 # Overview
 
 ## Overview of the repo
 All of the source code is inclued in the private directory. The files are organized by their file types and usage.
+Also, test directory contains selenium IDE test cases.
+
+- test
+  - EcoClub.side
+
 - private
 
   - css
@@ -97,8 +105,13 @@ All of the source code is inclued in the private directory. The files are organi
 
   - index.html
 
-## Testing plan
-https://docs.google.com/spreadsheets/d/1oSN_pOmUZY88u3J25gyRoTJBI9Lc1b1JcPilmBSzRUs/edit?usp=sharing
+## Test
+
+- Testing plan
+  https://docs.google.com/spreadsheets/d/1oSN_pOmUZY88u3J25gyRoTJBI9Lc1b1JcPilmBSzRUs/edit?usp=sharing
+- Test cases
+  - SelenuimIDE
+  - /test/EcoClub.side
 
 ## Licensing
 This project is licensed under Unlicense license. This license does not require you to take the license with you to your project.
